@@ -1,0 +1,16 @@
+[ui]
+username = Brice Shatzer <bshatzer@gohealth.com>
+verbose = True
+
+[auth]
+GoHealthSCM.prefix = https://scm.dev.norvax.net/scm/hg
+GoHealthSCM.username = xxx
+GoHealthSCM.password = xxx
+
+[defaults]
+log = --graph
+
+[hooks]
+#check if commit message is properly formatted (ie: starts with the ticket id)
+pretxncommit.ticket_id_required = hg log -r $HG_NODE --template {desc} | grep -q "^[[:alpha:]]*-[[:digit:]]*[[:space:]]"
+
