@@ -1,0 +1,2413 @@
+{
+	"folder_history":
+	[
+		"/com/home/users/bshatzer/dotfiles",
+		"/com/home/users/bshatzer/ehealthapply.org",
+		"/com/home/users/bshatzer/getyourinsurancequote.com",
+		"/com/home/users/bshatzer/yourcoverageoptions",
+		"/com/home/users/bshatzer/individualfamilyhealth-legacy",
+		"/com/home/users/bshatzer/insurelane.com",
+		"/com/home/users/bshatzer/myinsurancequotes.com",
+		"/com/home/users/bshatzer/healthplanwiz",
+		"/com/home/users/bshatzer/trustedhealthquotes.com",
+		"/com/home/users/bshatzer/madlib",
+		"/com/home/users/bshatzer/consent-manager-js-lib",
+		"/com/home/users/bshatzer/individualhealthquotes",
+		"/com/home/users/bshatzer/LEAD-370_IHQ_Natural_Language_Form",
+		"/com/home/users/bshatzer/medicareenroller",
+		"/com/home/users/bshatzer/gohealthinsurance-java",
+		"/com/home/users/bshatzer/individualfamilyhealth",
+		"/com/home/users/bshatzer/uho-reenroll-marketing-site",
+		"/com/home/users/bshatzer/renewmyblue-reenroll-marketing-site",
+		"/com/home/users/bshatzer/archive/renewmyblue",
+		"/com/home/users/bshatzer/gomedicare.com",
+		"/com/home/users/bshatzer/LEAD-869_adding_consent/individualhealthquotes",
+		"/com/home/users/bshatzer/Desktop/consent_messages",
+		"/com/home/users/bshatzer/LEAD-311_Update_Logos_on_IHQ_Lead_Forms/individualhealthquotes",
+		"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo",
+		"/com/home/users/bshatzer/LEAD-818_exploremymedicareoptions.com/exploremymedicareoptions.com",
+		"/com/home/users/bshatzer/LEAD-820_medicarequalify.com/medicarequalify",
+		"/com/home/users/bshatzer/LEAD-838_Lead_froms_on_GHI_do_not_have_consent_manager",
+		"/com/home/users/bshatzer/LEAD-841",
+		"/com/home/users/bshatzer/LEAD-815_yourcoverageoptions.com",
+		"/com/home/users/bshatzer/LEAD-818_exploremymedicareoptions.com",
+		"/com/home/users/bshatzer/LEAD-819_medicareenroller.com",
+		"/com/home/users/bshatzer/LEAD-820_medicarequalify.com",
+		"/com/home/users/bshatzer/LEAD-311_Update_Logos_on_IHQ_Lead_Forms",
+		"/com/home/users/bshatzer/LEAD-664_add_company_names_to_the_partners_list_file_on_IHQ",
+		"/com/home/users/bshatzer/renewmyblue",
+		"/com/home/users/bshatzer/unitedhealthcare-renewal",
+		"/com/home/users/bshatzer/United Renewal",
+		"/com/home/users/bshatzer/gohealthinsurance",
+		"/com/home/users/bshatzer/ihq-nl/css-only",
+		"/com/home/users/bshatzer/NaturalLanguageForm",
+		"/com/home/users/bshatzer/ihq-nl/www.individualhealthquotes.kr8zyates.com",
+		"/com/home/users/bshatzer/vagrantpress",
+		"/com/home/users/bshatzer/gohealth-wordpress-theme",
+		"/com/home/users/bshatzer/wordpress-runner",
+		"/com/home/users/bshatzer/individualhealthquotes.kr8zyates.com",
+		"/com/home/users/bshatzer/IHQ"
+	],
+	"last_version": 3083,
+	"last_window_id": 173,
+	"log_indexing": false,
+	"settings":
+	{
+		"new_window_height": 673.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"back",
+						"background-repeat"
+					],
+					[
+						"backgroud",
+						"background-position"
+					],
+					[
+						"get",
+						"getParameter"
+					],
+					[
+						"text",
+						"text-decoration"
+					]
+				]
+			},
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 328.0,
+				"last_filter": "jsp",
+				"selected_items":
+				[
+					[
+						"jsp",
+						"Set Syntax: Java Server Page (JSP)"
+					],
+					[
+						"html",
+						"Set Syntax: HTML"
+					],
+					[
+						"h",
+						"Set Syntax: HTML"
+					],
+					[
+						"plain",
+						"Set Syntax: Plain Text"
+					],
+					[
+						"css",
+						"Set Syntax: CSS3"
+					],
+					[
+						"jav",
+						"Set Syntax: JavaScript"
+					],
+					[
+						"alii",
+						"Preferences: Alignment File Settings – Default"
+					],
+					[
+						"java",
+						"Set Syntax: JavaScript"
+					],
+					[
+						"text",
+						"Set Syntax: Plain Text"
+					],
+					[
+						"jshi",
+						"JSHint"
+					],
+					[
+						"disc",
+						"Package Control: Discover Packages"
+					],
+					[
+						"disco",
+						"Package Control: Discover Packages"
+					],
+					[
+						"py",
+						"Set Syntax: Python"
+					],
+					[
+						"shell",
+						"Set Syntax: Shell Script (Bash)"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"javasc",
+						"Set Syntax: JavaScript"
+					],
+					[
+						"jsl",
+						"Set Syntax: JSTL"
+					],
+					[
+						"sftp",
+						"SFTP: Show Panel"
+					],
+					[
+						"diff",
+						"FileDiffs: Menu"
+					],
+					[
+						"dif",
+						"FileDiffs: Menu"
+					],
+					[
+						"dis",
+						"Package Control: Discover Packages"
+					],
+					[
+						"js",
+						"Set Syntax: JSTL"
+					],
+					[
+						"list",
+						"Package Control: List Packages"
+					]
+				],
+				"width": 514.0
+			},
+			"console":
+			{
+				"height": 368.0,
+				"history":
+				[
+					"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/com/home/users/bshatzer/.bashrc",
+				"/com/home/users/bshatzer/.zshrc",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/quotes/health_quotes.jsp",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/calculatingLifeQuotes.jsp",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/quotes/annuity_quotes.html",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/quotes/life_quotes.jsp",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/quotes/lifetest.jsp",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/includes/navbar.jsp",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/old docs/cfcroot/com/myinsurancequotes/users/briefcaseManager.cfc",
+				"/com/home/users/bshatzer/Desktop/NOTES/LEAD-966 list of formis on LG sites/healthplanwiz.com",
+				"/com/home/users/bshatzer/Desktop/NOTES/LEAD-966 list of formis on LG sites/trustedhealthquotes.com",
+				"/com/home/users/bshatzer/Desktop/NOTES/notes",
+				"/com/home/users/bshatzer/Desktop/LEAD-310 & 311 files to push to prod.txt",
+				"/com/home/users/bshatzer/Desktop/NOTES/Web Dev HipChat commands",
+				"/com/home/users/bshatzer/Desktop/NOTES/Time Log ",
+				"/com/home/users/bshatzer/archive/MediaAlpha-underpop.css",
+				"/com/home/users/bshatzer/archive/LEAD-311.txt",
+				"/com/home/users/bshatzer/.hgrc",
+				"/tmp/fz3temp-1/compare-health-insurance.html",
+				"/tmp/fz3temp-1/affordable-health-insurance.html",
+				"/com/home/users/bshatzer/Desktop/LEAD-822_T&T-expirences/MediaAlpha_underpop.html",
+				"/com/home/users/bshatzer/Desktop/LEAD-822_T&T-expirences/BrokersWeb_underpop.html",
+				"/com/home/users/bshatzer/.config/sublime-text-3/Packages/User/Base File.sublime-settings",
+				"/com/home/users/bshatzer/.config/sublime-text-3/Packages/Terminal/Base File.sublime-settings",
+				"/com/home/users/bshatzer/LEAD-370_IHQ_Natural_Language_Form/individualhealthquotes/src/main/webapp/includes/healthNL.template.jsp",
+				"/com/home/users/bshatzer/consent-manager-js-lib/README.md",
+				"/com/home/users/bshatzer/consent-manager-js-lib/test/consentManagerContoller.js",
+				"/com/home/users/bshatzer/consent-manager-js-lib/test/ConsentManagerSpec.js",
+				"/com/home/users/bshatzer/consent-manager-js-lib/src/consentManager.js",
+				"/com/home/users/bshatzer/archive/renewmyblue/index-new.html",
+				"/com/home/users/bshatzer/Desktop/consent_messages/LeadGen.html",
+				"/com/home/users/bshatzer/gohealthinsurance-java/src/main/webapp/proxy-to-marketplace.jsp",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/frontend/README.md",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/frontend/dist/what-we-do.html",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/webapp/about-us.html",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/frontend/dist/careers/index.html",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/webapp/css/style.e7a970b5.css",
+				"/com/home/users/bshatzer/gohealthinsurance-java/.reviewboardrc",
+				"/com/home/users/bshatzer/consent-manager-js-lib/Gruntfile.js",
+				"/com/home/users/bshatzer/consent-manager-js-lib/package.json",
+				"/com/home/users/bshatzer/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+				"/com/home/users/bshatzer/renewmyblue/page.html",
+				"/com/home/users/bshatzer/.mercurial_hook-check_commit_message",
+				"/com/home/users/bshatzer/hook-test/test",
+				"/com/home/users/bshatzer/hook-test/testfile",
+				"/com/home/users/bshatzer/hook-test/text.txt",
+				"/com/home/users/bshatzer/.profile",
+				"/com/home/users/bshatzer/.bash_profile",
+				"/com/home/users/bshatzer/Desktop/console.log",
+				"/com/home/users/bshatzer/Desktop/seems-excessive.html",
+				"/com/home/users/bshatzer/individualhealthquotes/src/main/webapp/includes/health.template.jsp",
+				"/com/home/users/bshatzer/individualhealthquotes/src/main/webapp/sftp-config.json",
+				"/com/home/users/bshatzer/individualhealthquotes/src/main/webapp/js/health-form-validation.js",
+				"/tmp/fz3temp-1/health-NL.jsp",
+				"/tmp/fz3temp-1/partners.html",
+				"/etc/hosts",
+				"/etc/shells",
+				"/etc/passwd"
+			],
+			"find":
+			{
+				"height": 25.0
+			},
+			"find_in_files":
+			{
+				"height": 95.0,
+				"where_history":
+				[
+					"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/quotes",
+					"/com/home/users/bshatzer/LEAD-311_Update_Logos_on_IHQ_Lead_Forms/individualhealthquotes/src",
+					"<current file>",
+					"",
+					"/com/home/users/bshatzer/wordpress-runner,/com/home/users/bshatzer/gohealth-wordpress-theme",
+					"/com/home/users/bshatzer/wordpress-runner",
+					"<open folders>"
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"form",
+					" bo",
+					"bo",
+					"leadsave",
+					"leadsave.url",
+					"submit",
+					"form",
+					"param.",
+					"param",
+					"action",
+					"input",
+					"include",
+					"-> ?loads index.jsp?",
+					"+",
+					"-> 500",
+					"-> ?loads index.jsp?",
+					"->",
+					"+",
+					"carriers",
+					"->",
+					":binary file",
+					": 5 changes [ 1 2 3 4 5 ]",
+					":binary file",
+					": 1 change [ 1 ]",
+					".com",
+					".kr8zyates.",
+					"individualhealthquotes.com",
+					"/zip",
+					"2",
+					".jsp",
+					"   ",
+					"  ",
+					"src/main/webapp/",
+					"src/main/",
+					"/",
+					"XXXX",
+					")",
+					"-",
+					"870",
+					"NREUM",
+					"NR",
+					"consentForm:submit",
+					"legal",
+					"/",
+					"blue-cross-blue-shield",
+					" - /includes/privacy.jsp",
+					" -/includes/privacy.jsp",
+					"-",
+					"images/insurancelogos.gif",
+					"/images/insurancelogos.gif",
+					"insurancelogos.gif",
+					"workplace/i",
+					"/insurance/",
+					"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/webapp/",
+					":",
+					"\\n",
+					"M ",
+					"src/main/webapp/",
+					"M ",
+					"- ",
+					" ",
+					"       \n",
+					"# No match.",
+					"[",
+					"'",
+					"taco",
+					"flag",
+					"taco",
+					");",
+					"individualhealthquotes/src/main/webapp",
+					"d.",
+					"c.",
+					"carr",
+					"setConditions",
+					"Health B",
+					"net",
+					"national",
+					"Vagrant",
+					"skorecky"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					""
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 25.0
+			},
+			"input":
+			{
+				"height": 35.0
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"output.sftp":
+			{
+				"height": 123.0
+			},
+			"output.unsaved_changes":
+			{
+				"height": 114.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 46.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"h",
+						"src/main/webapp/health.jsp"
+					],
+					[
+						"partn",
+						"src/main/webapp/partners.html"
+					],
+					[
+						"vag",
+						"wordpress-runner/Vagrantfile"
+					],
+					[
+						"health.tem",
+						"httpdocs/includes/health.template.jsp"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": true,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 319.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 1442.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"back",
+						"background-repeat"
+					],
+					[
+						"backgroud",
+						"background-position"
+					],
+					[
+						"get",
+						"getParameter"
+					],
+					[
+						"text",
+						"text-decoration"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/com/home/users/bshatzer/Desktop/notes",
+					"settings":
+					{
+						"buffer_size": 886,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"contents": "rbt post -p --diff-filename changes.diff --summary \"LEAD-310 Update Logos on Zip Submit Page [IHQ]\" --description \"Updating the most current logos on the zip submit pages \" --target-people \"skorecky, mgerton\" --target-groups \"leads-developers\" \n\nrbt post -p -r 53351 --diff-filename changes_12-15-15.diff --summary \"LEAD-310 Update Logos on Zip Submit Page [IHQ]\" --description \"Updating to the most current version of carrier logos on the zip submit pages & removing files that were incorrectly added in a prior changeset\" --target-people \"skorecky, mgerton\" --target-groups \"leads-developers\"\n\n\n\nthe privacy.html page that is created by the ihq-static project,  the file that is generated by the \n\nan \"ihq privacy policy\" method needs to be added to the \"madlib\" project. That way, when it is accessible by the \"ihq-static\" project which ultimately can create the file that that is needed.\n\n\n",
+					"settings":
+					{
+						"buffer_size": 894,
+						"line_ending": "Unix",
+						"name": "rbt post -p --diff-filename changes.diff --summary"
+					}
+				},
+				{
+					"contents": "Finalized cross-browser functionality\n\nIn related news, they added a new gun to counter-strike which broke everything....thats fun\n\nMy Unsolicited Thoughts, Opinions & Recommendations \nI get the sense that these sites have lacked both technical and managerial ownership for sometime. \n\nThis is ultimately what has allowed the \"Close The Ticket\" mentality. \n\n\n\n<script type=\"text/javascript\">\n    console.log('default behavior used');\n    bwapsprodid = '<c:out value=\"${bwebProdId}\" />';\n    bwapsstate = '<c:out value=\"${bwebState}\" />';\n    bwapsadsource = 'ihqleadform_${affiliate_id}_${link_id}_${lead_id}_${currentTime}_${address_1_zip}_${bwebState}';\n    console.log('default behavior used');\n    bwapszip = zip;\n    bwapsaid = '10323';\n    bwapscid = '7173';\n</script>\n<script type=\"text/javascript\" src=\"//cdn.bwserver.net/10300/10323/scripts/bw-load-7173.js\"></script>\n\n",
+					"settings":
+					{
+						"buffer_size": 878,
+						"line_ending": "Unix",
+						"name": "Finalized cross-browser functionality"
+					}
+				},
+				{
+					"contents": "src/main/webapp/images/aetna.gif\nsrc/main/webapp/images/health-logos2.gif\nsrc/main/webapp/images/homepage.carrier.gif\nsrc/main/webapp/images/insurancelogos.gif\nsrc/main/webapp/images/insurancelogos.jpg\nsrc/main/webapp/images/insurancelogos.png\nsrc/main/webapp/images/carriers.jpg\nsrc/main/webapp/images/united.gif\nsrc/main/webapp/images2/health-logos.gif\nsrc/main/webapp/images2/contents/carrier-logos-horizontal-bottom.gif\nsrc/main/webapp/child-health-insurance.jsp\nsrc/main/webapp/clarendon-national.jsp\nsrc/main/webapp/coventry.jsp\nsrc/main/webapp/fairmont-specialty.jsp \nsrc/main/webapp/health-insurance-quote.jsp\nsrc/main/webapp/health-insurance.jsp  \nsrc/main/webapp/health-quotes.jsp\nsrc/main/webapp/illinois.jsp \nsrc/main/webapp/individual-health-insurance-quotes.jsp\nsrc/main/webapp/low-cost-health-insurance.jsp\nsrc/main/webapp/medicare-supplement-health-insurance.jsp\nsrc/main/webapp/quotes.jsp\nsrc/main/webapp/sierra-health-and-life.jsp\nsrc/main/webapp/contents/Blue-Form.jsp\nsrc/main/webapp/includes/health.template.jsp",
+					"settings":
+					{
+						"buffer_size": 1032,
+						"line_ending": "Unix",
+						"name": "src/main/webapp/images/aetna.gif"
+					}
+				},
+				{
+					"file": "/com/home/users/bshatzer/Desktop/NOTES/LEAD-966 list of formis on LG sites/yourcoverageoptions.com",
+					"settings":
+					{
+						"buffer_size": 2367,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"contents": "==eHealthApply.org==\n\n--issues---",
+					"settings":
+					{
+						"buffer_size": 33,
+						"line_ending": "Unix",
+						"name": "==eHealthApply.org=="
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 177.0,
+				"last_filter": "html",
+				"selected_items":
+				[
+					[
+						"html",
+						"Set Syntax: HTML"
+					],
+					[
+						"h",
+						"Set Syntax: HTML"
+					],
+					[
+						"plain",
+						"Set Syntax: Plain Text"
+					],
+					[
+						"css",
+						"Set Syntax: CSS3"
+					],
+					[
+						"jav",
+						"Set Syntax: JavaScript"
+					],
+					[
+						"alii",
+						"Preferences: Alignment File Settings – Default"
+					],
+					[
+						"java",
+						"Set Syntax: JavaScript"
+					],
+					[
+						"text",
+						"Set Syntax: Plain Text"
+					],
+					[
+						"jshi",
+						"JSHint"
+					],
+					[
+						"disc",
+						"Package Control: Discover Packages"
+					],
+					[
+						"disco",
+						"Package Control: Discover Packages"
+					],
+					[
+						"py",
+						"Set Syntax: Python"
+					],
+					[
+						"shell",
+						"Set Syntax: Shell Script (Bash)"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"javasc",
+						"Set Syntax: JavaScript"
+					],
+					[
+						"jsl",
+						"Set Syntax: JSTL"
+					],
+					[
+						"sftp",
+						"SFTP: Show Panel"
+					],
+					[
+						"diff",
+						"FileDiffs: Menu"
+					],
+					[
+						"dif",
+						"FileDiffs: Menu"
+					],
+					[
+						"dis",
+						"Package Control: Discover Packages"
+					],
+					[
+						"js",
+						"Set Syntax: JSTL"
+					],
+					[
+						"list",
+						"Package Control: List Packages"
+					]
+				],
+				"width": 514.0
+			},
+			"console":
+			{
+				"height": 368.0,
+				"history":
+				[
+					"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/com/home/users/bshatzer/Desktop/NOTES/LEAD-966 list of formis on LG sites/getyourinsurancequote.com",
+				"/com/home/users/bshatzer/Desktop/NOTES/LEAD-966 list of formis on LG sites/trustedhealthquotes.com",
+				"/com/home/users/bshatzer/Desktop/NOTES/LEAD-966 list of formis on LG sites/yourcoverageoptions.com",
+				"/com/home/users/bshatzer/Desktop/NOTES/LEAD-966 list of formis on LG sites/individualfamilyhealth.com",
+				"/com/home/users/bshatzer/Desktop/NOTES/LEAD-966 list of formis on LG sites/myinsurancequotes.com",
+				"/com/home/users/bshatzer/Desktop/NOTES/LEAD-966 list of formis on LG sites/myinsurancequotes.com - Current Known Pages",
+				"/com/home/users/bshatzer/Desktop/NOTES/LEAD-966 list of formis on LG sites/healthplanwiz.com",
+				"/com/home/users/bshatzer/Desktop/NOTES/notes",
+				"/com/home/users/bshatzer/.zshrc",
+				"/com/home/users/bshatzer/Desktop/LEAD-310 & 311 files to push to prod.txt",
+				"/com/home/users/bshatzer/Desktop/NOTES/Web Dev HipChat commands",
+				"/com/home/users/bshatzer/Desktop/NOTES/Time Log ",
+				"/com/home/users/bshatzer/archive/MediaAlpha-underpop.css",
+				"/com/home/users/bshatzer/archive/LEAD-311.txt",
+				"/com/home/users/bshatzer/.hgrc",
+				"/tmp/fz3temp-1/compare-health-insurance.html",
+				"/tmp/fz3temp-1/affordable-health-insurance.html",
+				"/com/home/users/bshatzer/Desktop/LEAD-822_T&T-expirences/MediaAlpha_underpop.html",
+				"/com/home/users/bshatzer/Desktop/LEAD-822_T&T-expirences/BrokersWeb_underpop.html",
+				"/com/home/users/bshatzer/.config/sublime-text-3/Packages/User/Base File.sublime-settings",
+				"/com/home/users/bshatzer/.config/sublime-text-3/Packages/Terminal/Base File.sublime-settings",
+				"/com/home/users/bshatzer/LEAD-370_IHQ_Natural_Language_Form/individualhealthquotes/src/main/webapp/includes/healthNL.template.jsp",
+				"/com/home/users/bshatzer/consent-manager-js-lib/README.md",
+				"/com/home/users/bshatzer/consent-manager-js-lib/test/consentManagerContoller.js",
+				"/com/home/users/bshatzer/consent-manager-js-lib/test/ConsentManagerSpec.js",
+				"/com/home/users/bshatzer/consent-manager-js-lib/src/consentManager.js",
+				"/com/home/users/bshatzer/archive/renewmyblue/index-new.html",
+				"/com/home/users/bshatzer/Desktop/consent_messages/LeadGen.html",
+				"/com/home/users/bshatzer/gohealthinsurance-java/src/main/webapp/proxy-to-marketplace.jsp",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/frontend/README.md",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/frontend/dist/what-we-do.html",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/webapp/about-us.html",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/frontend/dist/careers/index.html",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/webapp/css/style.e7a970b5.css",
+				"/com/home/users/bshatzer/.bashrc",
+				"/com/home/users/bshatzer/gohealthinsurance-java/.reviewboardrc",
+				"/com/home/users/bshatzer/consent-manager-js-lib/Gruntfile.js",
+				"/com/home/users/bshatzer/consent-manager-js-lib/package.json",
+				"/com/home/users/bshatzer/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+				"/com/home/users/bshatzer/renewmyblue/page.html",
+				"/com/home/users/bshatzer/.mercurial_hook-check_commit_message",
+				"/com/home/users/bshatzer/hook-test/test",
+				"/com/home/users/bshatzer/hook-test/testfile",
+				"/com/home/users/bshatzer/hook-test/text.txt",
+				"/com/home/users/bshatzer/.profile",
+				"/com/home/users/bshatzer/.bash_profile",
+				"/com/home/users/bshatzer/Desktop/console.log",
+				"/com/home/users/bshatzer/Desktop/seems-excessive.html",
+				"/com/home/users/bshatzer/individualhealthquotes/src/main/webapp/includes/health.template.jsp",
+				"/com/home/users/bshatzer/individualhealthquotes/src/main/webapp/sftp-config.json",
+				"/com/home/users/bshatzer/individualhealthquotes/src/main/webapp/js/health-form-validation.js",
+				"/tmp/fz3temp-1/health-NL.jsp",
+				"/tmp/fz3temp-1/partners.html",
+				"/etc/hosts",
+				"/etc/shells",
+				"/etc/passwd"
+			],
+			"find":
+			{
+				"height": 35.0
+			},
+			"find_in_files":
+			{
+				"height": 95.0,
+				"where_history":
+				[
+					"/com/home/users/bshatzer/LEAD-311_Update_Logos_on_IHQ_Lead_Forms/individualhealthquotes/src",
+					"<current file>",
+					"",
+					"/com/home/users/bshatzer/wordpress-runner,/com/home/users/bshatzer/gohealth-wordpress-theme",
+					"/com/home/users/bshatzer/wordpress-runner",
+					"<open folders>"
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"+",
+					" -> ",
+					"http",
+					"&",
+					"listings.jsp:",
+					"listings.jsp:19 GET ",
+					"http",
+					"listings.jsp:19 ",
+					" -> ",
+					"->",
+					" /",
+					" -> ",
+					"->",
+					"\n+http",
+					"+",
+					"  -  displays unstyled page w/ broken or missing assets",
+					"(life insurance)",
+					"(life insurance) ",
+					"  -  ",
+					".html",
+					"old%20docs/",
+					"/a",
+					"(name=",
+					"-> ?loads index.jsp?",
+					"+",
+					"-> 500",
+					"-> ?loads index.jsp?",
+					"->",
+					"+",
+					"carriers",
+					"->",
+					":binary file",
+					": 5 changes [ 1 2 3 4 5 ]",
+					":binary file",
+					": 1 change [ 1 ]",
+					".com",
+					".kr8zyates.",
+					"individualhealthquotes.com",
+					"/zip",
+					"2",
+					".jsp",
+					"   ",
+					"  ",
+					"src/main/webapp/",
+					"src/main/",
+					"/",
+					"XXXX",
+					")",
+					"-",
+					"870",
+					"NREUM",
+					"NR",
+					"consentForm:submit",
+					"legal",
+					"/",
+					"blue-cross-blue-shield",
+					" - /includes/privacy.jsp",
+					" -/includes/privacy.jsp",
+					"-",
+					"images/insurancelogos.gif",
+					"/images/insurancelogos.gif",
+					"insurancelogos.gif",
+					"workplace/i",
+					"/insurance/",
+					"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/webapp/",
+					":",
+					"\\n",
+					"M ",
+					"src/main/webapp/",
+					"M ",
+					"- ",
+					" ",
+					"       \n",
+					"# No match.",
+					"[",
+					"'",
+					"taco",
+					"flag",
+					"taco",
+					");",
+					"individualhealthquotes/src/main/webapp",
+					"d.",
+					"c.",
+					"carr",
+					"setConditions",
+					"Health B",
+					"net",
+					"national",
+					"Vagrant",
+					"skorecky"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					""
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 5,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/com/home/users/bshatzer/Desktop/notes",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 886,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										575,
+										575
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"remote_loading": false,
+									"spell_check": true,
+									"syncScroll": false,
+									"synced": false,
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true,
+									"word_wrap": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 5,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 894,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										894,
+										894
+									]
+								],
+								"settings":
+								{
+									"auto_name": "rbt post -p --diff-filename changes.diff --summary",
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"spell_check": true,
+									"syncScroll": false,
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 878,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										193,
+										193
+									]
+								],
+								"settings":
+								{
+									"auto_name": "Finalized cross-browser functionality",
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"spell_check": true,
+									"syncScroll": false,
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 4,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1032,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1032,
+										1032
+									]
+								],
+								"settings":
+								{
+									"auto_name": "src/main/webapp/images/aetna.gif",
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"syncScroll": false,
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 4,
+							"file": "/com/home/users/bshatzer/Desktop/NOTES/LEAD-966 list of formis on LG sites/yourcoverageoptions.com",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 2367,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										408.0
+									],
+									"remote_loading": false,
+									"syncScroll": false,
+									"synced": false,
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 408.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 5,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 33,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										33,
+										33
+									]
+								],
+								"settings":
+								{
+									"auto_name": "==eHealthApply.org==",
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"syncScroll": false,
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 35.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"output.sftp":
+			{
+				"height": 123.0
+			},
+			"output.unsaved_changes":
+			{
+				"height": 114.0
+			},
+			"pinned_build_system": "",
+			"position": "0,0,1,0,0,1700,109,3158,753,3200,1800",
+			"project": "",
+			"replace":
+			{
+				"height": 46.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"h",
+						"src/main/webapp/health.jsp"
+					],
+					[
+						"partn",
+						"src/main/webapp/partners.html"
+					],
+					[
+						"vag",
+						"wordpress-runner/Vagrantfile"
+					],
+					[
+						"health.tem",
+						"httpdocs/includes/health.template.jsp"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": false,
+			"show_open_files": true,
+			"show_tabs": true,
+			"side_bar_visible": false,
+			"side_bar_width": 227.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 124,
+			"workspace_name": ""
+		},
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"back",
+						"background-repeat"
+					],
+					[
+						"backgroud",
+						"background-position"
+					],
+					[
+						"get",
+						"getParameter"
+					],
+					[
+						"text",
+						"text-decoration"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/com/home/users/bshatzer/ehealthapply.org/src/main/webapp/health.jsp",
+					"settings":
+					{
+						"buffer_size": 26978,
+						"line_ending": "Windows"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 328.0,
+				"last_filter": "jsp",
+				"selected_items":
+				[
+					[
+						"jsp",
+						"Set Syntax: Java Server Page (JSP)"
+					],
+					[
+						"html",
+						"Set Syntax: HTML"
+					],
+					[
+						"h",
+						"Set Syntax: HTML"
+					],
+					[
+						"plain",
+						"Set Syntax: Plain Text"
+					],
+					[
+						"css",
+						"Set Syntax: CSS3"
+					],
+					[
+						"jav",
+						"Set Syntax: JavaScript"
+					],
+					[
+						"alii",
+						"Preferences: Alignment File Settings – Default"
+					],
+					[
+						"java",
+						"Set Syntax: JavaScript"
+					],
+					[
+						"text",
+						"Set Syntax: Plain Text"
+					],
+					[
+						"jshi",
+						"JSHint"
+					],
+					[
+						"disc",
+						"Package Control: Discover Packages"
+					],
+					[
+						"disco",
+						"Package Control: Discover Packages"
+					],
+					[
+						"py",
+						"Set Syntax: Python"
+					],
+					[
+						"shell",
+						"Set Syntax: Shell Script (Bash)"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"javasc",
+						"Set Syntax: JavaScript"
+					],
+					[
+						"jsl",
+						"Set Syntax: JSTL"
+					],
+					[
+						"sftp",
+						"SFTP: Show Panel"
+					],
+					[
+						"diff",
+						"FileDiffs: Menu"
+					],
+					[
+						"dif",
+						"FileDiffs: Menu"
+					],
+					[
+						"dis",
+						"Package Control: Discover Packages"
+					],
+					[
+						"js",
+						"Set Syntax: JSTL"
+					],
+					[
+						"list",
+						"Package Control: List Packages"
+					]
+				],
+				"width": 514.0
+			},
+			"console":
+			{
+				"height": 368.0,
+				"history":
+				[
+					"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"expanded_folders":
+			[
+				"/com/home/users/bshatzer/ehealthapply.org",
+				"/com/home/users/bshatzer/ehealthapply.org/src",
+				"/com/home/users/bshatzer/ehealthapply.org/src/main",
+				"/com/home/users/bshatzer/ehealthapply.org/src/main/webapp"
+			],
+			"file_history":
+			[
+				"/com/home/users/bshatzer/.bashrc",
+				"/com/home/users/bshatzer/.zshrc",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/quotes/health_quotes.jsp",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/calculatingLifeQuotes.jsp",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/quotes/annuity_quotes.html",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/quotes/life_quotes.jsp",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/quotes/lifetest.jsp",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/includes/navbar.jsp",
+				"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/old docs/cfcroot/com/myinsurancequotes/users/briefcaseManager.cfc",
+				"/com/home/users/bshatzer/Desktop/NOTES/LEAD-966 list of formis on LG sites/healthplanwiz.com",
+				"/com/home/users/bshatzer/Desktop/NOTES/LEAD-966 list of formis on LG sites/trustedhealthquotes.com",
+				"/com/home/users/bshatzer/Desktop/NOTES/notes",
+				"/com/home/users/bshatzer/Desktop/LEAD-310 & 311 files to push to prod.txt",
+				"/com/home/users/bshatzer/Desktop/NOTES/Web Dev HipChat commands",
+				"/com/home/users/bshatzer/Desktop/NOTES/Time Log ",
+				"/com/home/users/bshatzer/archive/MediaAlpha-underpop.css",
+				"/com/home/users/bshatzer/archive/LEAD-311.txt",
+				"/com/home/users/bshatzer/.hgrc",
+				"/tmp/fz3temp-1/compare-health-insurance.html",
+				"/tmp/fz3temp-1/affordable-health-insurance.html",
+				"/com/home/users/bshatzer/Desktop/LEAD-822_T&T-expirences/MediaAlpha_underpop.html",
+				"/com/home/users/bshatzer/Desktop/LEAD-822_T&T-expirences/BrokersWeb_underpop.html",
+				"/com/home/users/bshatzer/.config/sublime-text-3/Packages/User/Base File.sublime-settings",
+				"/com/home/users/bshatzer/.config/sublime-text-3/Packages/Terminal/Base File.sublime-settings",
+				"/com/home/users/bshatzer/LEAD-370_IHQ_Natural_Language_Form/individualhealthquotes/src/main/webapp/includes/healthNL.template.jsp",
+				"/com/home/users/bshatzer/consent-manager-js-lib/README.md",
+				"/com/home/users/bshatzer/consent-manager-js-lib/test/consentManagerContoller.js",
+				"/com/home/users/bshatzer/consent-manager-js-lib/test/ConsentManagerSpec.js",
+				"/com/home/users/bshatzer/consent-manager-js-lib/src/consentManager.js",
+				"/com/home/users/bshatzer/archive/renewmyblue/index-new.html",
+				"/com/home/users/bshatzer/Desktop/consent_messages/LeadGen.html",
+				"/com/home/users/bshatzer/gohealthinsurance-java/src/main/webapp/proxy-to-marketplace.jsp",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/frontend/README.md",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/frontend/dist/what-we-do.html",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/webapp/about-us.html",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/frontend/dist/careers/index.html",
+				"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/webapp/css/style.e7a970b5.css",
+				"/com/home/users/bshatzer/gohealthinsurance-java/.reviewboardrc",
+				"/com/home/users/bshatzer/consent-manager-js-lib/Gruntfile.js",
+				"/com/home/users/bshatzer/consent-manager-js-lib/package.json",
+				"/com/home/users/bshatzer/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+				"/com/home/users/bshatzer/renewmyblue/page.html",
+				"/com/home/users/bshatzer/.mercurial_hook-check_commit_message",
+				"/com/home/users/bshatzer/hook-test/test",
+				"/com/home/users/bshatzer/hook-test/testfile",
+				"/com/home/users/bshatzer/hook-test/text.txt",
+				"/com/home/users/bshatzer/.profile",
+				"/com/home/users/bshatzer/.bash_profile",
+				"/com/home/users/bshatzer/Desktop/console.log",
+				"/com/home/users/bshatzer/Desktop/seems-excessive.html",
+				"/com/home/users/bshatzer/individualhealthquotes/src/main/webapp/includes/health.template.jsp",
+				"/com/home/users/bshatzer/individualhealthquotes/src/main/webapp/sftp-config.json",
+				"/com/home/users/bshatzer/individualhealthquotes/src/main/webapp/js/health-form-validation.js",
+				"/tmp/fz3temp-1/health-NL.jsp",
+				"/tmp/fz3temp-1/partners.html",
+				"/etc/hosts",
+				"/etc/shells",
+				"/etc/passwd"
+			],
+			"find":
+			{
+				"height": 25.0
+			},
+			"find_in_files":
+			{
+				"height": 95.0,
+				"where_history":
+				[
+					"/com/home/users/bshatzer/myinsurancequotes.com/src/main/webapp/quotes",
+					"/com/home/users/bshatzer/LEAD-311_Update_Logos_on_IHQ_Lead_Forms/individualhealthquotes/src",
+					"<current file>",
+					"",
+					"/com/home/users/bshatzer/wordpress-runner,/com/home/users/bshatzer/gohealth-wordpress-theme",
+					"/com/home/users/bshatzer/wordpress-runner",
+					"<open folders>"
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"form",
+					" bo",
+					"bo",
+					"leadsave",
+					"leadsave.url",
+					"submit",
+					"form",
+					"param.",
+					"param",
+					"action",
+					"input",
+					"include",
+					"-> ?loads index.jsp?",
+					"+",
+					"-> 500",
+					"-> ?loads index.jsp?",
+					"->",
+					"+",
+					"carriers",
+					"->",
+					":binary file",
+					": 5 changes [ 1 2 3 4 5 ]",
+					":binary file",
+					": 1 change [ 1 ]",
+					".com",
+					".kr8zyates.",
+					"individualhealthquotes.com",
+					"/zip",
+					"2",
+					".jsp",
+					"   ",
+					"  ",
+					"src/main/webapp/",
+					"src/main/",
+					"/",
+					"XXXX",
+					")",
+					"-",
+					"870",
+					"NREUM",
+					"NR",
+					"consentForm:submit",
+					"legal",
+					"/",
+					"blue-cross-blue-shield",
+					" - /includes/privacy.jsp",
+					" -/includes/privacy.jsp",
+					"-",
+					"images/insurancelogos.gif",
+					"/images/insurancelogos.gif",
+					"insurancelogos.gif",
+					"workplace/i",
+					"/insurance/",
+					"/com/home/users/bshatzer/LEAD-385_Update_TRUSTe_logo/gohealthinsurance-java/src/main/webapp/",
+					":",
+					"\\n",
+					"M ",
+					"src/main/webapp/",
+					"M ",
+					"- ",
+					" ",
+					"       \n",
+					"# No match.",
+					"[",
+					"'",
+					"taco",
+					"flag",
+					"taco",
+					");",
+					"individualhealthquotes/src/main/webapp",
+					"d.",
+					"c.",
+					"carr",
+					"setConditions",
+					"Health B",
+					"net",
+					"national",
+					"Vagrant",
+					"skorecky"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					""
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"folders":
+			[
+				{
+					"path": "/com/home/users/bshatzer/ehealthapply.org"
+				}
+			],
+			"groups":
+			[
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/com/home/users/bshatzer/ehealthapply.org/src/main/webapp/health.jsp",
+							"semi_transient": true,
+							"settings":
+							{
+								"buffer_size": 26978,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1164,
+										1164
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"remote_loading": false,
+									"syncScroll": false,
+									"synced": false,
+									"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 25.0
+			},
+			"input":
+			{
+				"height": 35.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"output.sftp":
+			{
+				"height": 123.0
+			},
+			"output.unsaved_changes":
+			{
+				"height": 114.0
+			},
+			"pinned_build_system": "",
+			"position": "0,0,1,0,0,1632,143,3074,816,3200,1800",
+			"project": "",
+			"replace":
+			{
+				"height": 46.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"h",
+						"src/main/webapp/health.jsp"
+					],
+					[
+						"partn",
+						"src/main/webapp/partners.html"
+					],
+					[
+						"vag",
+						"wordpress-runner/Vagrantfile"
+					],
+					[
+						"health.tem",
+						"httpdocs/includes/health.template.jsp"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": true,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 319.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 170,
+			"workspace_name": ""
+		},
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/com/home/users/bshatzer/.zsh-update",
+					"settings":
+					{
+						"buffer_size": 17,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/com/home/users/bshatzer/.zshrc",
+					"settings":
+					{
+						"buffer_size": 3054,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/com/home/users/bshatzer/.oh-my-zsh/themes/custom.zsh-theme",
+					"settings":
+					{
+						"buffer_size": 1663,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/com/home/users/bshatzer/.profile",
+					"settings":
+					{
+						"buffer_size": 425,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/com/home/users/bshatzer/.bashrc",
+					"settings":
+					{
+						"buffer_size": 3676,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/com/home/users/bshatzer/.bash_profile",
+					"settings":
+					{
+						"buffer_size": 217,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/com/home/users/bshatzer/.hgrc",
+					"settings":
+					{
+						"buffer_size": 435,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/com/home/users/bshatzer/.gitconfig",
+					"settings":
+					{
+						"buffer_size": 87,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/com/home/users/bshatzer/dotfiles/GoHealth/Preferences.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 272,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"contents": "\n#!/bin/bash\n#\n#   This file echoes a bunch of color codes to the\n#   terminal to demonstrate what's available.  Each\n#   line is the color code of one forground color,\n#   out of 17 (default + 16 escapes), followed by a\n#   test use of that color on all nine background\n#   colors (default + 8 escapes).\n#\n\n\n# T='gYw'   # The test text\n\n# echo -e \"\\n                 40m     41m     42m     43m\\\n#      44m     45m     46m     47m\";\n\n# for FGs in '    m' '   1m' '  30m' '1;30m' '  31m' '1;31m' '  32m' \\\n#            '1;32m' '  33m' '1;33m' '  34m' '1;34m' '  35m' '1;35m' \\\n#            '  36m' '1;36m' '  37m' '1;37m';\n#   do FG=${FGs// /}\n#   echo -en \" $FGs \\033[$FG  $T  \"\n#   for BG in 40m 41m 42m 43m 44m 45m 46m 47m;\n#     do echo -en \"$EINS \\033[$FG\\033[$BG  $T  \\033[0m\";\n#   done\n#   echo;\n# done\n# echo\n# cd \n\n\nRED='\\033[0;31m'\nNC='\\033[0m' # No Color\nprintf \"I ${RED}love${NC} Stack Overflow\\n\"",
+					"file": "/com/home/users/bshatzer/Desktop/color.sh",
+					"file_size": 788,
+					"file_write_time": 130948517335202430,
+					"settings":
+					{
+						"buffer_size": 909,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 72.0,
+				"last_filter": "set bash",
+				"selected_items":
+				[
+					[
+						"set bash",
+						"Set Syntax: Shell Script (Bash)"
+					],
+					[
+						"list",
+						"Package Control: List Packages"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"discover",
+						"Package Control: Discover Packages"
+					],
+					[
+						"dis",
+						"Package Control: Discover Packages"
+					],
+					[
+						"shell",
+						"Set Syntax: Shell Script (Bash)"
+					],
+					[
+						"js",
+						"Set Syntax: JSTL"
+					]
+				],
+				"width": 514.0
+			},
+			"console":
+			{
+				"height": 139.0,
+				"history":
+				[
+					"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"expanded_folders":
+			[
+				"/com/home/users/bshatzer/dotfiles",
+				"/com/home/users/bshatzer/dotfiles/GoHealth"
+			],
+			"file_history":
+			[
+				"/com/home/users/bshatzer/dotfiles/GoHealth/.zshrc",
+				"/com/home/users/bshatzer/dotfiles/GoHealth/custom.zsh-theme",
+				"/com/home/users/bshatzer/dotfiles/GoHealth/.profile",
+				"/com/home/users/bshatzer/dotfiles/GoHealth/.bashrc",
+				"/com/home/users/bshatzer/dotfiles/GoHealth/.hgrc",
+				"/com/home/users/bshatzer/dotfiles/GoHealth/.gitconfig",
+				"/com/home/users/bshatzer/.zsh-update",
+				"/com/home/users/bshatzer/.zsh_history",
+				"/com/home/users/bshatzer/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+				"/com/home/users/bshatzer/.bash_profile",
+				"/etc/shells",
+				"/etc/passwd",
+				"/com/home/users/bshatzer/.bashrc",
+				"/com/home/users/bshatzer/.zshrc"
+			],
+			"find":
+			{
+				"height": 35.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"blue",
+					"magenta",
+					"red",
+					"orange",
+					"cyan",
+					"blue",
+					"green",
+					"black",
+					"yellow",
+					"grey",
+					"black",
+					"gray",
+					"red"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 8,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/com/home/users/bshatzer/.zsh-update",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 17,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"remote_loading": false,
+									"syncScroll": false,
+									"synced": false,
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/com/home/users/bshatzer/.zshrc",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 3054,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										918.0
+									],
+									"remote_loading": false,
+									"syncScroll": false,
+									"synced": false,
+									"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 918.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/com/home/users/bshatzer/.oh-my-zsh/themes/custom.zsh-theme",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1663,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1397,
+										1397
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"remote_loading": false,
+									"syncScroll": false,
+									"synced": false,
+									"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 9,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/com/home/users/bshatzer/.profile",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 425,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										425,
+										425
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"remote_loading": false,
+									"syncScroll": false,
+									"synced": false,
+									"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 8,
+							"type": "text"
+						},
+						{
+							"buffer": 4,
+							"file": "/com/home/users/bshatzer/.bashrc",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 3676,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										3676,
+										3676
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										1632.0
+									],
+									"remote_loading": false,
+									"syncScroll": false,
+									"synced": false,
+									"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 1632.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 7,
+							"type": "text"
+						},
+						{
+							"buffer": 5,
+							"file": "/com/home/users/bshatzer/.bash_profile",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 217,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"remote_loading": false,
+									"syncScroll": false,
+									"synced": false,
+									"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 6,
+							"type": "text"
+						},
+						{
+							"buffer": 6,
+							"file": "/com/home/users/bshatzer/.hgrc",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 435,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"remote_loading": false,
+									"spell_check": false,
+									"syncScroll": false,
+									"synced": false,
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
+							"type": "text"
+						},
+						{
+							"buffer": 7,
+							"file": "/com/home/users/bshatzer/.gitconfig",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 87,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										87,
+										87
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"remote_loading": false,
+									"syncScroll": false,
+									"synced": false,
+									"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 4,
+							"type": "text"
+						},
+						{
+							"buffer": 8,
+							"file": "/com/home/users/bshatzer/dotfiles/GoHealth/Preferences.sublime-settings",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 272,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"remote_loading": false,
+									"syncScroll": false,
+									"synced": false,
+									"syntax": "Packages/JavaScript/JSON.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 9,
+							"file": "/com/home/users/bshatzer/Desktop/color.sh",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 909,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										909,
+										909
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"origPos":
+									[
+										0.0,
+										0.0
+									],
+									"remote_loading": false,
+									"syncScroll": false,
+									"synced": false,
+									"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 5,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 35.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"output.sftp":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,0,0,0,0,1600,21,3042,694,3200,1800",
+			"project": "shell-dot-files.sublime-project",
+			"replace":
+			{
+				"height": 0.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"health.tem",
+						"httpdocs/includes/health.template.jsp"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": false,
+			"show_open_files": true,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 229.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 173,
+			"workspace_name": "/com/home/users/bshatzer/sublime_projects/shell-dot-files.sublime-workspace"
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+			"/com/home/users/bshatzer/sublime_projects/shell-dot-files.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/getyourinsurancequote.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/yourcoverageoptions.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/individualfamilyhealth-legacy.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/insurelane.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/MyInsuranceQuotes.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/healthplanwiz.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/trustedhealthquotes.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/individualhealthquotes.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/madlib.sublime-workspace",
+			"/com/home/users/bshatzer/LEAD-311_Update_Logos_on_IHQ_Lead_Forms/project.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/consent_messages.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/gohealthinsurance-java.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/LEAD-385_Update_TRUSTe_logo.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/unitedhealthcare-renewal.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/NaturalLanguageForm.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/gohealth-wordpress-theme.sublime-workspace",
+			"/com/home/users/bshatzer/sublime_projects/individualhealthquotes.kr8zyates.com.sublime-workspace"
+		]
+	}
+}

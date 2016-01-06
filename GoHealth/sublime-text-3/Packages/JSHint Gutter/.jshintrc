@@ -1,0 +1,75 @@
+{
+  // The plugin looks for a .jshintrc file in the same directory as the source
+  // file you're prettifying (or any directory above if it doesn't exist, or in
+  // your home folder if everything else fails) and uses those options along
+  // the default ones.
+
+  // Details: https://github.com/victorporof/Sublime-JSHint#using-your-own-jshintrc-options
+  // Example: https://github.com/jshint/jshint/blob/master/examples/.jshintrc
+  // Documentation: http://www.jshint.com/docs/options/
+  
+  // defaults
+  //"browser": true,
+  //"esnext": true,
+  //"globals": {},
+  //"globalstrict": true,
+  //"quotmark": true,
+  //"undef": true,
+  //"unused": true
+
+//GoHealth Strict 
+//via https://scm.dev.norvax.net/scm/hg/tools/hg-commit-hooks
+  "asi"          : true,
+  "bitwise"      : true,
+  "browser"      : true,
+  "boss"         : false,
+  "curly"        : false,
+  "debug"        : false,
+  "eqnull"       : false,
+  "es5"          : false,
+  "esnext"       : false,
+  "eqeqeq"       : false,
+  "evil"         : false,
+  "expr"         : false,
+  "forin"        : true,
+  "funcscope"    : false,
+  "globalstrict" : true,
+  "immed"        : true,
+  "iterator"     : false,
+  "jquery"       : true,
+  "lastsemic"    : false,
+  "latedef"      : true,
+  "laxbreak"     : false,
+  "laxcomma"     : false,
+  "loopfunc"     : false,
+  "maxerr"       : 1000,
+  "multistr"     : false,
+  "newcap"       : true,
+  "noarg"        : true,
+  "noempty"      : true,
+  "nonew"        : true,
+  "onecase"      : false,
+  "plusplus"     : true,
+  "proto"        : false,
+  "prototypejs"  : true,
+  "regexdash"    : false,
+  "regexp"       : true,
+  "scripturl"    : false,
+  "smarttabs"    : true,
+  "shadow"       : false,
+  "strict"       : false,
+  "sub"          : false,
+  "supernew"     : false,
+  "trailing"     : true,
+  "undef"        : true,
+  "validthis"    : false,
+
+  "globals": {
+      "describe"   : false,
+      "it"         : false,
+      "before"     : false,
+      "beforeEach" : false,
+      "after"      : false,
+      "afterEach"  : false
+  }
+}

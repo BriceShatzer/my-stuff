@@ -1,0 +1,21 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"CSS3",
+		"Dotfiles Syntax Highlighting",
+		"FileDiffs",
+		"JSHint Gutter",
+		"JSTL syntax",
+		"LESS",
+		"Package Control",
+		"SFTP",
+		"Sync View Scroll",
+		"Theme - SoDaReloaded",
+		"Trimmer"
+	]
+}
