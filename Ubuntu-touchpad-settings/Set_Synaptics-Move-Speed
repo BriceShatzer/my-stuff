@@ -1,0 +1,10 @@
+#values: MinSpeed, MaxSpeed, AccelFactor, TrackstickSpeed
+
+#Lenovo - Lower min speed to .75
+xinput set-prop 11 278 0.75, 1.735, 0.013, 0
+
+#Dell - Lower min speed & AccelFactor
+xinput set-prop 14 293 0.75, 1.750000, 0.0785, 0.000000
+xinput set-prop 14 293 0.75, 1.75, 0.030,0
+xinput set-prop 'AlpsPS/2 ALPS DualPoint TouchPad' 'Synaptics Move Speed' 0.75, 1.75, 0.030, 0
+xinput set-prop 'AlpsPS/2 ALPS DualPoint TouchPad' 'Synaptics Move Speed' 0.5, 1.75, 0.030, 0

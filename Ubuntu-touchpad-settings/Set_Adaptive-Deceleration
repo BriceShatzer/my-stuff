@@ -1,0 +1,5 @@
+#Lenovo
+xinput set-prop 11 264 2
+
+#Dell
+xinput set-prop 'AlpsPS/2 ALPS DualPoint TouchPad' 'Device Accel Adaptive Deceleration' 2

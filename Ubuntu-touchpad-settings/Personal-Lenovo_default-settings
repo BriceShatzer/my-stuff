@@ -1,0 +1,43 @@
+Device 'SynPS/2 Synaptics TouchPad':
+        Device Enabled (139):   1
+        Coordinate Transformation Matrix (141): 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000
+        Device Accel Profile (262):     1
+        Device Accel Constant Deceleration (263):       2.500000
+        Device Accel Adaptive Deceleration (264):       1.000000
+        Device Accel Velocity Scaling (265):    12.500000
+        Synaptics Edges (266):  1751, 5191, 1624, 4282
+        Synaptics Finger (267): 25, 30, 0
+        Synaptics Tap Time (268):       180
+        Synaptics Tap Move (269):       222
+        Synaptics Tap Durations (270):  180, 180, 100
+        Synaptics ClickPad (271):       0
+        Synaptics Middle Button Timeout (272):  75
+        Synaptics Two-Finger Pressure (273):    282
+        Synaptics Two-Finger Width (274):       7
+        Synaptics Scrolling Distance (275):     -101, -101
+        Synaptics Edge Scrolling (276): 0, 0, 0
+        Synaptics Two-Finger Scrolling (277):   1, 1
+        Synaptics Move Speed (278):     1.000000, 1.735000, 0.013000, 0.000000
+        Synaptics Off (279):    2
+        Synaptics Locked Drags (280):   0
+        Synaptics Locked Drags Timeout (281):   5000
+        Synaptics Tap Action (282):     2, 3, 0, 0, 1, 3, 0
+        Synaptics Click Action (283):   1, 1, 0
+        Synaptics Circular Scrolling (284):     0
+        Synaptics Circular Scrolling Distance (285):    0.100000
+        Synaptics Circular Scrolling Trigger (286):     0
+        Synaptics Circular Pad (287):   0
+        Synaptics Palm Detection (288): 0
+        Synaptics Palm Dimensions (289):        10, 200
+        Synaptics Coasting Speed (290): 20.000000, 50.000000
+        Synaptics Pressure Motion (291):        30, 160
+        Synaptics Pressure Motion Factor (292): 1.000000, 1.000000
+        Synaptics Resolution Detect (293):      1
+        Synaptics Grab Event Device (294):      0
+        Synaptics Gestures (295):       1
+        Synaptics Capabilities (296):   1, 0, 1, 1, 1, 1, 1
+        Synaptics Pad Resolution (297): 85, 60
+        Synaptics Area (298):   0, 0, 0, 0
+        Synaptics Noise Cancellation (299):     25, 25
+        Device Product ID (257):        2, 7
+        Device Node (258):      "/dev/input/event4"
