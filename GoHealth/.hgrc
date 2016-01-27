@@ -4,13 +4,15 @@ verbose = True
 
 [auth]
 GoHealthSCM.prefix = https://scm.dev.norvax.net/scm/hg
-GoHealthSCM.username = xxx
-GoHealthSCM.password = xxx
+GoHealthSCM.username = bshatzer
+GoHealthSCM.password = 760531Y0shi
 
 [alias]
 log = log --graph
 
 [hooks]
+#pretxncommit.print = hg log -r $HG_NODE --template {desc} #used in debugging hook issue
+
 #check if commit message is properly formatted (ie: starts with the ticket id)
-pretxncommit.ticket_id_required = hg log -r $HG_NODE --template {desc} | grep -q "^[[:alpha:]]*-[[:digit:]]*[[:space:]]"
+pretxncommit.ticket_id_required = hg log -r $HG_NODE --template {desc} | grep -q "^o  [[:alpha:]]*-[[:digit:]]*[[:space:]]"
 
