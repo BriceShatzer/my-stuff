@@ -7,8 +7,8 @@ GoHealthSCM.prefix = https://scm.dev.norvax.net/scm/hg
 GoHealthSCM.username = xxx
 GoHealthSCM.password = xxx
 
-[defaults]
-log = --graph
+[alias]
+log = log --graph
 
 [hooks]
 #check if commit message is properly formatted (ie: starts with the ticket id)
