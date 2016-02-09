@@ -1,0 +1,20 @@
+[user]
+    name = Brice Shatzer
+    email = brice@doejo.com
+
+[push]
+    default = simple
+    
+[core]
+    excludesfile = /Users/Brice/.gitignore_global
+
+[alias]
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path = 
+
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
