@@ -10,6 +10,7 @@
 
 [alias]
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    ignored = !git ls-files -v | grep "^[[:lower:]]"
 
 [difftool "sourcetree"]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
