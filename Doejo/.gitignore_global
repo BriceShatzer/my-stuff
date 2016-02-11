@@ -50,7 +50,12 @@ Thumbs.db
 # sftp configuration file
 sftp-config.json
 
-# Wordpress files  #
-######################
+# Wordpress files #
+###################
 wp-config.php
+
+# Frontend build files #
+########################
+node_modules
+bower_components
 
