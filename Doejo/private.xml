@@ -2,9 +2,12 @@
 <?xml version="1.0"?>
 <root>
     <item>
-        <name>Invert scroll on Apple Optical Mouse</name>
-        <identifier>remap.reverse_apple_optical_scroll</identifier>
-        <device_only>DeviceVendor::RawValue::0x05ac, DeviceProduct::RawValue::0x0304</device_only>
+        <name>Invert Scroll Wheel on Mouse</name>
+        <identifier>remap.reverse_optical_mouse_scroll_wheel</identifier>
+        <device_only>
+            DeviceVendor::RawValue::0x05ac, DeviceProduct::RawValue::0x0304,
+            DeviceVendor::RawValue::0x045e, DeviceProduct::RawValue::0x0040
+        </device_only>
         <autogen>__FlipScrollWheel__ Option::FLIPSCROLLWHEEL_VERTICAL</autogen>
     </item>
 </root>
