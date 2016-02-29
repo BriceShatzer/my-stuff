@@ -3,11 +3,21 @@
 <root>
     <item>
         <name>Invert Scroll Wheel on Mouse</name>
-        <identifier>remap.reverse_optical_mouse_scroll_wheel</identifier>
+        <identifier>remap.private_reverseScrollWheelOnOpticalMice</identifier>
         <device_only>
             DeviceVendor::RawValue::0x05ac, DeviceProduct::RawValue::0x0304,
             DeviceVendor::RawValue::0x045e, DeviceProduct::RawValue::0x0040
         </device_only>
         <autogen>__FlipScrollWheel__ Option::FLIPSCROLLWHEEL_VERTICAL</autogen>
+    </item>
+    <item>
+        <name>Chrome: F12 to open dev tools</name>
+        <identifier>remap.private_chromeDevTools</identifier>
+        <only>GOOGLE_CHROME</only>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::F12,
+            KeyCode::i, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L
+        </autogen>
     </item>
 </root>
