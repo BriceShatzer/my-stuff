@@ -213,8 +213,6 @@
             <string>constant.character, string</string>
             <key>settings</key>
             <dict>
-                <key>background</key>
-                <string>#0416521A</string>
                 <key>fontStyle</key>
                 <string></string>
                 <key>foreground</key>
@@ -267,8 +265,8 @@
             <string>string source, text source</string>
             <key>settings</key>
             <dict>
-                <key>foreground</key>
-                <string>#bcbcbc</string>
+                <key>foreground</key>                
+                <string>#fdff99</string>
             </dict>
         </dict>
 
@@ -684,9 +682,9 @@
             <key>settings</key>
             <dict>
                 <key>background</key>
-                <string>#44444422</string>
+                <string>#666666</string>
                 <key>foreground</key>
-                <string>#555555</string>
+                <string>#000000</string>
             </dict>
         </dict>
         <dict>
@@ -697,7 +695,9 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#666666</string>
+                <string>#AAAAAA</string>
+                <key>background</key>
+                <string>#3E3E3E</string>
             </dict>
         </dict>
         <dict>
@@ -757,7 +757,7 @@
                 <key>background</key>
                 <string>#3E3E3E</string>
                 <key>foreground</key>
-                <string>#3E3E3E</string>
+                <string>#000000</string>
             </dict>
         </dict>
         <dict>
