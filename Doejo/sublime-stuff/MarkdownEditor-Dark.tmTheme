@@ -10,7 +10,7 @@
             <key>settings</key>
             <dict>
                 <key>background</key>
-                <string>#272822</string>                
+                <string>#272822</string>
                 <key>caret</key>
                 <string>#00bbff</string>
                 <key>foreground</key>
@@ -263,7 +263,7 @@
             <string>string source, text source</string>
             <key>settings</key>
             <dict>
-                <key>foreground</key>                
+                <key>foreground</key>
                 <string>#fdff99</string>
             </dict>
         </dict>
@@ -403,7 +403,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#3db7ff</string>                
+                <string>#3db7ff</string>
             </dict>
         </dict>
         <dict>
@@ -534,8 +534,7 @@
                 , markup.strikethrough punctuation.definition.constant.end.markdown,
                 , markup.strikethrough punctuation.definition.constant.markdown,
                 , markup.strikethrough punctuation.definition.metadata.markdown,
-                , markup.strikethrough punctuation.definition.raw.markdown,
-                , markup.strikethrough punctuation.definition.strikethrough.markdown,
+                , markup.strikethrough punctuation.definition.raw.markdown,                
                 , markup.strikethrough punctuation.definition.string.begin.markdown,
                 , markup.strikethrough punctuation.definition.string.end.markdown,
                 , markup.strikethrough punctuation.definition.tag.begin.html,
@@ -547,9 +546,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#313131</string>
-                <key>background</key>
-                <string>#272822</string>
+                <string>#111111</string>
             </dict>
         </dict>
         <dict>
