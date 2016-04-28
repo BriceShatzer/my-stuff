@@ -83,6 +83,8 @@ export EDITOR="$VISUAL"
 #
 
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
+alias homesteadYAML = 'nano ~/.homestead/Homestead.yaml'
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
