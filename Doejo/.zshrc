@@ -53,7 +53,7 @@ plugins=(git mercurial)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/Brice/.rvm/bin:/Users/Brice/.rvm/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/Brice/.rvm/bin:/Users/Brice/.rvm/bin:/Users/Brice/.composer/vendor/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
