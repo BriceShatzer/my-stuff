@@ -1,6 +1,15 @@
 <!-- Custom Karabiner file, lives /Users/Brice/Library/Application Support/Karabiner/private.xml -->
+<!-- 
+    ITERM2 Modifications requires that the following mapping be added to the ITERM2 profile perferences 
+    option+left > Send Escape Sequence > Esc+b
+    option+right > Send Escape Sequence > Esc+f
+-->
 <?xml version="1.0"?>
 <root>
+    <appdef>
+        <appname>ITERM2</appname>
+        <equal>com.googlecode.iterm2</equal>
+    </appdef>
     <item>
         <name>Invert Scroll Wheel on Mouse</name>
         <identifier>remap.private_reverseScrollWheelOnOpticalMice</identifier>
@@ -15,9 +24,29 @@
         <identifier>remap.private_chromeDevTools</identifier>
         <only>GOOGLE_CHROME</only>
         <autogen>
-            __KeyToKey__ 
+            __KeyToKey__
             KeyCode::F12,
-            KeyCode::i, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L
+            KeyCode::I, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L
         </autogen>
     </item>
+    <item>
+        <name>Iterm: Next Word</name>
+        <identifier>remap.private_itermNextWord</identifier>
+        <only>ITERM2</only>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L,
+            KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L
+        </autogen>
+    </item>
+    <item>
+        <name>Iterm: Previous Word</name>
+        <identifier>remap.private_itermPreviousWord</identifier>
+        <only>ITERM2</only>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L,
+            KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L
+        </autogen>
+    </item>    
 </root>
