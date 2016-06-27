@@ -9,6 +9,7 @@
     excludesfile = /Users/Brice/.gitignore_global
 
 [alias]
+    branches = branch --list
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     ignored = !git ls-files -v | grep "^[[:lower:]]"
 
