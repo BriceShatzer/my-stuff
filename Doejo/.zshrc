@@ -83,8 +83,12 @@ export EDITOR="$VISUAL"
 #
 
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+
+function simpleserver() {ruby -run -e httpd . -p "${1:-8000}"}
+alias ss=simpleserver
+
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
-alias homesteadYAML = 'nano ~/.homestead/Homestead.yaml'
+alias homesteadYAML='nano ~/.homestead/Homestead.yaml'
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
