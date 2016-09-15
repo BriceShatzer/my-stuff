@@ -14,7 +14,7 @@
         <name>Invert Scroll Wheel on Mouse</name>
         <identifier>remap.private_reverseScrollWheelOnOpticalMice</identifier>
         <device_only>
-            DeviceVendor::RawValue::0x004c, DeviceProduct::RawValue::0x0269,
+            <!-- DeviceVendor::RawValue::0x004c, DeviceProduct::RawValue::0x0269, magic mouse-->
             DeviceVendor::RawValue::0x05ac, DeviceProduct::RawValue::0x0304,
             DeviceVendor::RawValue::0x045e, DeviceProduct::RawValue::0x0040
         </device_only>
