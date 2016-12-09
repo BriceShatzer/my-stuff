@@ -87,6 +87,14 @@ alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 function simpleserver() {ruby -run -e httpd . -p "${1:-8000}"}
 alias ss=simpleserver
 
+#http://brettterpstra.com/projects/mdless/
+# ^ ruby gem, may require: sudo pip install Pygments
+function readMarkdown() {
+    cat $1 | mdless
+}
+alias rmd=readMarkdown
+
+
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
 alias homesteadYAML='nano ~/.homestead/Homestead.yaml'
 
