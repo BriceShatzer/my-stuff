@@ -2,7 +2,7 @@ Set-up
 
 In Steam Library: Properties > General > SET LAUNCH OPTIONS = -novid +exec autoexec.cfg
 
-"...\Steam\userdata\<YOURID>\730\local\cfg
+"...\Steam\userdata\<YOURID>\730\local\cfg  
  ^ autoexec.cfg 
  ^ config.cfg
  
