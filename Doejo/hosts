@@ -1,0 +1,33 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1   localhost
+::1             localhost
+255.255.255.255 broadcasthost
+192.168.10.10   lincoln-common.dev
+192.168.10.10   craft.dev
+10.86.73.80     vip.local
+#192.168.10.10   investors.app
+#192.168.10.10   linksdocs.app
+#192.168.10.10   zorch.app
+
+## hardcoded GitHub to get around dns issue
+192.30.253.113 github.com
+151.101.4.133 assets-cdn.github.com
+
+## hardcoding gitlab.doejo.com for some reason
+159.203.102.236 gitlab.doejo.com
+
+## vagrant-hostmanager-start id: ff4659ae-92aa-4306-a4f2-edf6eac05058
+192.168.50.5    zorch.dev
+
+## vagrant-hostmanager-end
+
+## vagrant-hostmanager-start id: 433339b2-41e0-4cb2-9b92-719752f3b112
+192.168.50.5    zorch-project.dev
+192.168.50.5    www.zorch-project.dev
+## vagrant-hostmanager-end
+
