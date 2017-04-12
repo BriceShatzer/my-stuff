@@ -1,6 +1,6 @@
 [user]
-    name = Brice Shatzer
-    email = brice@doejo.com
+    name = 
+    email = 
 
 [push]
     default = simple
@@ -11,10 +11,9 @@
 [alias]
     branches = branch --list
     hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-#   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short    
+#   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short        
     history = !git hist && exit 
     ignored = !git ls-files -v | grep "^[[:lower:]]"
-
 
 [difftool "sourcetree"]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -26,3 +25,7 @@
 
 [merge]
     tool = opendiff
+[commit]
+    template = /Users/Brice/.stCommitMsg
+[pull]
+    rebase = true
