@@ -94,10 +94,14 @@ function readMarkdown() {
 }
 alias rmd=readMarkdown
 
-
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
 alias homesteadYAML='nano ~/.homestead/Homestead.yaml'
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Shows all files/folders
+# alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+alias sourcetree = 'open -a SourceTree .'
+alias st = sourcetree
+
+export NVM_DIR="/Users/Brice/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
