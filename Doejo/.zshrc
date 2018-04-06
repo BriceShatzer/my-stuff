@@ -97,6 +97,12 @@ alias rmd=readMarkdown
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
 alias homesteadYAML='nano ~/.homestead/Homestead.yaml'
 
+#https://github.com/hugomd/parrot.live
+alias parrot='curl parrot.live'
+alias partyparrot=parrot
+alias testinternet=parrot
+
+
 # Shows all files/folders
 # alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
