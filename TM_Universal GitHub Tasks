@@ -14,6 +14,7 @@
     let state_commitTimesConverted = false;
     let state_diffCollapserCreated = false;
     let state_usernamesConverted = false;
+    let state_githubIsWide = false
 
     updateState();
 //    showWikiButtons();
@@ -27,15 +28,18 @@
         state_commitTimesConverted = document.querySelectorAll('relative-time').length > 0 ? true : false;
         state_diffCollapserCreated = document.querySelectorAll('button[aria-label="Toggle diff text"]').length > 0 ? true : false;
         state_usernamesConverted = document.querySelectorAll('real-name').length > 0 ? true : false;
+        state_githubIsWide = document.getElementById('makeGithubWide') ? true : false;
 
         console.log('states updated:');
         console.log('commitTimesConverted-'+state_commitTimesConverted);
         console.log('diffCollapserCreated-'+state_diffCollapserCreated);
         console.log('usernamesConverted-'+state_usernamesConverted);
+        console.log('githubIsWide-'+state_githubIsWide);
 
         createDiffCollapser();
         convertCommitTimes();
         convertUsernamesToRealNames();
+        makeGithubWide();
     }
 /* ಠ_ಠ
     function showWikiButtons() {
@@ -118,7 +122,101 @@
             });
         }
     }
-/* Create Diff Collapser */
+
+/* Wide-Github */
+// source: https://github.com/xthexder/wide-github
+    function makeGithubWide() {
+        var styleSheet = "" +
+        ".header .container {" +
+          "width: auto !important;" +
+          "margin-left: 20px !important;" +
+          "margin-right: 20px !important;" +
+          "min-width: 980px;" +
+        "}" +
+        "#js-repo-pjax-container .container {" +
+          "width: auto !important;" +
+          "margin-left: 20px !important;" +
+          "margin-right: 20px !important;" +
+          "min-width: 980px;" +
+        "}" +
+        ".full-width .container {" +
+          "padding-left: 0px !important;" +
+          "padding-right: 0px !important;" +
+        "}" +
+
+        // New PR split diff
+        ".full-width .new-pr-form {" +
+          "max-width: none !important;" +
+        "}" +
+
+        // Repository Issues
+        "#js-repo-pjax-container .repository-content .discussion-timeline {" +  // Issue body
+          "margin-left: -220px;" +
+          "padding-left: 220px;" +
+          "width: 100% !important;" +
+        "}" +
+        ".repository-content .discussion-sidebar {" +
+          "width: 200px !important;" +
+        "}" +
+        ".repository-content .timeline-new-comment {" + // New Issue / issue comment form
+          "max-width: 100% !important;" +
+        "}" +
+        ".repository-content .inline-comments .comment-holder {" + // Diff / code comments
+          "max-width: 960px !important;" +
+        "}" +
+        ".repository-content .inline-comments .inline-comment-form-container {" +
+          "max-width: 960px !important;" +
+        "}" +
+        ".repository-content .inline-comments .inline-comment-form {" +
+          "max-width: 960px !important;" +
+        "}" +
+
+        // Repository pulse page
+        ".repository-content .authors-and-code .section {" + // Contributors bar graph
+          "width: 50%;" +
+          "height: 180px;" +
+        "}" +
+        ".repository-content .authors-and-code .section svg {" +
+          "height: 180px;" +
+        "}" +
+
+        // Repository graph page
+        ".repository-content .capped-card {" + // Graph cards on contributors / graph list
+          "margin:10px 10px 0 0 !important;" +
+        "}" +
+
+        // Gists
+        ".gist-content-wrapper .container {" +
+          "width: auto !important;" +
+          "margin-left: 20px !important;" +
+          "margin-right: 20px !important;" +
+          "min-width: 980px;" +
+        "}" +
+
+        // ultrawide margins
+        "@media (min-width: 1280px) { "+
+            ".header .container, " +
+            "#js-repo-pjax-container .container, " +
+            ".gist-content-wrapper .container {" +
+              "margin-left: 3% !important;" +
+              "margin-right: 3% !important;" +
+            "}"+
+        "}"+
+
+        "";
+
+        (function () {
+          var s = document.createElement('style');
+          s.id = "makeGithubWide";
+          s.type = "text/css";
+          s.innerHTML = styleSheet;
+          (document.head || document.documentElement).appendChild(s);
+        })();
+    }
+
+
+
+/* Convert Usernames to Real Names ?(WIP)? */
     function convertUsernamesToRealNames() {
         const usernames = [...document.querySelectorAll('.author')];
 
@@ -174,7 +272,7 @@
             }
 */
 
-        });
+        }); // usernames.forEach() end
     }
 
 
