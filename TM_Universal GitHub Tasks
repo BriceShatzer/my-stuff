@@ -82,19 +82,34 @@
                     el.parentNode.removeChild(el);
                 });
             }
-            let el = document.createElement('button');
+            let el = document.createElement('img');
+            let styleText = "position:fixed;" + 
+                        "left:.5rem;" +
+                        "bottom:50vh;" +
+                        "max-width:20px;" +
+                        "z-index:50;" + 
+                        "cursor:pointer";                        
+            el.src = "https://raw.githubusercontent.com/webdog/octicons-png/master/black/fold.png";
+            el.alt ="Collapse/Expand Diffs";
             el.setAttribute('id','diffCollapser');
-            el.setAttribute('style','position:fixed;left:2rem;bottom:50vh;z-index:50;');
-            el.setAttribute('class', 'btn');
-            el.innerHTML = 'Collapse Diffs';
-            el.addEventListener('click',()=>{
 
-                if(el.innerHTML === 'Collapse Diffs'){
+            el.setAttribute('style',styleText);
+            el
+            //el.setAttribute('class', 'btn');
+            //el.innerHTML = 'Collapse Diffs';
+            el.addEventListener('click',()=>{
+                function setStatus(status) {
+                    el.setAttribute('data-status',status);
+                }                  
+
+                if(el.getAttribute('data-status') === 'Collapse'){
                     collapseDiffs();
-                    el.innerHTML = 'Expand Diffs';
+                    setStatus('Expand');
+                    //el.innerHTML = 'Expand Diffs';
                 } else {
                     expandDiffs();
-                    el.innerHTML = 'Collapse Diffs';
+                    setStatus('Collapse');
+                    //el.innerHTML = 'Collapse Diffs';
                 }
 
             });
