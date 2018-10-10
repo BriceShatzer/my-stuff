@@ -38,8 +38,9 @@
 
         createDiffCollapser();
         convertCommitTimes();
-        convertUsernamesToRealNames();
+        //convertUsernamesToRealNames();
         makeGithubWide();
+        attachCustomControlsToPage();
     }
 /* ಠ_ಠ
     function showWikiButtons() {
@@ -47,15 +48,101 @@
         if(wikiButtons){wikiButtons.style.display = 'block';}
     }
 */
-/* Create Tampermonkey Re-run Button */
-    let reRunButton = document.createElement('img');
-    reRunButton.setAttribute('src','https://camo.githubusercontent.com/9919bc7e220f6919cdac2d9ec00b99caa9791c3b/687474703a2f2f692e696d6775722e636f6d2f3539566766457a2e706e67');
-    reRunButton.setAttribute('style','position:fixed;top:16px;left:16px;z-index:50;cursor:pointer;max-width:16px');
-    reRunButton.addEventListener('click',()=>{
-        updateState();
-    });
-    document.body.append(reRunButton);
 
+
+/* Attach custom controls to the page */
+    function attachCustomControlsToPage(){
+        let repoInfo = document.head.querySelector("[name=octolytics-dimension-repository_nwo][content]").content;
+        let oldControls = document.getElementById('customControls');
+        if(oldControls){ document.body.removeChild(oldControls)}
+
+        let styles = `
+            .searchToggleControl {
+                margin: 0 0.5rem;
+                cursor: pointer
+            }
+            .searchToggleControl:hover {
+                text-decoration: none;
+            }
+            #searchControls {
+                display: inline-flex;
+                transition: width 300ms ease;
+                width: 0;
+                overflow: hidden;
+            }
+            #searchControls.open {
+                width: 160px;
+            }
+            #searchControls input[type='text']{
+                width: 120px;
+                margin-right: 0.5rem;
+            }
+            #customControls {
+                position:fixed;
+                top:16px;
+                left:16px;
+                z-index:50;
+            }
+        `
+
+
+        if(!document.getElementById('controlStyles')) {
+            attachAStyleSheet(styles,'controlStyles');
+        }
+
+
+    /* Create Tampermonkey Re-run Button */
+        let reRunButton = document.createElement('img');
+        reRunButton.setAttribute('src','https://camo.githubusercontent.com/9919bc7e220f6919cdac2d9ec00b99caa9791c3b/687474703a2f2f692e696d6775722e636f6d2f3539566766457a2e706e67');
+        reRunButton.setAttribute('style','cursor:pointer;max-width:16px');
+        reRunButton.addEventListener('click',()=>{
+            updateState();
+        });
+        //document.body.append(reRunButton);
+
+    /* Create Repo Search Control */
+        let searchToggleControl = document.createElement('a');
+        searchToggleControl.textContent = '🔍';
+        searchToggleControl.classList.add('searchToggleControl');
+        searchToggleControl.addEventListener('click', () => {
+            let controls = document.getElementById('searchControls');
+            controls.classList.toggle('open');
+        });
+
+
+        let searchField = document.createElement('input');
+        searchField.setAttribute('type','text');
+        searchField.setAttribute('id','searchField');
+
+
+        let searchButton = document.createElement('button');
+        searchButton.textContent = '»';
+        searchButton.addEventListener('click', () => {
+//            document.getElementById('searchField');
+
+
+        });
+
+
+        let searchControls = document.createElement('div');
+        searchControls.setAttribute('id','searchControls');
+        searchControls.append(searchField);
+        searchControls.append(searchButton);
+
+
+        let customControls = document.createElement('div');
+        customControls.setAttribute('id', 'customControls');
+        customControls.append(reRunButton);
+        if (repoInfo) {
+            customControls.append(searchToggleControl);
+            customControls.append(searchControls);
+        }
+
+
+
+        document.body.append(customControls);
+
+    }
 /* Convert Commit Times To Non-realtive */
     function convertCommitTimes() {
         if(state_commitTimesConverted === false) {
@@ -83,12 +170,12 @@
                 });
             }
             let el = document.createElement('img');
-            let styleText = "position:fixed;" + 
+            let styleText = "position:fixed;" +
                         "left:.5rem;" +
                         "bottom:50vh;" +
                         "max-width:20px;" +
-                        "z-index:50;" + 
-                        "cursor:pointer";                        
+                        "z-index:50;" +
+                        "cursor:pointer";
             el.src = "https://raw.githubusercontent.com/webdog/octicons-png/master/black/fold.png";
             el.alt ="Collapse/Expand Diffs";
             el.setAttribute('id','diffCollapser');
@@ -100,7 +187,7 @@
             el.addEventListener('click',()=>{
                 function setStatus(status) {
                     el.setAttribute('data-status',status);
-                }                  
+                }
 
                 if(el.getAttribute('data-status') === 'Collapse'){
                     collapseDiffs();
@@ -219,17 +306,29 @@
         "}"+
 
         "";
+        if(!document.getElementById('makeGithubWide')){
+            attachAStyleSheet(styleSheet,'makeGithubWide');
+        }
 
-        (function () {
-          var s = document.createElement('style');
-          s.id = "makeGithubWide";
-          s.type = "text/css";
-          s.innerHTML = styleSheet;
-          (document.head || document.documentElement).appendChild(s);
-        })();
+        // (function () {
+        //   var s = document.createElement('style');
+        //   s.id = "makeGithubWide";
+        //   s.type = "text/css";
+        //   s.innerHTML = styleSheet;
+        //   (document.head || document.documentElement).appendChild(s);
+        // })();
     }
 
-
+/* Utility function which writes a stylesheet to the page*/
+    function attachAStyleSheet(styleSheet,id) {
+            (function () {
+              var s = document.createElement('style');
+              if(id){ s.id = id;}
+              s.type = "text/css";
+              s.innerHTML = styleSheet;
+              (document.head || document.documentElement).appendChild(s);
+            })();
+    }
 
 /* Convert Usernames to Real Names ?(WIP)? */
     function convertUsernamesToRealNames() {
