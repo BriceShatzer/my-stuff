@@ -52,9 +52,16 @@
 
 /* Attach custom controls to the page */
     function attachCustomControlsToPage(){
-        let repoInfo = document.head.querySelector("[name=octolytics-dimension-repository_nwo][content]").content;
         let oldControls = document.getElementById('customControls');
-        if(oldControls){ document.body.removeChild(oldControls)}
+        let repoInfo;
+
+        if (document.head.querySelector("[name=octolytics-dimension-repository_nwo][content]")) {
+            repoInfo = document.head.querySelector("[name=octolytics-dimension-repository_nwo][content]").content;
+        }
+
+        if (oldControls){
+            document.body.removeChild(oldControls)
+        }
 
         let styles = `
             .searchToggleControl {
@@ -85,7 +92,6 @@
             }
         `
 
-
         if(!document.getElementById('controlStyles')) {
             attachAStyleSheet(styles,'controlStyles');
         }
@@ -95,7 +101,7 @@
         let reRunButton = document.createElement('img');
         reRunButton.setAttribute('src','https://camo.githubusercontent.com/9919bc7e220f6919cdac2d9ec00b99caa9791c3b/687474703a2f2f692e696d6775722e636f6d2f3539566766457a2e706e67');
         reRunButton.setAttribute('style','cursor:pointer;max-width:16px');
-        reRunButton.addEventListener('click',()=>{
+        reRunButton.addEventListener('click', () => {
             updateState();
         });
         //document.body.append(reRunButton);
@@ -115,12 +121,15 @@
         searchField.setAttribute('id','searchField');
 
 
-        let searchButton = document.createElement('button');
+       let searchButton = document.createElement('button');
         searchButton.textContent = '»';
         searchButton.addEventListener('click', () => {
-//            document.getElementById('searchField');
+            let searchValue = document.getElementById('searchField').value;
+            searchValue = searchValue.split(' ').join('+');
 
+            let searchUrl = 'https://github.com/' + repoInfo + '/search?q=' + searchValue;
 
+            window.location = searchUrl;
         });
 
 
