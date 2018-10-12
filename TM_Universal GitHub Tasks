@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Universal GitHub Tasks
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
+// @version      0.3
+// @description  Making GitHub work more to my liking...
 // @author       https://github.com/BriceShatzer
 // @match        https://github.com/*
 // @grant        none
@@ -17,24 +17,32 @@
     let state_githubIsWide = false
 
     updateState();
-//    showWikiButtons();
-    window.onpopstate = function(event) {
-        console.log('popstate fired');
+
+    //extending history.pushState to run updateState, because github doesn't fire a popstate in many instances
+    (function(history){
+    var pushState = history.pushState;
+    history.pushState = function(state) {
+        if (typeof history.onpushstate == "function") {
+            history.onpushstate({state: state});
+        }
+        console.log('history.onpushstate fired');
         updateState();
-        //showWikiButtons();
-    };
+        return pushState.apply(history, arguments);
+    }
+    })(window.history);
+
 
     function updateState() {
         state_commitTimesConverted = document.querySelectorAll('relative-time').length > 0 ? true : false;
-        state_diffCollapserCreated = document.querySelectorAll('button[aria-label="Toggle diff text"]').length > 0 ? true : false;
+        state_diffCollapserCreated = document.getElementById('diffCollapser') ? true : false;
         state_usernamesConverted = document.querySelectorAll('real-name').length > 0 ? true : false;
         state_githubIsWide = document.getElementById('makeGithubWide') ? true : false;
 
         console.log('states updated:');
-        console.log('commitTimesConverted-'+state_commitTimesConverted);
-        console.log('diffCollapserCreated-'+state_diffCollapserCreated);
-        console.log('usernamesConverted-'+state_usernamesConverted);
-        console.log('githubIsWide-'+state_githubIsWide);
+        // console.log('commitTimesConverted-'+state_commitTimesConverted);
+        // console.log('diffCollapserCreated-'+state_diffCollapserCreated);
+        // console.log('usernamesConverted-'+state_usernamesConverted);
+        // console.log('githubIsWide-'+state_githubIsWide);
 
         createDiffCollapser();
         convertCommitTimes();
@@ -147,11 +155,9 @@
             customControls.append(searchControls);
         }
 
-
-
         document.body.append(customControls);
-
     }
+
 /* Convert Commit Times To Non-realtive */
     function convertCommitTimes() {
         if(state_commitTimesConverted === false) {
@@ -168,9 +174,9 @@
 
 /* Create Diff Collapser */
     function createDiffCollapser() {
-        if(state_diffCollapserCreated === false) {
-            window.setTimeout(createDiffCollapser, 750);
-        } else {
+        if(state_diffCollapserCreated === false && getCollapsibleElements().length) {
+        //     window.setTimeout(createDiffCollapser, 750);
+        // } else {
             state_diffCollapserCreated = true;
             let staleElements = document.querySelectorAll('#diffCollapser');
             if(staleElements.length>0){
@@ -179,18 +185,22 @@
                 });
             }
             let el = document.createElement('img');
-            let styleText = "position:fixed;" +
-                        "left:.5rem;" +
-                        "bottom:50vh;" +
-                        "max-width:20px;" +
-                        "z-index:50;" +
-                        "cursor:pointer";
+            //let el = document.createElement('button');
+            //let styleText = 'position:fixed;left:2rem;bottom:50vh;z-index:50;min-width:1rem;'
+
             el.src = "https://raw.githubusercontent.com/webdog/octicons-png/master/black/fold.png";
             el.alt ="Collapse/Expand Diffs";
-            el.setAttribute('id','diffCollapser');
+            el.id  = "diffCollapser";
+            let styleText = `
+                position:fixed;
+                left:.5rem;
+                bottom:50vh;
+                max-width:1rem;
+                z-index:50;
+                cursor:pointer
+                `;
 
             el.setAttribute('style',styleText);
-            el
             //el.setAttribute('class', 'btn');
             //el.innerHTML = 'Collapse Diffs';
             el.addEventListener('click',()=>{
@@ -213,24 +223,25 @@
         }
 
         function expandDiffs() {
-            let collapsedElements = Object.values(getElements()).filter(el=> el.getAttribute('aria-expanded')==='false');
+            let collapsedElements = getCollapsibleElements().filter(el=> el.getAttribute('aria-expanded')==='false');
             clickElements(collapsedElements);
         }
 
         function collapseDiffs() {
-            let expandedElements = Object.values(getElements()).filter(el=> el.getAttribute('aria-expanded')==='true');
+            let expandedElements = getCollapsibleElements().filter(el=> el.getAttribute('aria-expanded')==='true');
             clickElements(expandedElements);
         }
 
-        function getElements() {
-            let allElements = document.querySelectorAll('button[aria-label="Toggle diff text"]');
-            return allElements;
-        }
 
         function clickElements(elementsArr) {
             elementsArr.forEach((el)=>{
                 el.click();
             });
+        }
+
+        function getCollapsibleElements() {
+            let allElements = document.querySelectorAll('button[aria-label="Toggle diff contents"]');
+            return Object.values(allElements);
         }
     }
 
