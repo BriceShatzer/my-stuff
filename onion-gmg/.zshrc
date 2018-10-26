@@ -178,6 +178,37 @@ function pidof {
   fi
 }
 
+function curl-size {
+  if [[ -z $1 ]]; then
+    printf '%s\n' "Please provide a URL"
+  else
+    bytelength=$(curl -sI "$1" | tr -d '\r' | awk '/Content-Length/ {print $2}')
+
+    function _doMath {
+      divisor=$1
+      print "scale=3;$bytelength/$divisor" | bc -l
+    }
+
+    if [[ -z $bytelength ]]; then
+      value=""
+      unit="Please provide a valid URL"
+    elif (($bytelength>1000000000));then #1*10^9
+      value=$(_doMath 1000000000)
+      unit="gb"
+    elif (($bytelength>1000000));then #1*10^6
+      value=$(_doMath 1000000)
+      unit="mb"
+    elif (($bytelength>1000));then
+      value=$(_doMath 1000)
+      unit="kb"
+    else
+      value="$bytelength"
+      unit="bytes"
+    fi
+    printf '%s\n' "$(printf '%s\n' "$value" | grep -o '.*[1-9]') $unit"
+  fi
+}
+
 #---Kinja Alias---
 alias kinja-selenium='~/Projects/kinja-workspace/kinja-mantle/node_modules/.bin/selenium-standalone start'
 alias prio-tests='npm run test:wd -- -s circle -f test/webdriver/specs/ads/InPostAdZones-specs.js'
