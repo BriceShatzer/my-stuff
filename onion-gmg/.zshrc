@@ -98,6 +98,8 @@ alias ss=simpleserver
 
 alias beep="echo -e '\07'"
 
+alias restart="sudo shutdown -r now"
+
 #http://brettterpstra.com/projects/mdless/
 # ^ ruby gem, may require: sudo pip install Pygments
 # function readMarkdown() {
