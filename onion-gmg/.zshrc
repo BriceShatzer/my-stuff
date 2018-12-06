@@ -211,6 +211,20 @@ function curl-size {
   fi
 }
 
+function shortenGitUrl {
+  if [[ -z $1 ]]; then
+    printf '%s\n' "Please provide a URL"
+  else
+    response=$(curl -i https://git.io -F "url=$1" | grep -Fi Location);
+    url=${response:s/Location: /}
+    echo $url | pbcopy
+    print $url
+  fi
+}
+alias shortenGit=shortenGitUrl
+alias shortgit=shortenGitUrl
+
+
 #---Kinja Alias---
 alias kinja-selenium='~/Projects/kinja-workspace/kinja-mantle/node_modules/.bin/selenium-standalone start'
 alias prio-tests='npm run test:wd -- -s circle -f test/webdriver/specs/ads/InPostAdZones-specs.js'
