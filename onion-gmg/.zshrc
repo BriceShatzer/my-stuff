@@ -225,6 +225,15 @@ alias shortenGit=shortenGitUrl
 alias shortgit=shortenGitUrl
 
 
+# Markdown Viewer
+# https://github.com/axiros/terminal_markdown_viewer
+# Note: code snippets don't work if installed via pip. Use: `pip install git+https://github.com/axiros/terminal_markdown_viewer.git`
+function readMarkdown() {
+    cat $1 | mdv
+}
+alias rmd=readMarkdown
+alias markdown=readMarkdown
+
 #---Kinja Alias---
 alias kinja-selenium='~/Projects/kinja-workspace/kinja-mantle/node_modules/.bin/selenium-standalone start'
 alias prio-tests='npm run test:wd -- -s circle -f test/webdriver/specs/ads/InPostAdZones-specs.js'
