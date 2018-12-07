@@ -211,6 +211,7 @@ function curl-size {
   fi
 }
 
+
 function shortenGitUrl {
   if [[ -z $1 ]]; then
     printf '%s\n' "Please provide a URL"
@@ -228,11 +229,10 @@ alias shortgit=shortenGitUrl
 # Markdown Viewer
 # https://github.com/axiros/terminal_markdown_viewer
 # Note: code snippets don't work if installed via pip. Use: `pip install git+https://github.com/axiros/terminal_markdown_viewer.git`
-function readMarkdown() {
-    cat $1 | mdv
-}
-alias rmd=readMarkdown
-alias markdown=readMarkdown
+alias readMarkdown=mdv
+alias rmd=mdv
+alias markdown=mdv
+
 
 #---Kinja Alias---
 alias kinja-selenium='~/Projects/kinja-workspace/kinja-mantle/node_modules/.bin/selenium-standalone start'
@@ -241,6 +241,7 @@ alias pm2-kill='npx pm2 stop all'
 alias pm2-killall='npx pm2 stop all'
 alias pm2-stop='npx pm2 stop all'
 alias pm2-stopall='npx pm2 stop all'
+
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
