@@ -17,9 +17,9 @@
 // @match        http://*.earther.localhost:3000*
 // @match        http://*.earther.localhost:9000*
 // @match        https://*.gizmodo*
-// @match        *://gizmodo*
-// @match        http://*.xgizmodo.localhost:3000*
-// @match        http://*.xgizmodo.localhost:9000*
+// @match        https://gizmodo*
+// @match        http://*.gizmodo.localhost:3000*
+// @match        http://*.gizmodo.localhost:9000*
 // @match        https://*.jalopnik*
 // @match        http://*.jalopnik.localhost:3000*
 // @match        http://*.jalopnik.localhost:9000*
@@ -69,7 +69,7 @@
 	content.style.padding = '1em';
 	content.innerHTML = `
 		<div style="display:relative;padding:0.25em 0 0.5em;text-align:center;">
-			<span style="line-height:1; position:absolute; top:0; left:0; font-weight:700; cursor:pointer;" onclick="remove()">⊠</span>
+			<span id="close-view_TM" style="line-height:1; position:absolute; top:0; left:0; font-weight:700; cursor:pointer;">⊠</span>
 			What feature Switches are on?
 		</div>`
 
@@ -84,6 +84,12 @@
 
 	el.appendChild(content);
 	document.body.appendChild(el);
+
+    //set close button click behavior
+    let closeButton = document.getElementById('close-view_TM');
+    closeButton.addEventListener('click', (e) => {
+        remove();
+    })
 
 	//set mouseover behavior
 	let attached = document.querySelector('.fmg-whats-on')
