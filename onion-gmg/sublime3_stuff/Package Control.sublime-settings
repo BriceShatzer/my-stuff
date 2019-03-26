@@ -1,0 +1,42 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Advanced CSV",
+		"Alignment",
+		"Babel",
+		"CSS3",
+		"Dotfiles Syntax Highlighting",
+		"Emoji",
+		"FileDiffs",
+		"Fix Mac Path",
+		"Flow",
+		"Git blame",
+		"GitHub Markdown Snippets",
+		"HTML-CSS-JS Prettify",
+		"jQuery",
+		"MarkdownEditing",
+		"MarkdownLivePreview",
+		"MarkdownPreview",
+		"nginx",
+		"Open Finder",
+		"Package Control",
+		"PackageResourceViewer",
+		"Path Tools",
+		"ReactJS",
+		"Sass",
+		"SideBarEnhancements",
+		"Soy",
+		"Statusbar Path",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-contrib-alex",
+		"SublimeLinter-php",
+		"SublimeREPL",
+		"Theme - SoDaReloaded",
+		"Trimmer"
+	]
+}

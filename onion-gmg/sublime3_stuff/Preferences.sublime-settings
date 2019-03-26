@@ -1,0 +1,23 @@
+{
+	"added_words":
+	[
+		"programmatically",
+		"curation",
+		"Asana"
+	],
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"default_encoding": "UTF-8",
+	"font_size": 13,
+	"ignored_packages":
+	[
+		"Flow",
+		"Markdown",
+		"ReactJS",
+		"Vintage"
+	],
+	"soda_classic_tabs": true,
+	"tab_size": 4,
+	"theme": "SoDaReloaded Dark.sublime-theme",
+	"translate_tabs_to_spaces": false,
+	"trim_trailing_white_space_on_save": true
+}
