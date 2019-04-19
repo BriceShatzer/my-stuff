@@ -116,6 +116,9 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias hostfile='sudo nano -w /private/etc/hosts'
 alias hosts=hostfile
 
+#Magic Card util
+alias mtg="mtg --colorize"
+
 # https://github.com/hugomd/parrot.live
 alias parrot='curl parrot.live'
 alias partyparrot=parrot
@@ -180,6 +183,7 @@ function pidof {
   fi
 }
 
+
 function curl-size {
   if [[ -z $1 ]]; then
     printf '%s\n' "Please provide a URL"
@@ -212,6 +216,15 @@ function curl-size {
 }
 
 
+function initMantle {
+  printf '%s\n' "intializing Kinja-Mantle"
+  cd /Users/briceshatzer/Projects/kinja-workspace/kinja-mantle
+  sbt run
+}
+alias mantle=initMantle
+alias startMantle=initMantle
+
+
 function shortenGitUrl {
   if [[ -z $1 ]]; then
     printf '%s\n' "Please provide a URL"
@@ -241,7 +254,6 @@ alias pm2-kill='npx pm2 stop all'
 alias pm2-killall='npx pm2 stop all'
 alias pm2-stop='npx pm2 stop all'
 alias pm2-stopall='npx pm2 stop all'
-
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
