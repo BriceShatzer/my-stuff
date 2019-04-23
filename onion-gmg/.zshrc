@@ -100,6 +100,23 @@ alias beep="echo -e '\07'"
 
 alias restart="sudo shutdown -r now"
 
+#colors use ${RED}Red text ${NORMAL} back to normal
+BLACK=$(tput setaf 0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+LIME_YELLOW=$(tput setaf 190)
+POWDER_BLUE=$(tput setaf 153)
+BLUE=$(tput setaf 4)
+MAGENTA=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 7)
+BRIGHT=$(tput bold)
+NORMAL=$(tput sgr0)
+BLINK=$(tput blink)
+REVERSE=$(tput smso)
+UNDERLINE=$(tput smul)
+
 #http://brettterpstra.com/projects/mdless/
 # ^ ruby gem, may require: sudo pip install Pygments
 # function readMarkdown() {
@@ -211,7 +228,7 @@ function curl-size {
       value="$bytelength"
       unit="bytes"
     fi
-    printf '%s\n' "$(printf '%s\n' "$value" | grep -o '.*[1-9]') $unit"
+    printf '%s\n' "${YELLOW}$(printf '%s\n' "$value" | grep -o '.*[1-9]') $unit"
   fi
 }
 
@@ -254,6 +271,23 @@ alias pm2-kill='npx pm2 stop all'
 alias pm2-killall='npx pm2 stop all'
 alias pm2-stop='npx pm2 stop all'
 alias pm2-stopall='npx pm2 stop all'
+
+
+function listAlias {
+  text=''
+  text+="${POWDER_BLUE}curl-size $URL\n"
+  text+="${LIME_YELLOW}hostfile\n"
+  text+="${POWDER_BLUE}initMantle / mantle / startMantle\n"
+  text+="${LIME_YELLOW}mtg\n"
+  text+="${POWDER_BLUE}party / parrot / partyparrot / testinternet\n"
+  text+="${LIME_YELLOW}pm2-kill\n"
+  text+="${POWDER_BLUE}rmd / readMarkdown\n"
+  text+="${LIME_YELLOW}sourcetree\n"
+  text+="${POWDER_BLUE}tree\n"
+  printf "%b" "$text"
+}
+alias Aliases=listAlias
+alias aliases=listAlias
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
