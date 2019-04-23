@@ -188,10 +188,7 @@ function curl-size {
   if [[ -z $1 ]]; then
     printf '%s\n' "Please provide a URL"
   else
-    bytelength=$(curl -sI "$1" | grep --regexp='content-length' | tr -d '\r' | awk '{print $2}') #try https
-    if [[ -z $bytelength ]]; then
-      bytelength=$(curl -sI "$1" | tr -d '\r' | awk '/Content-Length/ {print $2}') #try http?
-    fi
+    bytelength=$(curl -sI "$1" | tr -d '\r' | awk '/[cC]ontent-[lL]ength/ {print $2}')
 
     function _doMath {
       divisor=$1
