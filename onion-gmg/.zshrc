@@ -205,14 +205,20 @@ function curl-size {
   if [[ -z $1 ]]; then
     printf '%s\n' "Please provide a URL"
   else
-    bytelength=$(curl -sI "$1" | tr -d '\r' | awk '/[cC]ontent-[lL]ength/ {print $2}')
+    response=$(curl -sI "$1" | tr -d '\r' )
+    statuscode=$(echo $response | awk '/^HTTP/ {print}')
+    bytelength=$(echo $response | awk '/[cC]ontent-[lL]ength/ {print $2}')
+
+    if [[ $statuscode != *"200"* ]]; then
+      print $statuscode
+    fi
 
     function _doMath {
       divisor=$1
       print "scale=3;$bytelength/$divisor" | bc -l
     }
 
-    if [[ -z $bytelength ]]; then
+    if [[ -z $bytelength || ($bytelength == "0") ]]; then
       value=""
       unit="Please provide a valid URL"
     elif (($bytelength>1000000000));then #1*10^9
