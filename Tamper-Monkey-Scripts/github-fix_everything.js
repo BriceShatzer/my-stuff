@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Universal GitHub Tasks
 // @namespace    github.com
-// @version      0.2
+// @version      0.3
 // @description  Making GitHub work more to my liking...
 // @author       https://github.com/BriceShatzer
 // @match        https://github.com/*
@@ -70,11 +70,11 @@
         if (oldControls){
             document.body.removeChild(oldControls)
         }
-
+        let controlPositioningTop = '80px' //height of header + standard padding on elements | 64px + 16px
         let styles = `
             .searchToggleControl {
-                margin: 0 0.5rem;
-                cursor: pointer
+                cursor: pointer;
+                padding: 2px 0 0 2px;
             }
             .searchToggleControl:hover {
                 text-decoration: none;
@@ -87,6 +87,9 @@
             }
             #searchControls.open {
                 width: 160px;
+                position: relative;
+                top: -23px;
+                left: 18px;
             }
             #searchControls input[type='text']{
                 width: 120px;
@@ -94,9 +97,11 @@
             }
             #customControls {
                 position:fixed;
-                top:16px;
-                left:16px;
-                z-index:50;
+                top: ${controlPositioningTop};
+                left: 16px;
+                z-index: 199;
+                display: flex;
+                flex-direction: column;
             }
         `
 
@@ -114,22 +119,12 @@
         });
         //document.body.append(reRunButton);
 
-    /* Create Repo Search Control */
-        let searchToggleControl = document.createElement('a');
-        searchToggleControl.textContent = '🔍';
-        searchToggleControl.classList.add('searchToggleControl');
-        searchToggleControl.addEventListener('click', () => {
-            let controls = document.getElementById('searchControls');
-            controls.classList.toggle('open');
-        });
-
-
+    /* Create Repo Search Controls */
         let searchField = document.createElement('input');
         searchField.setAttribute('type','text');
         searchField.setAttribute('id','searchField');
 
-
-       let searchButton = document.createElement('button');
+        let searchButton = document.createElement('button');
         searchButton.textContent = '»';
         searchButton.addEventListener('click', () => {
             let searchValue = document.getElementById('searchField').value;
@@ -140,12 +135,22 @@
             window.location = searchUrl;
         });
 
+        let searchToggleControl = document.createElement('a');
+        searchToggleControl.textContent = '🔍';
+        searchToggleControl.classList.add('searchToggleControl');
+        searchToggleControl.addEventListener('click', () => {
+            let controls = document.getElementById('searchControls');
+            controls.classList.toggle('open');
+            if(controls.classList.contains('open')){
+                searchField.focus();
+            }
+
+        });
 
         let searchControls = document.createElement('div');
         searchControls.setAttribute('id','searchControls');
         searchControls.append(searchField);
         searchControls.append(searchButton);
-
 
         let customControls = document.createElement('div');
         customControls.setAttribute('id', 'customControls');
