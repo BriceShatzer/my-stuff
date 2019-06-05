@@ -16,7 +16,7 @@
     let state_usernamesConverted = false;
     let state_githubIsWide = false
 
-    updateState();
+    window.onload = () => updateState();
 
     //extending history.pushState to run updateState, because github doesn't fire a popstate in many instances
     (function(history){
@@ -124,7 +124,7 @@
         searchField.setAttribute('type','text');
         searchField.setAttribute('id','searchField');
 
-        let searchButton = document.createElement('button');
+       let searchButton = document.createElement('button');
         searchButton.textContent = '»';
         searchButton.addEventListener('click', () => {
             let searchValue = document.getElementById('searchField').value;
