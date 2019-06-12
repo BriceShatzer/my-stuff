@@ -16,6 +16,8 @@
     let state_usernamesConverted = false;
     let state_githubIsWide = false
 
+    makeGithubWide();
+
     window.onload = () => updateState();
 
     //extending history.pushState to run updateState, because github doesn't fire a popstate in many instances
@@ -47,7 +49,7 @@
         createDiffCollapser();
         convertCommitTimes();
         //convertUsernamesToRealNames();
-        makeGithubWide();
+        if (state_githubIsWide !== true){makeGithubWide();}
         attachCustomControlsToPage();
     }
 /* ಠ_ಠ
