@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tinder Workmode Toggle
 // @namespace    tinder.com
-// @version      0.2
+// @version      0.3
 // @description  hidind the sidebar in tinder's messager
 // @author       github.com/briceshatzer
 // @match        https://tinder.com/*
@@ -10,10 +10,12 @@
 
 (function() {
     'use strict';
-	window.onload = () => initSidebarToggle();
+	window.onload = () => initWorkmodeToggle();
+    window.setInterval(replaceIcon, 2000);
 
 
-	function initSidebarToggle() {
+
+	function initWorkmodeToggle() {
 		let oldButton = document.getElementById('showHideButton');
 	    if (oldButton){
 	        document.body.removeChild(oldButton);
@@ -72,9 +74,16 @@
 	              (document.head || document.documentElement).appendChild(s);
 	            })();
 	    }
-
-
 	}
+
+    function replaceIcon() {
+        var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+        link.type = 'image/x-icon';
+        link.rel = 'shortcut icon';
+        link.href = 'https://cdn.sstatic.net/Sites/apple/img/favicon.ico';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }
+
 
 
 
