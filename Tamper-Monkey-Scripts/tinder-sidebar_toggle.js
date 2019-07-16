@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Tinder Sidebar Toggle
+// @name         Tinder Workmode Toggle
 // @namespace    tinder.com
-// @version      0.1
+// @version      0.2
 // @description  hidind the sidebar in tinder's messager
 // @author       github.com/briceshatzer
 // @match        https://tinder.com/*
@@ -25,6 +25,9 @@
 		showHideButton.addEventListener('click', () => {
 			let sidebar = document.querySelector('div.BdStart');
 			sidebar.classList.toggle('hideSidebar');
+
+			let desktopNavbar = document.querySelector('.desktopNavbar');
+			desktopNavbar.classList.toggle('hide');
 		});
 
 	    let toggleStyle = `
@@ -47,6 +50,9 @@
 	    		max-width: 0px !important;
 	    		overflow: hidden;
 	    	}
+	    	aside .desktopNavbar.hide {
+	    		background-image: linear-gradient(45deg, white, transparent) !important;
+	    	}
 	    `;
 
 	    if(!document.getElementById('hideSidebar')) {
@@ -54,6 +60,7 @@
 	    }
 
 		document.body.append(showHideButton);
+
 
 	/* Utility function which writes a stylesheet to the page*/
 	    function attachAStyleSheet(styleSheet,id) {
