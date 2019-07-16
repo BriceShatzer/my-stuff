@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  hide the ico & tab name of certain tabs
 // @author       github.com/briceshatzer
-// @match        https://bumble.com/*
+// @match        https://tinder.com/*
 // @grant        none
 // ==/UserScript==
 
@@ -14,7 +14,7 @@
         var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
         link.type = 'image/x-icon';
         link.rel = 'shortcut icon';
-        link.href = 'https://cdn.sstatic.net/Sites/alcohol/img/favicon.ico';
+        link.href = 'https://cdn.sstatic.net/Sites/apple/img/favicon.ico';
         document.getElementsByTagName('head')[0].appendChild(link);
     }
     window.setInterval(replaceIcon, 2000);
