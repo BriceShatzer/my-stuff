@@ -133,8 +133,12 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias hostfile='sudo nano -w /private/etc/hosts'
 alias hosts=hostfile
 
+# -- No Longer functional :(
 #Magic Card util
-alias mtg="mtg --colorize"
+#alias mtg="mtg --colorize"
+
+# Weather
+alias weather='curl https://wttr.in'
 
 # https://github.com/hugomd/parrot.live
 alias parrot='curl parrot.live'
