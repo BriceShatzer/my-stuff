@@ -1,0 +1,32 @@
+[user]
+	name = Brice Shatzer
+	email = bshatzer@kinja.com
+
+[push]
+    default = simple
+    
+[core]
+	excludesfile = /Users/briceshatzer/.gitignore_global
+	editor = nano
+
+[alias]
+    branches = branch --list
+    hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+#   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short        
+    history = !git hist && exit 
+    ignored = !git ls-files -v | grep "^[[:lower:]]"
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+[merge]
+    tool = opendiff
+[commit]
+	template = /Users/Brice/.stCommitMsg
+[pull]
+    rebase = true
