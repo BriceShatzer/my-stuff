@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitter Advance Search Link
 // @namespace    http://twitter.com/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       http://github.com/BriceShatzer
 // @match        https://twitter.com/*
@@ -11,8 +11,7 @@
 (function() {
     'use strict';
     window.onload = () => {
-        console.log('yo we fired');
-        const nav = document.getElementsByTagName('nav')[0];
+        let nav = document.getElementsByTagName('nav')[0];
         const link = document.createElement('a');
         link.style.textAlign = 'center'
         link.style.fontWeight = '700';
@@ -21,6 +20,10 @@
         link.href = 'https://twitter.com/search-advanced';
         link.innerHTML = '🔍 Advance Search';
         nav.insertBefore(link, nav.firstChild);
-    }
 
+        function didWeGetNavYet(value){
+            if (value){ nav = value; }
+            else { setTimeout(()=>{ didWeGetNavYet(document.getElementsByTagName('nav')[0]); }, 1200);}
+        }
+    }
 })();
