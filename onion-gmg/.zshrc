@@ -285,15 +285,18 @@ alias pm2-stopall='npx pm2 stop all'
 
 function listAlias {
   text=''
-  text+="${POWDER_BLUE}curl-size $URL\n"
-  text+="${LIME_YELLOW}hostfile\n"
-  text+="${POWDER_BLUE}initMantle / mantle / startMantle\n"
-  text+="${LIME_YELLOW}mtg\n"
-  text+="${POWDER_BLUE}party / parrot / partyparrot / testinternet\n"
-  text+="${LIME_YELLOW}pm2-kill\n"
-  text+="${POWDER_BLUE}rmd / readMarkdown\n"
-  text+="${LIME_YELLOW}sourcetree\n"
-  text+="${POWDER_BLUE}tree\n"
+  text+="  ${GREEN}weather\n"
+  text+="  ${LIME_YELLOW}parrot / partyparrot / party / testinternet\n"
+  text+="  ${GREEN}curl-size $URL\n"
+  text+="  ${LIME_YELLOW}simpleserver / ss\n"
+  text+="  ${GREEN}hostfile\n"
+  text+="  ${LIME_YELLOW}initMantle / mantle / startMantle\n"
+  text+="  ${GREEN}mtg\n"
+  text+="  ${LIME_YELLOW}party / parrot / partyparrot / testinternet\n"
+  text+="  ${GREEN}pm2-kill\n"
+  text+="  ${LIME_YELLOW}rmd / readMarkdown\n"
+  text+="  ${GREEN}sourcetree\n"
+  text+="  ${LIME_YELLOW}tree\n"
   printf "%b" "$text"
 }
 alias Aliases=listAlias
