@@ -240,7 +240,7 @@ function curl-size {
         local value=""
         local unit=""
         if [[ -z $byteLength || ($byteLength == "0") ]]; then
-          unit="Please provide a valid URLxx"
+          unit="Please provide a valid URL"
         elif (($byteLength>1000000000));then #1*10^9
           value=$(_doMath 1000000000)
           unit="gb"
