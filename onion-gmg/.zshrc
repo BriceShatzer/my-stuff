@@ -210,35 +210,53 @@ function curl-size {
     printf '%s\n' "Please provide a URL"
   else
     response=$(curl -sI "$1" | tr -d '\r' )
-    statuscode=$(echo $response | awk '/^HTTP/ {print}')
-    bytelength=$(echo $response | awk '/[cC]ontent-[lL]ength/ {print $2}')
+    statusCode=$(echo $response | awk '/^HTTP/ {print}')
+    byteLength=$(echo $response | awk '/[cC]ontent-[lL]ength/ {print $2}')
 
-    if [[ $statuscode != *"200"* ]]; then
-      print $statuscode
+    if [[ $statusCode = *"200"* ]]; then
+      redirect=false
+    elif [[
+      $statuscode = *"301"* ||
+      $statuscode = *"307"* ||
+      $statuscode = *"308"* ||
+    ]]; then
+      redirect=true
+      newLocation=$(echo $response | awk '/^[lL]ocation:/ {print $2}')
+      print $statusCode
+    elif [[ $statuscode != *"200"* ]]; then
+      nonStandard=true
     fi
 
     function _doMath {
       divisor=$1
-      print "scale=3;$bytelength/$divisor" | bc -l
+      print "scale=3;$byteLength/$divisor" | bc -l
     }
 
-    if [[ -z $bytelength || ($bytelength == "0") ]]; then
-      value=""
-      unit="Please provide a valid URL"
-    elif (($bytelength>1000000000));then #1*10^9
-      value=$(_doMath 1000000000)
-      unit="gb"
-    elif (($bytelength>1000000));then #1*10^6
-      value=$(_doMath 1000000)
-      unit="mb"
-    elif (($bytelength>1000));then
-      value=$(_doMath 1000)
-      unit="kb"
+    if [[ $redirect = true ]]; then
+      printf 'redirecting to %s\n' $newLocation
+      curl-size $(echo $newLocation)
+    elif [[ $nonStandard = true ]]; then
+       print $statuscode
     else
-      value="$bytelength"
-      unit="bytes"
+      if [[ -z $byteLength || ($byteLength == "0") ]]; then
+        value=""
+        unit="Please provide a valid URL"
+      elif (($byteLength>1000000000));then #1*10^9
+        value=$(_doMath 1000000000)
+        unit="gb"
+      elif (($byteLength>1000000));then #1*10^6
+        value=$(_doMath 1000000)
+        unit="mb"
+      elif (($byteLength>1000));then
+        value=$(_doMath 1000)
+        unit="kb"
+      else
+        value="$byteLength"
+        unit="bytes"
+      fi
+
+      printf '%s\n' "${YELLOW}$(printf '%s\n' "$value" | grep -o '.*[1-9]') $unit"
     fi
-    printf '%s\n' "${YELLOW}$(printf '%s\n' "$value" | grep -o '.*[1-9]') $unit"
   fi
 }
 
