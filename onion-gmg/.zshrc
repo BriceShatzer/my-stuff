@@ -204,58 +204,58 @@ function pidof {
   fi
 }
 
-
 function curl-size {
   if [[ -z $1 ]]; then
     printf '%s\n' "Please provide a URL"
   else
-    response=$(curl -sI "$1" | tr -d '\r' )
-    statusCode=$(echo $response | awk '/^HTTP/ {print}')
-    byteLength=$(echo $response | awk '/[cC]ontent-[lL]ength/ {print $2}')
-
-    if [[ $statusCode = *"200"* ]]; then
-      redirect=false
-    elif [[
-      $statuscode = *"301"* ||
-      $statuscode = *"307"* ||
-      $statuscode = *"308"* ||
-    ]]; then
-      redirect=true
-      newLocation=$(echo $response | awk '/^[lL]ocation:/ {print $2}')
-      print $statusCode
-    elif [[ $statuscode != *"200"* ]]; then
-      nonStandard=true
-    fi
-
-    function _doMath {
-      divisor=$1
-      print "scale=3;$byteLength/$divisor" | bc -l
-    }
-
-    if [[ $redirect = true ]]; then
-      printf 'redirecting to %s\n' $newLocation
-      curl-size $(echo $newLocation)
-    elif [[ $nonStandard = true ]]; then
-       print $statuscode
+    local response=$(curl -sI "$1" | tr -d '\r' )
+    local statusCode=$(echo $response | awk '/^HTTP/ {print}')
+    local byteLength=$(echo $response | awk '/[cC]ontent-[lL]ength/ {print $2}')
+    if [[ -z $response || -z statusCode ]]; then
+      printf '%s\n' "Please provide a valid URL"
     else
-      if [[ -z $byteLength || ($byteLength == "0") ]]; then
-        value=""
-        unit="Please provide a valid URL"
-      elif (($byteLength>1000000000));then #1*10^9
-        value=$(_doMath 1000000000)
-        unit="gb"
-      elif (($byteLength>1000000));then #1*10^6
-        value=$(_doMath 1000000)
-        unit="mb"
-      elif (($byteLength>1000));then
-        value=$(_doMath 1000)
-        unit="kb"
+      local disposition=UNKNOWN
+
+      if [[ $statusCode = *"200"* ]]; then
+        disposition=OK
+      elif [[ $statusCode = *" 30"* ]]; then
+        local newLocation=$(echo $response | awk '/^[lL]ocation:/ {print $2}')
+        print $statusCode
       else
-        value="$byteLength"
-        unit="bytes"
+        disposition=OTHER
       fi
 
-      printf '%s\n' "${YELLOW}$(printf '%s\n' "$value" | grep -o '.*[1-9]') $unit"
+      function _doMath {
+        divisor=$1
+        print "scale=3;$byteLength/$divisor" | bc -l
+      }
+
+      if [[ $disposition == REDIRECT ]]; then
+        printf 'redirecting to %s\n' $newLocation
+        curl-size $(echo $newLocation)
+      elif [[ $disposition == OTHER ]]; then
+         print $statusCode
+      else
+        local value=""
+        local unit=""
+        if [[ -z $byteLength || ($byteLength == "0") ]]; then
+          unit="Please provide a valid URL"
+        elif (($byteLength>1000000000));then #1*10^9
+          value=$(_doMath 1000000000)
+          unit="gb"
+        elif (($byteLength>1000000));then #1*10^6
+          value=$(_doMath 1000000)
+          unit="mb"
+        elif (($byteLength>1000));then
+          value=$(_doMath 1000)
+          unit="kb"
+        else
+          value="$byteLength"
+          unit="bytes"
+        fi
+
+        printf '%s\n' "${YELLOW}$(printf '%s\n' "$value" | grep -o '.*[1-9]') $unit"
+      fi
     fi
   fi
 }
