@@ -211,7 +211,7 @@ function curl-size {
     local response=$(curl -sI "$1" | tr -d '\r' )
     local statusCode=$(echo $response | awk '/^HTTP/ {print}')
     local byteLength=$(echo $response | awk '/[cC]ontent-[lL]ength/ {print $2}')
-    if [[ -z $response || -z statusCode ]]; then
+    if [[ -z $response ]]; then
       printf '%s\n' "Please provide a valid URL"
     else
       local disposition=UNKNOWN
@@ -219,6 +219,7 @@ function curl-size {
       if [[ $statusCode = *"200"* ]]; then
         disposition=OK
       elif [[ $statusCode = *" 30"* ]]; then
+        disposition=REDIRECT
         local newLocation=$(echo $response | awk '/^[lL]ocation:/ {print $2}')
         print $statusCode
       else
@@ -239,7 +240,7 @@ function curl-size {
         local value=""
         local unit=""
         if [[ -z $byteLength || ($byteLength == "0") ]]; then
-          unit="Please provide a valid URL"
+          unit="Please provide a valid URLxx"
         elif (($byteLength>1000000000));then #1*10^9
           value=$(_doMath 1000000000)
           unit="gb"
@@ -253,13 +254,12 @@ function curl-size {
           value="$byteLength"
           unit="bytes"
         fi
-
+        # printf '%s\n' "$(printf '%s\n' "$value" | grep -o '.*[1-9]') $unit"
         printf '%s\n' "${YELLOW}$(printf '%s\n' "$value" | grep -o '.*[1-9]') $unit"
       fi
     fi
   fi
 }
-
 
 function initMantle {
   printf '%s\n' "intializing Kinja-Mantle"
