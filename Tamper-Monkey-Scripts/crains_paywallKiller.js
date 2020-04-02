@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Crain's Paywall Avoider
 // @namespace    https://www.chicagobusiness.com/
-// @version      0.1
+// @version      0.2
 // @description  nukes their paywall
 // @author       http://github.com/BriceShatzer
 // @match        https://www.chicagobusiness.com/*
@@ -12,8 +12,8 @@
     'use strict';
     window.onload = () => {
         setTimeout(()=>{
-	        let hasFired = false;
-	        const theInterval = setInterval(removePaywall(hasFired),350);
+            let hasFired = false;
+            const theInterval = setInterval(()=>removePaywall(hasFired),350);
             function removePaywall(status){
                 if (!status) {
                     const modal = document.querySelector('.tp-modal');
@@ -27,6 +27,6 @@
                     }
                 }
             }
-		},500);
-	}
+        },250);
+    }
 })();
