@@ -94,6 +94,19 @@ function readMarkdown() {
 }
 alias rmd=readMarkdown
 
+function rebuildPackgageJsonFromGulpfile () {
+    local regex="require\(['\"](.*)['\"]\)"
+    cat gulpfile.js | while read line
+    do
+        if 
+            [[ $line =~ $regex ]] ; 
+            then echo "${BASH_REMATCH[1]}"
+        fi
+    done    
+}
+
+alias testRebuilder='bash rebuildPackgageJsonFromGulpfile'
+
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
 alias homesteadYAML='nano ~/.homestead/Homestead.yaml'
 
