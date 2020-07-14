@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Universal GitHub Tasks
 // @namespace    github.com
-// @version      0.4
+// @version      0.5
 // @description  Making GitHub work more to my liking...
 // @author       https://github.com/BriceShatzer
 // @match        https://github.com/*
@@ -257,61 +257,67 @@
 /* Wide-Github */
 // source: https://github.com/xthexder/wide-github
     function makeGithubWide() {
-        var styleSheet = `body:not(.wgh-disabled) .application-main .container {
-          width: auto !important;
-          padding-left: 32px !important;
-          padding-right: 32px !important;
-          margin-left: 0px !important;
-          min-width: 980px;
-        }
-        body:not(.wgh-disabled) .application-main .container-lg,
-        body:not(.wgh-disabled) .footer.container-lg {
-          max-width: none !important;
-          margin-left: 0px !important;
-        }
+        var styleSheet = `
+body:not(.wgh-disabled) .application-main .container {
+  width: auto !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  margin-left: 0px !important;
+  min-width: 980px;
+}
+body:not(.wgh-disabled) .application-main .container-lg,
+body:not(.wgh-disabled) .footer.container-lg {
+  max-width: none !important;
+  margin-left: 0px !important;
+}
 
-        /* Floating PR toolbar */
-        body:not(.wgh-disabled) .pr-toolbar {
-          margin-left: -16px !important;
-          margin-right: -16px !important;
-          padding-left: 16px !important;
-          padding-right: 16px !important;
-        }
+/* New github design */
+body:not(.wgh-disabled) .application-main .container-xl {
+  max-width: none !important;
+}
 
-        /* Repository Issues */
-        body:not(.wgh-disabled) #js-repo-pjax-container .repository-content .discussion-timeline {  /* Issue body */
-          width: 100% !important;
-        }
-        body:not(.wgh-disabled) .repository-content .timeline-new-comment { /* New Issue / issue comment form */
-          max-width: 100% !important;
-        }
-        body:not(.wgh-disabled) .repository-content .inline-comments .comment-holder, /* Diff / code comments */
-        body:not(.wgh-disabled) .repository-content .inline-comments .inline-comment-form-container,
-        body:not(.wgh-disabled) .repository-content .inline-comments .inline-comment-form,
-        body:not(.wgh-disabled) .repository-content #all_commit_comments .commit-comments-heading,
-        body:not(.wgh-disabled) .repository-content #all_commit_comments .comment-holder {
-          max-width: inherit !important;
-        }
+/* Floating PR toolbar */
+body:not(.wgh-disabled) .pr-toolbar {
+  margin-left: -16px !important;
+  margin-right: -16px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
 
-        /* Repository graph page */
-        body:not(.wgh-disabled) .repository-content .capped-card-content { /* Graph cards on contributors / graph list */
-          width: 100% !important;
-        }
+/* Repository Issues */
+body:not(.wgh-disabled) #js-repo-pjax-container .repository-content .discussion-timeline {  /* Issue body */
+  width: 100% !important;
+}
+body:not(.wgh-disabled) .repository-content .timeline-new-comment { /* New Issue / issue comment form */
+  max-width: 100% !important;
+}
+body:not(.wgh-disabled) .repository-content .inline-comments .comment-holder, /* Diff / code comments */
+body:not(.wgh-disabled) .repository-content .inline-comments .inline-comment-form-container,
+body:not(.wgh-disabled) .repository-content .inline-comments .inline-comment-form,
+body:not(.wgh-disabled) .repository-content #all_commit_comments .commit-comments-heading,
+body:not(.wgh-disabled) .repository-content #all_commit_comments .comment-holder {
+  max-width: inherit !important;
+}
 
-        /* Gists */
-        body:not(.wgh-disabled) .gist-content-wrapper .container {
-          width: auto !important;
-          margin-left: 20px !important;
-          margin-right: 20px !important;
-          min-width: 980px;
-        }
-        body:not(.wgh-disabled) .gist-content-wrapper .container-lg {
-          max-width: none !important;
-        }
-        body:not(.wgh-disabled) .gist-content-wrapper .container-lg .h-card {
-          width: 253px !important;
-        }
-        `
+/* Repository graph page */
+body:not(.wgh-disabled) .repository-content .capped-card-content { /* Graph cards on contributors / graph list */
+  width: 100% !important;
+}
+
+/* Gists */
+body:not(.wgh-disabled) .gist-content-wrapper .container {
+  width: auto !important;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  min-width: 980px;
+}
+body:not(.wgh-disabled) .gist-content-wrapper .container-lg {
+  max-width: none !important;
+}
+body:not(.wgh-disabled) .gist-content-wrapper .container-lg .h-card {
+  width: 253px !important;
+}        
+        `;
         if(!document.getElementById('makeGithubWide')){
             attachAStyleSheet(styleSheet,'makeGithubWide');
         }
