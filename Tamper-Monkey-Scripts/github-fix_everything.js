@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         Universal GitHub Tasks
 // @namespace    github.com
-// @version      0.5
+// @version      0.6
 // @description  Making GitHub work more to my liking...
 // @author       https://github.com/BriceShatzer
 // @match        https://github.com/*
+// @match        https://github.paypal.com/*
+// @exclude      https://github.paypal.com/gist/*
 // @grant        none
 // ==/UserScript==
 
@@ -316,7 +318,7 @@ body:not(.wgh-disabled) .gist-content-wrapper .container-lg {
 }
 body:not(.wgh-disabled) .gist-content-wrapper .container-lg .h-card {
   width: 253px !important;
-}        
+}
         `;
         if(!document.getElementById('makeGithubWide')){
             attachAStyleSheet(styleSheet,'makeGithubWide');
