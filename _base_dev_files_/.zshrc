@@ -231,6 +231,23 @@ alias readMarkdown=mdv
 alias rmd=mdv
 alias markdown=mdv
 
+function listAlias {
+  text=''
+  text+="  ${GREEN}weather\n"
+  text+="  ${LIME_YELLOW}parrot / partyparrot / party / testinternet\n"
+  text+="  ${GREEN}curl-size \$URL\n"
+  text+="  ${LIME_YELLOW}simpleserver / ss\n"
+  text+="  ${GREEN}hostfile / hosts\n"
+  text+="  ${LIME_YELLOW}tree\n"
+  text+="  ${GREEN}sourcetree\n"  
+  text+="  ${LIME_YELLOW}shortenGit \$URL / shortenGitUrl / shortgit\n"  
+  text+="  ${POWDER_BLUE}--- git --- \n"
+  text+="  ${POWDER_BLUE}branches | remotes | hist/history | ignored\n"
+  printf "%b" "$text"
+}
+alias Aliases=listAlias
+alias aliases=listAlias
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
