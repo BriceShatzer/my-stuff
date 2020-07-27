@@ -1,0 +1,36 @@
+## - lives in ~/
+
+[user]
+	name = Brice Shatzer
+	email = brice.shatzer@gmail.com
+
+[core]
+	editor = nano
+	# excludesfile = /Users/bshatzer/.gitignore_global
+
+[alias]
+    branches = branch --list
+    remotes = remote -v
+    hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    history = !git hist && exit 
+    ignored = !git ls-files -v | grep "^[[:lower:]]"
+
+[push]
+    default = simple
+
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED    
+
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+# [difftool "sourcetree"]
+# 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+# 	path = 
+# [mergetool "sourcetree"]
+# 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+# 	trustExitCode = true
