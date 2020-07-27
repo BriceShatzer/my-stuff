@@ -80,6 +80,7 @@ wp-config.php
 # VS Code #
 ###########
 *.code-workspace
+**/.vscode/
 
 # SublimeText files  #
 ######################
@@ -94,6 +95,8 @@ wp-config.php
 
 # sftp configuration file
 sftp-config.json
+
+
 
 
 # Covers JetBrains IDEs:                                                            #
