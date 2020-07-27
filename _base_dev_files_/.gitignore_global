@@ -30,6 +30,8 @@ Temporary Items
 
 # --- Build & Compiled files --- #
 
+log.txt
+
 # Compiled source #
 ###################
 *.com
