@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Universal GitHub Tasks
 // @namespace    github.com
-// @version      0.6
+// @version      0.7
 // @description  Making GitHub work more to my liking...
 // @author       https://github.com/BriceShatzer
 // @match        https://github.com/*
@@ -287,8 +287,8 @@ body:not(.wgh-disabled) .pr-toolbar {
 }
 
 /* Repository Issues */
-body:not(.wgh-disabled) #js-repo-pjax-container .repository-content .discussion-timeline {  /* Issue body */
-  width: 100% !important;
+body:not(.wgh-disabled) #js-repo-pjax-container .repository-content .discussion-timeline {  /* Issue body */  
+  width: calc(100% - 220px);
 }
 body:not(.wgh-disabled) .repository-content .timeline-new-comment { /* New Issue / issue comment form */
   max-width: 100% !important;
