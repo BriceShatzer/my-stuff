@@ -65,10 +65,10 @@
 /* Attach custom controls to the page */
     function attachCustomControlsToPage(){
         let oldControls = document.getElementById('customControls');
-        let repoInfo;
+        let repoPath;
 
-        if (document.head.querySelector("[name=octolytics-dimension-repository_nwo][content]")) {
-            repoInfo = document.head.querySelector("[name=octolytics-dimension-repository_nwo][content]").content;
+        if(document.head.querySelector("[property='og:url']").content){
+            repoPath = document.head.querySelector("[property='og:url']").content;
         }
 
         if (oldControls){
@@ -93,7 +93,7 @@
                 width: 160px;
                 position: relative;
                 top: -23px;
-                left: 18px;
+                left: 24px;
             }
             #searchControls input[type='text']{
                 width: 120px;
@@ -134,7 +134,7 @@
             let searchValue = document.getElementById('searchField').value;
             searchValue = searchValue.split(' ').join('+');
 
-            let searchUrl = 'https://github.com/' + repoInfo + '/search?q=' + searchValue;
+            let searchUrl = repoPath + '/search?q=' + searchValue;
 
             window.location = searchUrl;
         });
@@ -159,7 +159,7 @@
         let customControls = document.createElement('div');
         customControls.setAttribute('id', 'customControls');
         customControls.append(reRunButton);
-        if (repoInfo) {
+        if (repoPath) {
             customControls.append(searchToggleControl);
             customControls.append(searchControls);
         }
@@ -287,7 +287,7 @@ body:not(.wgh-disabled) .pr-toolbar {
 }
 
 /* Repository Issues */
-body:not(.wgh-disabled) #js-repo-pjax-container .repository-content .discussion-timeline {  /* Issue body */  
+body:not(.wgh-disabled) #js-repo-pjax-container .repository-content .discussion-timeline {  /* Issue body */
   width: calc(100% - 220px);
 }
 body:not(.wgh-disabled) .repository-content .timeline-new-comment { /* New Issue / issue comment form */
