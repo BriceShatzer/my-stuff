@@ -1,0 +1,3 @@
+# PayPal Trusted cert stuff
+# see https://engineering.paypalcorp.com/confluence/pages/viewpage.action?pageId=459516299
+export NODE_EXTRA_CA_CERTS=/usr/local/etc/openssl/cert.pem
