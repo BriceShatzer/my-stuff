@@ -120,9 +120,19 @@ alias ss=simpleserver
 
 alias beep="echo -e '\07'"
 
-alias restart="sudo shutdown -r now"
 
-
+alias fire_immediateShutdown='sudo shutdown -r now'
+function shutdown() {
+  if read -q "RESP?Are you sure you want to shutdown? "; then
+      echo
+      fire_immediateShutdown
+      echo
+      echo "shutting down..."      
+  else 
+    beep
+    echo "'$RESP' not 'Y' or 'y'. Exiting..."
+  fi
+}
 
 # https://www.makeuseof.com/tag/sound-advice-fixing-common-mac-audio-problems-os-x/#reset-core-audio
 alias kill_coreaudio='sudo killall coreaudiod'
@@ -131,10 +141,9 @@ function resetAudio() {
       echo
       kill_coreaudio
       echo
-      echo "Yes fired"      
+      echo "audio reset..."      
   else 
     beep
-    echo
     echo "'$RESP' not 'Y' or 'y'. Exiting..."
   fi
 }
