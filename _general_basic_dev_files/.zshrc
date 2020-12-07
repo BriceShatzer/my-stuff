@@ -122,6 +122,25 @@ alias beep="echo -e '\07'"
 
 alias restart="sudo shutdown -r now"
 
+
+
+# https://www.makeuseof.com/tag/sound-advice-fixing-common-mac-audio-problems-os-x/#reset-core-audio
+alias kill_coreaudio='sudo killall coreaudiod'
+function resetAudio() {
+  if read -q "RESP?Reset coreaudiod? "; then
+      echo
+      kill_coreaudio
+      echo
+      echo "Yes fired"      
+  else 
+    beep
+    echo
+    echo "'$RESP' not 'Y' or 'y'. Exiting..."
+  fi
+}
+alias restartAudio=resetAudio
+
+
 #colors use ${RED}Red text ${NORMAL} back to normal
 BLACK=$(tput setaf 0)
 RED=$(tput setaf 1)
