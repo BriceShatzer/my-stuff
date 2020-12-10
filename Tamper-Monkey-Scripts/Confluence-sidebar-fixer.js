@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Confluence Sidebar Fixer
 // @namespace    Confluence
-// @version      0.3
+// @version      0.4
 // @description  try to take over the world!
 // @author       http://briceshatzer.com
 // @match        https://engineering.paypalcorp.com/confluence/display/*
+// @match        https://engineering.paypalcorp.com/confluence/pages/*
 // @grant        none
 // ==/UserScript==
 
@@ -34,22 +35,18 @@
     styleElement(pinControl, pinControlStyles);
     document.body.appendChild(pinControl);
 
-
-    document.querySelectorAll('.confluence-information-macro').forEach((el)=>{
-        el.parentNode.removeChild(el);
-    });
-
-
-
     function pinSidebar () {
         const pagetree = document.getElementById('rw_page_tree_wrapper');
         const splitter = document.getElementById('rw_splitter');
         let fixedHeight = viewportHeight - mainContent.offsetTop;
 
+        document.querySelectorAll('.confluence-information-macro').forEach((el)=>{
+            el.style.display = 'none';
+            // el.parentNode.removeChild(el);
+        });
         document.getElementById('rw_main').style.paddingBottom = '0';
         document.getElementById('rw_footer_wrapper').style.display = 'none';
-        let pagetreeStyles = {
-            width: pagetree.offsetWidth + 'px',
+        function getPagetreeStyles() { return {
             maxHeight: fixedHeight + 'px',
             position: 'fixed',
             left: pagetree.offsetLeft,
@@ -59,28 +56,40 @@
             width: splitter.offsetLeft - pagetree.offsetLeft + 'px',
             zIndex: 1,
             backgroundColor: '#ededed'
-        }
+        }}
+
 
         styleElement(mainContent, {
-            zIndex: 10,
+            zIndex: 9,
             position: 'relative'
         });
         styleElement(splitter, {zIndex:8});
-        styleElement(pagetree, pagetreeStyles);
+        styleElement(pagetree, getPagetreeStyles());
         setPagetreeBasedScroll(window.scrollY);
 
         if (!pinned){
-                pinControl.style.transform = 'rotate(45deg) translateX(-30px)';
+            pinControl.style.transform = 'rotate(45deg) translateX(-30px)';
 
-                window.addEventListener('scroll', function(e) {
-                    if (!ticking) {
-                        window.requestAnimationFrame(function() {
-                            setPagetreeBasedScroll(window.scrollY);
-                            ticking = false;
-                        });
-                        ticking = true;
-                    }
-                });
+            window.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        setPagetreeBasedScroll(window.scrollY);
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+            splitter.addEventListener('mouseup', function(e){
+                setTimeout(()=>{
+                    let value = splitter.offsetLeft - pagetree.offsetLeft + 'px';
+                    console.log(value);
+                    styleElement(
+                        pagetree,
+                        getPagetreeStyles()
+                    );
+                    setPagetreeBasedScroll(window.scrollY);
+                }, 25 );
+            });
             pinned = true;
         }
 
