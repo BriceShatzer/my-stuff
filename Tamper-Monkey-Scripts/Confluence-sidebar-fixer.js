@@ -2,7 +2,7 @@
 // @name         Confluence Sidebar Fixer
 // @namespace    Confluence
 // @version      0.4
-// @description  try to take over the world!
+// @description  Pins page tree of Confluence pages in view
 // @author       http://briceshatzer.com
 // @match        https://engineering.paypalcorp.com/confluence/display/*
 // @match        https://engineering.paypalcorp.com/confluence/pages/*
