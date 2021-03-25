@@ -156,16 +156,42 @@ RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
 YELLOW=$(tput setaf 3)
 LIME_YELLOW=$(tput setaf 190)
-POWDER_BLUE=$(tput setaf 153)
+PEACOCK_BLUE=$(tput setaf 74)
 BLUE=$(tput setaf 4)
 MAGENTA=$(tput setaf 5)
 CYAN=$(tput setaf 6)
 WHITE=$(tput setaf 7)
 BRIGHT=$(tput bold)
 NORMAL=$(tput sgr0)
+SALMON=$(tput setaf 209)
 BLINK=$(tput blink)
 REVERSE=$(tput smso)
 UNDERLINE=$(tput smul)
+
+function listTextFormat() {
+  text=''
+  text+=" ${BLACK}BLACK\n"
+  text+=" ${RED}RED\n"
+  text+=" ${GREEN}GREEN\n"
+  text+=" ${YELLOW}YELLOW\n"
+  text+=" ${LIME_YELLOW}LIME_YELLOW\n"
+  text+=" ${PEACOCK_BLUE}PEACOCK_BLUE\n"
+  text+=" ${BLUE}BLUE\n"
+  text+=" ${MAGENTA}MAGENTA\n"
+  text+=" ${CYAN}CYAN\n"
+  text+=" ${SALMON}SALMON\n"
+  text+=" ${WHITE}WHITE\n"
+  text+=" ${BRIGHT}BRIGHT\n"
+  text+=" ${NORMAL}NORMAL\n"
+  text+=" ${BLINK}BLINK\n"
+  text+=" ${REVERSE}REVERSE (\${NORMAL} to end)${NORMAL}\n"
+  text+=" ${UNDERLINE}UNDERLINE(\${NORMAL} to end)${NORMAL}\n"
+
+  printf "%b" "$text"
+}
+alias listColors=listTextFormat
+alias listcolors=listTextFormat
+alias colors=listTextFormat
 
 # Shows all files/folders
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
@@ -260,17 +286,25 @@ alias rmd=mdv
 alias markdown=mdv
 
 function listAlias {
-  text=''
+  text='\n'
   text+="  ${GREEN}weather\n"
   text+="  ${LIME_YELLOW}parrot / partyparrot / party / testinternet\n"
-  text+="  ${GREEN}curl-size \$URL\n"
-  text+="  ${LIME_YELLOW}simpleserver / ss\n"
-  text+="  ${GREEN}hostfile / hosts\n"
-  text+="  ${LIME_YELLOW}tree\n"
-  text+="  ${GREEN}sourcetree\n"  
-  text+="  ${LIME_YELLOW}shortenGit \$URL / shortenGitUrl / shortgit\n"  
-  text+="  ${POWDER_BLUE}--- git --- \n"
-  text+="  ${POWDER_BLUE}branches | remotes | hist/history | ignored\n"
+  text+="  ${GREEN}listTextFormat / listColors / listcolors / colors list\n"  
+  text+="  ${LIME_YELLOW}curl-size \$URL\n"
+  text+="  ${GREEN}simpleserver / ss\n"
+  text+="  ${LIME_YELLOW}hostfile / hosts\n"
+  text+="  ${GREEN}tree\n"
+  text+="  ${LIME_YELLOW}sourcetree\n"  
+  text+="  ${GREEN}shortenGit \$URL / shortenGitUrl / shortgit\n" 
+  text+="  ${LIME_YELLOW}restartAudio\n"  
+  text+="  ${GREEN}fire_immediateShutdown\n"  
+  text+="\n"  
+  text+="  ${PEACOCK_BLUE}--- git --- \n"
+  text+="  ${PEACOCK_BLUE}branches | remotes | hist/history | ignored\n"
+  text+="\n"  
+  text+="  ${SALMON}--- builtin --- \n"
+  text+="  ${SALMON}uptime | finder . | top\n"
+
   printf "%b" "$text"
 }
 alias Aliases=listAlias
