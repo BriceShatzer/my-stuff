@@ -197,7 +197,7 @@ alias colors=listTextFormat
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # Weather
-alias weather='curl https://wttr.in'
+alias weather='curl https://wttr.in/Chicago\?u'
 
 # update per https://jira.atlassian.com/browse/SRCTREE-3172
 alias sourcetree='/Applications/SourceTree.app/Contents/Resources/stree'
