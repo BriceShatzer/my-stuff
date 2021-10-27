@@ -196,6 +196,9 @@ alias colors=listTextFormat
 # Shows all files/folders
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
+# See occupid ports 
+alias ports='lsof -i -P -n | grep LISTEN'
+
 # Weather
 alias weather='curl https://wttr.in/Chicago\?u'
 
@@ -278,12 +281,16 @@ function shortenGitUrl {
 alias shortenGit=shortenGitUrl
 alias shortgit=shortenGitUrl
 
-# Markdown Viewer
+# old Markdown Viewer
 # https://github.com/axiros/terminal_markdown_viewer
 # Note: code snippets don't work if installed via pip. Use: `pip install git+https://github.com/axiros/terminal_markdown_viewer.git`
-alias readMarkdown=mdv
-alias rmd=mdv
-alias markdown=mdv
+# alias readMarkdown=mdv
+# alias rmd=mdv
+# alias markdown=mdv
+
+# Glow - markdown reader
+# https://github.com/charmbracelet/glow
+alias rmd=glow
 
 function listAlias {
   text='\n'
@@ -298,6 +305,7 @@ function listAlias {
   text+="  ${GREEN}shortenGit \$URL / shortenGitUrl / shortgit\n" 
   text+="  ${LIME_YELLOW}restartAudio\n"  
   text+="  ${GREEN}fire_immediateShutdown\n"  
+  text+="  ${LIME_YELLOW}ports\n"  
   text+="\n"  
   text+="  ${PEACOCK_BLUE}--- git --- \n"
   text+="  ${PEACOCK_BLUE}branches | remotes | hist/history | ignored\n"
