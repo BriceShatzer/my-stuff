@@ -6,5 +6,5 @@ alias codeartifact=loginToCodeartifact
 alias vault=loginToCodeartifact
 #
 # - open my notes files in vsCode
-alias notes='code notes.code-workspace'
+alias notes='code ~/Projects/notes.code-workspace'
 
