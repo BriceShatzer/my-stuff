@@ -120,6 +120,7 @@ alias ss=simpleserver
 
 alias beep="echo -e '\07'"
 
+alias finder=open
 
 alias fire_immediateShutdown='sudo shutdown -r now'
 function shutdown() {
