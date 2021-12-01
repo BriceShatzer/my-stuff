@@ -200,6 +200,11 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 # See occupid ports 
 alias ports='lsof -i -P -n | grep LISTEN'
 
+# See running node processes 
+alias runningNode='ps | grep node'
+alias runningNodes=runningNode
+alias showNodes=runningNode
+
 # Weather
 alias weather='curl https://wttr.in/Chicago\?u'
 
@@ -307,6 +312,9 @@ function listAlias {
   text+="  ${LIME_YELLOW}restartAudio\n"  
   text+="  ${GREEN}fire_immediateShutdown\n"  
   text+="  ${LIME_YELLOW}ports\n"  
+  text+="  ${GREEN}showNodes / runningNodes / runningNode\n" 
+  text+="  ${LIME_YELLOW}shortenGit \$URL / shortenGitUrl / shortgit\n" 
+  text+="  ${GREEN}rmd / glow\n"
   text+="\n"  
   text+="  ${PEACOCK_BLUE}--- git --- \n"
   text+="  ${PEACOCK_BLUE}branches | remotes | hist/history | ignored\n"
