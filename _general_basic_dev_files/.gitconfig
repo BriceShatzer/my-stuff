@@ -2,7 +2,9 @@
 
 [user]
 	name = Brice Shatzer
-	email = brice.shatzer@gmail.com
+	# email = brice.shatzer@gmail.com 
+    # leaving this out forces git to ask you on the intial commit of any repo
+    # this is good if you have both personal and professional repos 
 
 [core]
 	editor = nano
@@ -17,6 +19,7 @@
     hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     history = !git hist && exit 
     ignored = !git ls-files -v | grep "^[[:lower:]]"
+    unstage = reset HEAD --
 
 [push]
     default = simple
