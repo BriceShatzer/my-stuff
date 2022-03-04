@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Github Gist Searching
+// @name         Github Gist Upgrades
 // @namespace    gist.github.com
-// @version      0.1
-// @description  Making it easier to search for my gists
+// @version      0.2
+// @description  Making Github's gist site easier to use
 // @author       https://briceshatzer.com
 // @match        https://gist.github.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
@@ -11,16 +11,24 @@
 (function() {
 'use strict';
 
-//    const nav = document.querySelector('nav');
-
-
 const nav = document.querySelector('nav');
-let el = document.createElement('a');
-el.className = 'Header-link';
-el.innerText = 'Search My Gists';
-el.href = 'https://gist.github.com/search?q=user%3ABriceShatzer';
-nav.appendChild(el);
 
+nav.querySelector('a[href="https://github.com"]').setAttribute('style', 'margin-right: 8px !important');
+
+const searchLink = makeHeaderLink('Search My Gists','https://gist.github.com/search?q=user%3ABriceShatzer');
+searchLink.style.borderLeft = "1px solid #fff";
+searchLink.style.paddingLeft = "8px";
+const allGistsLink = makeHeaderLink('All My Gists','https://gist.github.com/BriceShatzer');
+nav.append(searchLink, allGistsLink);
+
+function makeHeaderLink(text, href) {
+    let el = document.createElement('a');
+    el.className = 'Header-link';
+    el.innerText = text;
+    el.href = href;
+    el.style.marginRight = "16px";
+    return el;
+}
 if (window.location.pathname === '/search') {
     let infoLink = document.createElement('a');
     infoLink.href = 'https://gist.github.com/BriceShatzer/86832ab4ccfbd3220468cb3c045dad5c';
