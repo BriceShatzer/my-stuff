@@ -10,26 +10,42 @@
 
 (function() {
     'use strict';
-let stocks = [];
+let stocks;
 let loadedSections;
 let alphaSort;
+let firedCount = 0;
+
+let trigger = document.createElement('span');
+trigger.setAttribute('style',`
+    font-size:2rem;
+    position:absolute;
+    bottom:1rem;
+    left:1rem;
+    z-index:5000;
+    cursor:pointer;
+
+    `);
+trigger.innerText = '✎';
+trigger.addEventListener('click',()=>{logStocksToConsole()});
 
 const interval = window.setInterval(isAppReady, 500);
 
-
 function logStocksToConsole(){
+    stocks = [];
+    console.log('fired')
     let target;
     let arr;
 
-    loadedSections.forEach((section)=>{
-        if(section.querySelector('h3').innerText === 'Stocks'){ target = section }
-    });
+    // loadedSections.forEach((section)=>{
+    //     if(section.querySelector('header').innerText === 'Stocks'){ target = section }
+    // });
 
-    arr = target.querySelectorAll('a');
+    arr = document.querySelectorAll('[data-testid="PositionCell"]');
     arr.forEach(el => {
         let obj = {}
-        obj.ticker = el.querySelector('h4').innerText;
-        obj.equity = el.querySelector('h3').innerText;
+        const values = el.querySelectorAll('div')[0].innerText.split(/\n/);
+        obj.ticker = values[0]
+        obj.equity = values[1];
         stocks.push(obj);
     });
 
@@ -41,13 +57,17 @@ function logStocksToConsole(){
     });
 
     console.log(alphaSort);
+    if (firedCount % 5 === 0 ){
+        console.log('zoom out to fit all stocks on one screen ಠ_ಠ')
+    }
+    firedCount++;
 }
 
 function isAppReady() {
-    loadedSections = document.querySelectorAll('.main-container .col-5 section');
+    loadedSections = document.querySelector('.sidebar-content-sticky');
     if (loadedSections.length !== 0){
-        logStocksToConsole();
-        clearInterval(interval)
+        document.querySelector('.app').appendChild(trigger);
+        clearInterval(interval);
     }
 }
 })();
