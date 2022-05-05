@@ -274,19 +274,6 @@ function curl-size {
   fi
 }
 
-function shortenGitUrl {
-  if [[ -z $1 ]]; then
-    printf '%s\n' "Please provide a URL"
-  else
-    response=$(curl -i https://git.io -F "url=$1" | grep -Fi Location);
-    url=${response:s/Location: /}
-    echo $url | pbcopy
-    print $url
-  fi
-}
-alias shortenGit=shortenGitUrl
-alias shortgit=shortenGitUrl
-
 # old Markdown Viewer
 # https://github.com/axiros/terminal_markdown_viewer
 # Note: code snippets don't work if installed via pip. Use: `pip install git+https://github.com/axiros/terminal_markdown_viewer.git`
@@ -308,12 +295,10 @@ function listAlias {
   text+="  ${LIME_YELLOW}hostfile / hosts\n"
   text+="  ${GREEN}tree\n"
   text+="  ${LIME_YELLOW}sourcetree\n"  
-  text+="  ${GREEN}shortenGit \$URL / shortenGitUrl / shortgit\n" 
-  text+="  ${LIME_YELLOW}restartAudio\n"  
-  text+="  ${GREEN}fire_immediateShutdown\n"  
-  text+="  ${LIME_YELLOW}ports\n"  
+  text+="  ${GREEN}restartAudio\n"  
+  text+="  ${LIME_YELLOW}fire_immediateShutdown\n"  
   text+="  ${GREEN}showNodes / runningNodes / runningNode\n" 
-  text+="  ${LIME_YELLOW}shortenGit \$URL / shortenGitUrl / shortgit\n" 
+  text+="  ${LIME_YELLOW}ports\n"  
   text+="  ${GREEN}rmd / glow\n"
   text+="\n"  
   text+="  ${PEACOCK_BLUE}--- git --- \n"
