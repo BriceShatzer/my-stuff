@@ -1,3 +1,4 @@
+// Grainger M1 mac
 {
 	"ignored_packages":
 	[
@@ -8,4 +9,25 @@
 	"theme" : "SoDaReloaded Dark.sublime-theme",
 	"color_scheme" : "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
 	"soda_classic_tabs": true,
+}
+
+// -- Brice's Macbook 2015
+{
+    "added_words":
+    [
+        "Kinja"
+    ],
+    "color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+    "default_encoding": "UTF-8",
+    "font_size": 14,
+    "ignored_packages":
+    [
+        "jQuery",
+        "Markdown",
+        "Vintage"
+    ],
+    "soda_classic_tabs": true,
+    "tab_size": 4,
+    "theme": "SoDaReloaded Dark.sublime-theme",
+    "translate_tabs_to_spaces": true
 }

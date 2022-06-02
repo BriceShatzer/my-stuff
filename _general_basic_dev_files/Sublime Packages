@@ -1,12 +1,52 @@
 // -- Grainger 
-"Dotfiles Syntax Highlighting",
-"FileDiffs",
-"Package Control",
-"SCSS",
-"Statusbar Path",
-"SublimeLinter",
-"SublimeLinter-json",
-"SVG Viewer",
-"Theme - SoDaReloaded",
+"installed_packages":
+[
+    "Dotfiles Syntax Highlighting",
+    "FileDiffs",
+    "Package Control",
+    "SCSS",
+    "Statusbar Path",
+    "SublimeLinter",
+    "SublimeLinter-json",
+    "SVG Viewer",
+    "Theme - SoDaReloaded",
+]
+
 
 // -- Brice's Macbook 2015
+"installed_packages":
+[
+    "Advanced CSV",
+    "Alignment",
+    "Babel",
+    "Craft-Twig",
+    "CSS3",
+    "Dotfiles Syntax Highlighting",
+    "FileDiffs",
+    "HTML-CSS-JS Prettify",
+    "HTML5",
+    "Javascript Beautify",
+    "jQuery",
+    "js-beautify-sublime",
+    "MarkdownEditing",
+    "MarkdownPreview",
+    "nginx",
+    "Package Control",
+    "PackageResourceViewer",
+    "Path Tools",
+    "Sass",
+    "SideBarEnhancements",
+    "SublimeCodeIntel",
+    "SublimeLinter",
+    "SublimeLinter-contrib-alex",
+    "SublimeLinter-php",
+    "SublimeREPL",
+    "Sync View Scroll",
+    "Theme - SoDaReloaded",
+    "Trimmer",
+    "VBDotNet"
+],
+"repositories":
+[
+    "https://github.com/enginespot/js-beautify-sublime"
+]
