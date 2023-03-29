@@ -31,9 +31,8 @@ GM_addStyle(`
         } else {
             let commitTimes = document.querySelectorAll('relative-time');
             commitTimes.forEach((el)=>{
-                el.on
                 let fullTime = el.title;
-                el.innerHTML = '<strong>'+fullTime+'</strong>';
+                el.shadowRoot.innerHTML = '&nbsp;'+fullTime;
             });
         }
     }
