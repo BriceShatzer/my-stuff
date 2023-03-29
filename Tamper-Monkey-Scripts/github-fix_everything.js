@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Universal GitHub Tasks
 // @namespace    github.com
-// @version      0.7
+// @version      0.8
 // @description  Making GitHub work more to my liking...
 // @author       https://github.com/BriceShatzer
 // @match        https://github.com/*
 // @match        https://github.paypal.com/*
 // @exclude      https://github.paypal.com/gist/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @grant        none
 // ==/UserScript==
 
@@ -23,6 +24,7 @@
     window.onload = () => updateState();
 
     //extending history.pushState to run updateState, because github doesn't fire a popstate in many instances
+ /*
     (function(history){
     var pushState = history.pushState;
     history.pushState = function(state) {
@@ -34,7 +36,7 @@
         return pushState.apply(history, arguments);
     }
     })(window.history);
-
+*/
 
     function updateState() {
         state_commitTimesConverted = document.querySelectorAll('relative-time').length > 0 ? true : false;
@@ -176,7 +178,7 @@
             let commitTimes = document.querySelectorAll('relative-time');
             commitTimes.forEach((el)=>{
                 let fullTime = el.title;
-                el.innerHTML = '<strong>'+fullTime+'</strong>';
+                el.shadowRoot.innerHTML = '<strong>'+fullTime+'</strong>';
             });
         }
     }
