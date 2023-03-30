@@ -178,7 +178,7 @@
             let commitTimes = document.querySelectorAll('relative-time');
             commitTimes.forEach((el)=>{
                 let fullTime = el.title;
-                el.shadowRoot.innerHTML = '&nbsp;'+fullTime;
+                el.shadowRoot.innerHTML = '&nbsp;<em>'+fullTime+'</em>';
             });
         }
     }
