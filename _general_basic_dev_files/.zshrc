@@ -110,10 +110,17 @@ export EDITOR="$VISUAL"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+
+alias finder=open
+
 alias hostfile='sudo nano -w /private/etc/hosts'
 alias hosts=hostfile
 
-alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias flushdns='dscacheutil -flushcache && killall -HUP mDNSResponder'
+
+# See occupid ports 
+alias ports='lsof -i -P -n | grep LISTEN'
 
 function simpleserver() {ruby -run -e httpd . -p "${1:-8000}"}
 alias ss=simpleserver
@@ -291,22 +298,30 @@ function listAlias {
   text+="  ${LIME_YELLOW}parrot / partyparrot / party / testinternet\n"
   text+="  ${GREEN}listTextFormat / listColors / listcolors / colors list\n"  
   text+="  ${LIME_YELLOW}curl-size \$URL\n"
+  
+  text+="  ${GREEN}hostfile / hosts\n"
+  text+="  ${LIME_YELLOW}flushdns / flushDNS\n"
+
   text+="  ${GREEN}simpleserver / ss\n"
-  text+="  ${LIME_YELLOW}hostfile / hosts\n"
+  text+="  ${LIME_YELLOW}ports\n"  
+  
   text+="  ${GREEN}tree\n"
+  
   text+="  ${LIME_YELLOW}sourcetree\n"  
+
   text+="  ${GREEN}restartAudio\n"  
   text+="  ${LIME_YELLOW}fire_immediateShutdown\n"  
+
   text+="  ${GREEN}showNodes / runningNodes / runningNode\n" 
-  text+="  ${LIME_YELLOW}ports\n"  
-  text+="  ${GREEN}rmd / glow\n"
+  text+="  ${LIME_YELLOW}rmd / glow\n"
   text+="\n"  
   text+="  ${PEACOCK_BLUE}--- git --- \n"
   text+="  ${PEACOCK_BLUE}branches | remotes | hist/history | ignored\n"
   text+="\n"  
   text+="  ${SALMON}--- builtin --- \n"
   text+="  ${SALMON}uptime | finder . | top\n"
-
+  text+="\n"  
+  text+="\n"  
   printf "%b" "$text"
 }
 alias Aliases=listAlias
