@@ -19,7 +19,7 @@
     const searchLink = makeHeaderLink('Search My Gists','https://gist.github.com/search?q=user%3ABriceShatzer');
     searchLink.style.borderLeft = "1px solid #fff";
     searchLink.style.paddingLeft = "8px";
-    const allGistsLink = makeHeaderLink('All My Gists','https://gist.github.com/BriceShatzer');
+    const allGistsLink = makeHeaderLink('All My Gists','https://gist.github.com/BriceShatzer?direction=desc&sort=updated');
     nav.append(searchLink, allGistsLink);
     
     const prettyLink = (() => {
