@@ -292,6 +292,10 @@ function curl-size {
 # https://github.com/charmbracelet/glow
 alias rmd=glow
 
+# list available scripts from package.json
+function listScripts () {node -e "console.log(Object.keys(require('.' + require('path').sep + 'package.json').scripts || {}))"}
+alias list-npm=listScripts
+
 function listAlias {
   text='\n'
   text+="  ${GREEN}weather\n"
@@ -314,6 +318,7 @@ function listAlias {
 
   text+="  ${GREEN}showNodes / runningNodes / runningNode\n" 
   text+="  ${LIME_YELLOW}rmd / glow\n"
+  text+="  ${GREEN}list-npm / listScripts\n"
   text+="\n"  
   text+="  ${PEACOCK_BLUE}--- git --- \n"
   text+="  ${PEACOCK_BLUE}branches | remotes | hist/history | ignored\n"

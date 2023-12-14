@@ -5,6 +5,21 @@ function loginToCodeartifact() {aws-vault exec productcore-prod -- aws codeartif
 alias codeartifact=loginToCodeartifact
 alias vault=loginToCodeartifact
 #
+# - fix linting issues because my IDE doesn't on save for some reason?
+alias lintfix='npx prettier --write .'
+#
+# - getting and running snyk
+MY_SNYK_CLI_VERSION=$(snyk --version)
+LATEST_SNYK_CLI_VERSION=$(curl -s https://static.snyk.io/cli/latest/version) 
+  if [[ ! $MY_SNYK_CLI_VERSION =~ "$LATEST_SNYK_CLI_VERSION" ]]; 
+   then
+     echo "Downloading latest version of snyk " $LATEST_SNYK_CLI_VERSION
+     curl https://static.snyk.io/cli/latest/snyk-macos -o snyk
+     chmod +x ./snyk
+     sudo mv -f ./snyk /usr/local/bin/
+  fi
+alias snyktest='snyk test --severity-threshold=medium --dev --prune-repeated-subdependencies .'
+#
 # - open my notes files in vsCode
 alias notes='code ~/Projects/notes.code-workspace'
 
