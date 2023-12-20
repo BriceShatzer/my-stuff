@@ -296,6 +296,18 @@ alias rmd=glow
 function listScripts () {node -e "console.log(Object.keys(require('.' + require('path').sep + 'package.json').scripts || {}))"}
 alias list-npm=listScripts
 
+# Function to suggest running `npm ci` instead of `npm install`
+npm_install() {
+  if [[ "$1" == "install" ]]; then
+    echo "Consider running 'npm ci' instead of 'npm install' to ensure you have the exact dependencies & versions listed in the package-lock.json file."
+  fi
+  command npm "$@"
+}
+
+# Override the npm command with the custom function
+alias npm='npm_install'
+
+
 function listAlias {
   text='\n'
   text+="  ${GREEN}weather\n"
