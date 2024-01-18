@@ -1,0 +1,20 @@
+// ==UserScript==
+// @name         Geeksforgeeks anti-adblocker
+// @namespace    geeksforgeeks.org
+// @version      2024-01-18
+// @description  W3 schools for the 2020s
+// @author       You
+// @match        https://www.geeksforgeeks.org/
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=geeksforgeeks.org
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    setTimeout(()=>{
+        const modal = document.querySelector('#adBlockerModal');
+        modal.remove();
+        document.body.style.overflow = "scroll";
+    }, 700)
+
+})();
