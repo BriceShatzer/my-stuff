@@ -119,9 +119,6 @@ alias hosts=hostfile
 
 alias flushdns='dscacheutil -flushcache && killall -HUP mDNSResponder'
 
-# See occupid ports 
-alias ports='lsof -i -P -n | grep LISTEN'
-
 function simpleserver() {ruby -run -e httpd . -p "${1:-8000}"}
 alias ss=simpleserver
 
@@ -204,8 +201,8 @@ alias colors=listTextFormat
 # Shows all files/folders
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
-# See occupid ports 
-alias ports='lsof -i -P -n | grep LISTEN'
+# See currently listening ports 
+alias ports='lsof -i -P -n | awk "NR == 1 || /LISTEN/"'
 
 # See running node processes 
 alias runningNode='ps | grep node'
