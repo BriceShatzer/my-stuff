@@ -294,7 +294,7 @@ function listScripts () {node -e "console.log(Object.keys(require('.' + require(
 alias list-npm=listScripts
 
 # Function to suggest running `npm ci` instead of `npm install`
-npm_install() {
+__npm_install() {
   if [[ "$1" == "install" ]]; then
     echo "Consider running 'npm ci' instead of 'npm install' to ensure you have the exact dependencies & versions listed in the package-lock.json file."
   fi
@@ -302,7 +302,7 @@ npm_install() {
 }
 
 # Override the npm command with the custom function
-alias npm='npm_install'
+alias npm='__npm_install'
 
 
 function listAlias {
@@ -327,7 +327,7 @@ function listAlias {
 
   text+="  ${GREEN}showNodes / runningNodes / runningNode\n" 
   text+="  ${LIME_YELLOW}rmd / glow\n"
-  text+="  ${GREEN}list-npm / listScripts\n"
+  text+="  ${GREEN}list-npm / listScripts / npmList\n"
   text+="\n"  
   text+="  ${PEACOCK_BLUE}--- git --- \n"
   text+="  ${PEACOCK_BLUE}branches | remotes | hist/history | ignored\n"
