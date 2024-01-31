@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Universal GitHub Tasks
 // @namespace    github.com
-// @version      0.8
+// @version      0.9
 // @description  Making GitHub work more to my liking...
 // @author       https://github.com/BriceShatzer
 // @match        https://github.com/*
@@ -54,6 +54,7 @@
         convertCommitTimes();
         //convertUsernamesToRealNames();
         if (state_githubIsWide !== true){makeGithubWide();}
+        addDependabotFilterToPulls();
         attachCustomControlsToPage();
     }
 /* ಠ_ಠ
@@ -118,11 +119,11 @@
 
     /* Create Tampermonkey Re-run Button */
         let reRunButton = document.createElement('img');
-        reRunButton.setAttribute('src','https://camo.githubusercontent.com/9919bc7e220f6919cdac2d9ec00b99caa9791c3b/687474703a2f2f692e696d6775722e636f6d2f3539566766457a2e706e67');
+        reRunButton.setAttribute('src','🛠️');
         reRunButton.setAttribute('style','cursor:pointer;max-width:16px');
         reRunButton.addEventListener('click', () => {
             updateState();
-        });
+        })
         //document.body.append(reRunButton);
 
     /* Create Repo Search Controls */
@@ -169,6 +170,20 @@
         document.body.append(customControls);
     }
 
+/* Add dependabot filter */
+    function addDependabotFilterToPulls(){
+        if(location.pathname.includes('/pulls') && !document.getElementById('dependabotFilter')){
+            let target = document.querySelector('#js-issues-toolbar .table-list-header-toggle');
+            let link = document.createElement('a');
+            link.id = "dependabotFilter"
+            link.innerHTML = "🤖 \&nbsp;Filter Dependabot"
+            link.classList.add('btn-link');
+            link.style.lineHeight = '1';
+            link.href=location.href+'+-author%3Adependabot%5Bbot%5D';
+            target.append(link);
+        }
+    }
+
 /* Convert Commit Times To Non-realtive */
     function convertCommitTimes() {
         if(state_commitTimesConverted === false) {
@@ -178,7 +193,7 @@
             let commitTimes = document.querySelectorAll('relative-time');
             commitTimes.forEach((el)=>{
                 let fullTime = el.title;
-                el.shadowRoot.innerHTML = '&nbsp;<em>'+fullTime+'</em>';
+                el.shadowRoot.innerHTML = '&nbsp;'+fullTime;
             });
         }
     }
