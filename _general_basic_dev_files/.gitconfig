@@ -20,6 +20,7 @@
     history = !git hist && exit 
     ignored = !git ls-files -v | grep "^[[:lower:]]"
     unstage = reset HEAD --
+    setbranch = "!f() { git branch -D $1 && git checkout -b $1; }; f"
 
 [push]
     default = simple

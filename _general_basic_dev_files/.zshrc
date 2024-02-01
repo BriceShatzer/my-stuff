@@ -331,6 +331,7 @@ function listAlias {
   text+="\n"  
   text+="  ${PEACOCK_BLUE}--- git --- \n"
   text+="  ${PEACOCK_BLUE}branches | remotes | hist/history | ignored\n"
+  text+="  ${PEACOCK_BLUE}setbranch <branchName> => git branch -D \$1 && git checkout -b \$1 \n"  
   text+="\n"  
   text+="  ${SALMON}--- builtin --- \n"
   text+="  ${SALMON}uptime | finder . | top\n"
