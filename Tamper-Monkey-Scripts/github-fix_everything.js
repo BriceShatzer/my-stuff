@@ -79,11 +79,11 @@
         }
         let controlPositioningTop = '80px' //height of header + standard padding on elements | 64px + 16px
         let styles = `
-            .searchToggleControl {
+            .baseControl {
                 cursor: pointer;
                 padding: 2px 0 0 2px;
             }
-            .searchToggleControl:hover {
+            .baseControl:hover {
                 text-decoration: none;
             }
             #searchControls {
@@ -118,9 +118,10 @@
 
 
     /* Create Tampermonkey Re-run Button */
-        let reRunButton = document.createElement('img');
-        reRunButton.setAttribute('src','🛠️');
-        reRunButton.setAttribute('style','cursor:pointer;max-width:16px');
+        let reRunButton = document.createElement('a');
+        reRunButton.textContent = '🛠️';
+        reRunButton.classList.add('baseControl');
+//        reRunButton.setAttribute('style','cursor:pointer;max-width:16px');
         reRunButton.addEventListener('click', () => {
             updateState();
         })
@@ -144,7 +145,7 @@
 
         let searchToggleControl = document.createElement('a');
         searchToggleControl.textContent = '🔍';
-        searchToggleControl.classList.add('searchToggleControl');
+        searchToggleControl.classList.add('baseControl');
         searchToggleControl.addEventListener('click', () => {
             let controls = document.getElementById('searchControls');
             controls.classList.toggle('open');
@@ -179,7 +180,7 @@
             link.innerHTML = "🤖 \&nbsp;Filter Dependabot"
             link.classList.add('btn-link');
             link.style.lineHeight = '1';
-            link.href=location.href+'+-author%3Adependabot%5Bbot%5D';
+            link.href=location.href + `${!location.search && '?q='}-author%3Adependabot%5Bbot%5D`;
             target.append(link);
         }
     }
