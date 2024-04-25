@@ -1,12 +1,10 @@
 // ==UserScript==
 // @name         Universal GitHub Tasks
 // @namespace    github.com
-// @version      0.9
+// @version      0.10
 // @description  Making GitHub work more to my liking...
 // @author       https://github.com/BriceShatzer
 // @match        https://github.com/*
-// @match        https://github.paypal.com/*
-// @exclude      https://github.paypal.com/gist/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @grant        none
 // ==/UserScript==
@@ -180,7 +178,7 @@
             link.innerHTML = "🤖 \&nbsp;Filter Dependabot"
             link.classList.add('btn-link');
             link.style.lineHeight = '1';
-            link.href=location.href + `${!location.search && '?q='}-author%3Adependabot%5Bbot%5D`;
+            link.href=location.href + `${!location.search && '?q='} -author%3Adependabot%5Bbot%5D`;
             target.append(link);
         }
     }
@@ -279,7 +277,6 @@
     function makeGithubWide() {
         var styleSheet = `
 body:not(.wgh-disabled) .application-main .container {
-  width: auto !important;
   padding-left: 16px !important;
   padding-right: 16px !important;
   margin-left: 0px !important;
