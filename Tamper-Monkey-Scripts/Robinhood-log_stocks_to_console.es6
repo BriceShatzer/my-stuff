@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Robinhood - log stocks to console
 // @namespace    https://robinhood.com/
-// @version      0.2
+// @version      0.3
 // @description  Grabs all the stocks, sorts them, and prints them w/ total equity. Used to verify our financial tracking doc.
 // @author       http://github.com/BriceShatzer
 // @match        https://robinhood.com/
@@ -10,64 +10,96 @@
 
 (function() {
     'use strict';
-let stocks;
-let loadedSections;
-let alphaSort;
-let firedCount = 0;
+    let stocks;
+    let stocksSidebar;
+    let alphaSort;
+    let zoom = (window.outerWidth / window.innerWidth).toFixed(2)
 
-let trigger = document.createElement('span');
-trigger.setAttribute('style',`
-    font-size:2rem;
-    position:absolute;
-    bottom:1rem;
-    left:1rem;
-    z-index:5000;
-    cursor:pointer;
+    let control = document.createElement('div');
+    control.id = 'control'
+    control.setAttribute('style',`
+        font-size:2.5rem;
+        position:absolute;
+        bottom:1rem;
+        left:1rem;
+        z-index:5000;
+        padding:2px 8px;
+        border: 1px solid rgb(227, 233, 237);
+        border-radius: 4px;
+        line-height: 1;
+        `);
 
+    let trigger = document.createElement('span');
+    trigger.innerText = '✎';
+    trigger.style.cursor = 'pointer';
+
+    trigger.addEventListener('click',()=>{logStocksToConsole()});
+
+    let removeTrigger = document.createElement('span');
+    removeTrigger.innerText = '⛒';
+    removeTrigger.setAttribute('style',`
+       font-size: 0.75rem;
+       position: absolute;
+       top: -2px;
+       z-index:1;
+       cursor: pointer;
     `);
-trigger.innerText = '✎';
-trigger.addEventListener('click',()=>{logStocksToConsole()});
+    removeTrigger.addEventListener('click',()=>{removeControl()});
 
-const interval = window.setInterval(isAppReady, 500);
+    control.appendChild(trigger);
+    control.appendChild(removeTrigger);
 
-function logStocksToConsole(){
-    stocks = [];
-    console.log('fired')
-    let target;
-    let arr;
+    const interval = window.setInterval(isAppReady, 500);
 
-    // loadedSections.forEach((section)=>{
-    //     if(section.querySelector('header').innerText === 'Stocks'){ target = section }
-    // });
-
-    arr = document.querySelectorAll('[data-testid="PositionCell"]');
-    arr.forEach(el => {
-        let obj = {}
-        const values = el.querySelectorAll('div')[0].innerText.split(/\n/);
-        obj.ticker = values[0]
-        obj.equity = values[1];
-        stocks.push(obj);
-    });
-
-    alphaSort = stocks.sort( (a, b) => {
-        var nameA=a.ticker.toLowerCase(), nameB=b.ticker.toLowerCase()
-        if (nameA < nameB){return -1}
-        if (nameA > nameB){return 1}
-        return 0
-    });
-
-    console.log(alphaSort);
-    if (firedCount % 5 === 0 ){
-        console.log('zoom out to fit all stocks on one screen ಠ_ಠ')
+    window.onresize = () => {
+        zoom = (window.outerWidth / window.innerWidth).toFixed(2);
+        updateTriggerElement();
     }
-    firedCount++;
-}
 
-function isAppReady() {
-    loadedSections = document.querySelector('.sidebar-content-sticky');
-    if (loadedSections.length !== 0){
-        document.querySelector('.app').appendChild(trigger);
-        clearInterval(interval);
+    function updateTriggerElement () {
+        const el = document.getElementById('control');
+        el.style.zoom = 1 / zoom;
     }
-}
+
+    function logStocksToConsole (){
+        stocks = [];
+        let target;
+        let arr;
+
+        if (zoom < 0.34){
+            arr = document.querySelectorAll('[data-testid="PositionCell"]');
+            arr.forEach(el => {
+                let obj = {}
+                const values = el.querySelectorAll('div')[0].innerText.split(/\n/);
+                obj.ticker = values[0]
+                obj.equity = values[1];
+                stocks.push(obj);
+            });
+
+            alphaSort = stocks.sort( (a, b) => {
+                var nameA=a.ticker.toLowerCase(), nameB=b.ticker.toLowerCase()
+                if (nameA < nameB){return -1}
+                if (nameA > nameB){return 1}
+                return 0
+            });
+
+            console.log(alphaSort);
+        } else {console.info('Zoom to less at least 33%')}
+    }
+
+    function isAppReady () {
+        console.log('checking if app ready');
+        stocksSidebar = document.querySelector('[data-testid="VirtualizedSidebar"]');
+        if (stocksSidebar.length !== 0){
+            console.log('app seems ready?');
+            document.querySelector('.app').appendChild(control);
+            clearInterval(interval);
+        }
+    }
+
+    function removeControl () {
+        control.remove();
+        window.onresize = null;
+    }
 })();
+
