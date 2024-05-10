@@ -21,5 +21,19 @@ class MarkdownLinkFolder(sublime_plugin.ViewEventListener):
     on_post_save = on_load
 
 
-# https://www.youtube.com/watch?v=lBgDilqulxg
+
 # put this in the top level of your "User" package => "Preferences: Browse Packages" will open the directory in finder 
+# video: https://www.youtube.com/watch?v=lBgDilqulxg
+#
+# additionally, add it to the command palatte by creating a new .sublime-commands file in the user package that looks like this:
+# video: https://www.youtube.com/watch?v=2NNpWYw04zw
+#
+#
+# [
+#   {
+#       "caption":"fold/collapse markdown links",
+#       "command":"markdown_fold_links"
+#   }
+# ]
+#
+#
