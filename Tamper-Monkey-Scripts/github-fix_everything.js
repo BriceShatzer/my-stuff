@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Universal GitHub Tasks
 // @namespace    github.com
-// @version      0.10
+// @version      0.11
 // @description  Making GitHub work more to my liking...
 // @author       https://github.com/BriceShatzer
 // @match        https://github.com/*
@@ -75,7 +75,8 @@
         if (oldControls){
             document.body.removeChild(oldControls)
         }
-        let controlPositioningTop = '80px' //height of header + standard padding on elements | 64px + 16px
+        let controlPositioningTop = '86px' // This is best for grainger/corporate github instances. adjust as you see fit
+        //height of header + standard padding on elements | 64px + 16px - old explanation
         let styles = `
             .baseControl {
                 cursor: pointer;
@@ -103,7 +104,7 @@
             #customControls {
                 position:fixed;
                 top: ${controlPositioningTop};
-                left: 16px;
+                left: 4px;
                 z-index: 199;
                 display: flex;
                 flex-direction: column;
