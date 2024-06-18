@@ -9,15 +9,21 @@ alias vault=loginToCodeartifact
 alias lintfix='npx prettier --write .'
 #
 # - getting and running snyk
-MY_SNYK_CLI_VERSION=$(snyk --version)
-LATEST_SNYK_CLI_VERSION=$(curl -s https://static.snyk.io/cli/latest/version) 
-  if [[ ! $MY_SNYK_CLI_VERSION =~ "$LATEST_SNYK_CLI_VERSION" ]]; 
-   then
-     echo "Downloading latest version of snyk " $LATEST_SNYK_CLI_VERSION
-     curl https://static.snyk.io/cli/latest/snyk-macos -o snyk
-     chmod +x ./snyk
-     sudo mv -f ./snyk /usr/local/bin/
-  fi
+function updatesnyk () {
+  MY_SNYK_CLI_VERSION=$(snyk --version)
+  LATEST_SNYK_CLI_VERSION=$(curl -s https://static.snyk.io/cli/latest/version) 
+    if [[ ! $MY_SNYK_CLI_VERSION =~ "$LATEST_SNYK_CLI_VERSION" ]]; 
+     then
+       echo "Downloading latest version of snyk " $LATEST_SNYK_CLI_VERSION
+       curl https://static.snyk.io/cli/latest/snyk-macos -o snyk
+       chmod +x ./snyk
+       sudo mv -f ./snyk /usr/local/bin/
+    fi  
+}
+alias updateSnyk=updatesnyk 
+alias update-snyk=updatesnyk 
+alias update_snyk=updatesnyk 
+
 alias snyktest='snyk test --severity-threshold=medium --dev --prune-repeated-subdependencies .'
 #
 # - open my notes files in vsCode
