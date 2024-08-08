@@ -7,4 +7,6 @@
     + normal mouse middle button -> Mission Control
     + advanced settings: window snapping enabled 
     + advanced settings: inverse scrolling for normal mice
+- [QuickResApp](https://www.thnkdev.com/QuickRes/) - quick screen resolution toggleing
+    + [purchase link](https://mail.google.com/mail/u/0/#inbox/FMfcgzGsmrFVLbPTWZsfSSGrhdWPSSvf) 
 - [RescueTime](https://www.rescuetime.com/) - app for time tracking
