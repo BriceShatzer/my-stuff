@@ -1,93 +1,18 @@
-/*
-*  takes the player lists in yahoo fantasy football and makes them copyable into google sheets
-*/
+// ==UserScript==
+// @name         Yahoo Fantasy Football
+// @namespace    https://football.fantasysports.yahoo.com/
+// @version      2024-08-24
+// @description  Show Last Years Auction Price. Use the commented out bit to generate the playerCost object.
+// @author       briceshatzer.com
+// @match        https://football.fantasysports.yahoo.com/f1/178397/players
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=yahoo.com
+// @grant        none
+// ==/UserScript==
 
-// (document.querySelectorAll('table.Table td.Alt[style="width: 20px;"]')).forEach(el=>el.parentNode.removeChild(el));
-// (document.querySelectorAll('a.Nowrap.name+span')).forEach(el=>el.parentNode.removeChild(el));
-// (document.querySelectorAll('span.ysf-player-status')).forEach(el=>el.parentNode.removeChild(el));
-// (document.querySelectorAll('div.ysf-player-detail')).forEach(el=>el.parentNode.removeChild(el));
-// (document.querySelectorAll('span.player-status')).forEach(el=>el.parentNode.removeChild(el));
-
-selectors = ['table.Table td.Alt[style="width: 20px;"]'
-'a.Nowrap.name+span',
-'span.ysf-player-status',
-'div.ysf-player-detail',
-'span.player-status'];
-
-selectors.forEach(selector=>{
-	remove(getElements(selector));
-});
-
-function getElements(selector){
-	var arr =
-	return document.querySelectorAll(selector);
-}
-function remove(arrOfElements){
-	arrOfElements.forEach(el=>el.parentNode.removeChild(el));
-}
-
-
-/*
-*  builds an object that contains all the player prices from the draft results page
-*  at https://football.fantasysports.yahoo.com/f1/178397/lastseason
-*/
-
-var playerCosts = {}
-const players = document.querySelectorAll('td.player.first a:first-child');
-
-players.forEach((el)=>{
-    var key=el.innerText;
-    playerCosts[key] = el.parentElement.parentElement.querySelector('.auctioncost').innerText
-})
-
-
-playerCosts = {
-    "Derek Carr": "29",
-    "Courtland Sutton": "21",
-    "Rashid Shaheed": "1",
-    "Curtis Samuel": "2",
-    "Austin Ekeler": "18",
-    "Christian McCaffrey": "57",
-    "Cade Otton": "1",
-    "Gerald Everett": "4",
-    "Rashod Bateman": "5",
-    "Geno Smith": "7",
-    "C.J. Stroud": "24",
-    "Jalen Guyton": "-",
-    "DeVante Parker": "11",
-    "Allen Lazard": "7",
-    "Greg Dortch": "-",
-    "Michael Wilson": "1",
-    "Darnell Mooney": "13",
-    "Joshua Kelley": "5",
-    "Marquez Valdes-Scantling": "6",
-    "Michael Carter": "1",
-    "Parris Campbell": "4",
-    "Pierre Strong Jr.": "1",
-    "Mike Williams": "25",
-    "Buffalo": "12",
-    "Houston": "-",
-    "Mark Andrews": "24"
-}
-
-
-/*
-*  take an object of player prices and apply it to the player search page 
-*  at https://football.fantasysports.yahoo.com/f1/178397/players
-*/
-
-var elements = document.querySelectorAll('a.name');
-
-for (var [key, value] of Object.entries(playerCosts)){
-	var element = Array.from(elements).filter(el => el.textContent.includes(key));
-	if (element[0]){
-		element[0].innerHTML = `${key}<b style="color:black !important"> -  ${value}</b>`
-	}
-}
-
-
-
-playerCosts = {
+(function() {
+    'use strict';
+    window.onload = function() {
+        var playerCosts = {
     "Dak Prescott": "24",
     "Mike Evans": "17",
     "Davante Adams": "24",
@@ -390,4 +315,28 @@ playerCosts = {
     "Cleveland": "5",
     "New England": "5"
 }
+        var elements = document.querySelectorAll('a.name');
 
+        for (var [key, value] of Object.entries(playerCosts)){
+            var element = Array.from(elements).filter(el => el.textContent.includes(key));
+            if (element[0]){
+                element[0].innerHTML = `${key}<b style="color:black !important"> -  ${value}</b>`
+            }
+        }
+    }
+
+/*
+*  builds an object that contains all the player prices from the draft results page
+*  at https://football.fantasysports.yahoo.com/f1/178397/lastseason
+*
+
+    var playerCosts = {}
+    const players = document.querySelectorAll('td.player.first a:first-child');
+
+    players.forEach((el)=>{
+        var key=el.innerText;
+        playerCosts[key] = el.parentElement.parentElement.querySelector('.auctioncost').innerText
+    })
+
+*/
+})();
