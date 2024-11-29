@@ -8,7 +8,7 @@
 // (document.querySelectorAll('div.ysf-player-detail')).forEach(el=>el.parentNode.removeChild(el));
 // (document.querySelectorAll('span.player-status')).forEach(el=>el.parentNode.removeChild(el));
 
-selectors = ['table.Table td.Alt[style="width: 20px;"]'
+selectors = ['table.Table td.Alt[style="width: 20px;"]',
 'a.Nowrap.name+span',
 'span.ysf-player-status',
 'div.ysf-player-detail',
