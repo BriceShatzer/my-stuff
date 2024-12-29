@@ -4,6 +4,7 @@
 // @version      0.1
 // @description  Inject a link to the hourly view on the RescueTime dashboard pages.
 // @author       http://github.com/BriceShatzer
+// @match        https://www.rescuetime.com/dashboard/*
 // @match        https://www.rescuetime.com/dashboard?*
 // @match        https://www.rescuetime.com/dashboard/for/the/day/of/*
 // @grant        none
