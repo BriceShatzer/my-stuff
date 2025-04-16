@@ -8,34 +8,34 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @grant        none
 // ==/UserScript==
-(function() {
+    (function() {
     'use strict';
-    
+
     const nav = document.querySelector('nav');
     const pathname = window.location.pathname;
-    
+
     nav.querySelector('a[href="https://github.com"]').setAttribute('style', 'margin-right: 8px !important');
-    
+
     const searchLink = makeHeaderLink('Search My Gists','https://gist.github.com/search?q=user%3ABriceShatzer');
     searchLink.style.borderLeft = "1px solid #fff";
     searchLink.style.paddingLeft = "8px";
     const allGistsLink = makeHeaderLink('All My Gists','https://gist.github.com/BriceShatzer?direction=desc&sort=updated');
     nav.append(searchLink, allGistsLink);
-    
+
     const prettyLink = (() => {
         let str = [...pathname];
         str.splice(1,0,'@')
-    
+
         let link = makeLink('PrettyPage','https://gist.io' + str.join(''));
         link.className = 'btn btn-sm';
         link.target = '_blank';
-    
+
         let li = document.createElement('li');
         li.append(link);
         return li;
     })();
     document.querySelector('ul.pagehead-actions').prepend(prettyLink)
-    
+
     function makeHeaderLink(text, href) {
         let el = makeLink(text,href);
         el.className = 'Header-link';
@@ -48,7 +48,19 @@
         el.href = href;
         return el;
     }
-    
+    if(pathname.includes('e4fb287118e49e61ea00b1fc824fa0d5')){
+        const style = document.createElement('style');
+        style.innerText = `
+        h3,
+        p:has(+ details),
+        ul:has(+ details) {
+        margin-bottom:0 !important;
+        }
+        details > details {padding-left: 1rem !important;border-left:1px solid gray}
+        `;
+
+        document.body.prepend(style);
+    }
     if (pathname === '/search') {
         let infoLink = document.createElement('a');
         infoLink.href = 'https://gist.github.com/BriceShatzer/86832ab4ccfbd3220468cb3c045dad5c';
@@ -83,11 +95,11 @@
             house.style.position = 'relative';
             house.appendChild(notesElement)
     //        console.log(notesElement);
-    
+
         }).catch(function(err) {
             // There was an error
             console.warn('Something went wrong.', err);
         });
     */
     }
-    })();
+})();
