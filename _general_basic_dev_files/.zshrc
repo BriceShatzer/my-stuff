@@ -2,13 +2,15 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/bshatzer/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="custom"
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -23,14 +25,13 @@ ZSH_THEME="custom"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -45,6 +46,9 @@ ZSH_THEME="custom"
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -69,14 +73,13 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git colored-man-pages pip nvm)
-# osx python zsh-autosuggestions
-
-
-
-# User configuration
-export PATH="/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/use:/usr/local/sbin"
 
 source $ZSH/oh-my-zsh.sh
+
+# User configuration
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/use:/usr/local/sbin"
+
+
 
 # User configuration
 ## explanation of VISUAL vs EDITOR 
@@ -110,14 +113,12 @@ export EDITOR="$VISUAL"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
-
-alias finder=open
-
 alias hostfile='sudo nano -w /private/etc/hosts'
 alias hosts=hostfile
 
 alias flushdns='dscacheutil -flushcache && killall -HUP mDNSResponder'
+
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
 function simpleserver() {ruby -run -e httpd . -p "${1:-8000}"}
 alias ss=simpleserver
@@ -126,7 +127,6 @@ alias beep="echo -e '\07'"
 
 alias finder=open
 
-alias fire_immediateShutdown='sudo shutdown -r now'
 function shutdown() {
   if read -q "RESP?Are you sure you want to shutdown? "; then
       echo
@@ -138,21 +138,34 @@ function shutdown() {
     echo "'$RESP' not 'Y' or 'y'. Exiting..."
   fi
 }
+alias fire_immediateShutdown='sudo shutdown -r now'
 
-# https://www.makeuseof.com/tag/sound-advice-fixing-common-mac-audio-problems-os-x/#reset-core-audio
-alias kill_coreaudio='sudo killall coreaudiod'
-function resetAudio() {
-  if read -q "RESP?Reset coreaudiod? "; then
-      echo
-      kill_coreaudio
-      echo
-      echo "audio reset..."      
-  else 
-    beep
-    echo "'$RESP' not 'Y' or 'y'. Exiting..."
+
+# overwriting git to prompt & handle unset upstream pushes
+git() {
+  if [[ "$1" == "push" ]]; then
+    shift
+    local branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+
+    if git rev-parse --abbrev-ref --symbolic-full-name "@{u}" >/dev/null 2>&1; then
+      command git push "$@"
+    else
+      echo "⚠️  No upstream set for branch '$branch'."
+      read "choice?👉 Set upstream to 'origin/$branch' and push? (y/n) "
+      if [[ "$choice" == "y" ]]; then
+        command git push --set-upstream origin "$branch" "$@"
+      else
+        echo "❌ Push cancelled."
+        return 1
+      fi
+    fi
+  if [[ "$1" == "chekcout" ]]; then
+    echo "⚠️  No upstream set for branch '$branch'."
+  else
+    command git "$@"
   fi
 }
-alias restartAudio=resetAudio
+
 
 
 #colors use ${RED}Red text ${NORMAL} back to normal
@@ -201,8 +214,8 @@ alias colors=listTextFormat
 # Shows all files/folders
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
-# See currently listening ports 
-alias ports='lsof -i -P -n | awk "NR == 1 || /LISTEN/"'
+# See occupid ports 
+alias ports='lsof -i -P -n | grep LISTEN'
 
 # See running node processes 
 alias runningNode='ps | grep node'
@@ -211,9 +224,6 @@ alias showNodes=runningNode
 
 # Weather
 alias weather='curl https://wttr.in/Chicago\?u'
-
-# update per https://jira.atlassian.com/browse/SRCTREE-3172
-alias sourcetree='/Applications/SourceTree.app/Contents/Resources/stree'
 
 # https://github.com/hugomd/parrot.live
 alias parrot='curl parrot.live'
@@ -278,32 +288,32 @@ function curl-size {
   fi
 }
 
-# old Markdown Viewer
-# https://github.com/axiros/terminal_markdown_viewer
-# Note: code snippets don't work if installed via pip. Use: `pip install git+https://github.com/axiros/terminal_markdown_viewer.git`
-# alias readMarkdown=mdv
-# alias rmd=mdv
-# alias markdown=mdv
-
 # Glow - markdown reader
 # https://github.com/charmbracelet/glow
 alias rmd=glow
+
+# update per https://jira.atlassian.com/browse/SRCTREE-3172
+alias sourcetree='/Applications/SourceTree.app/Contents/Resources/stree'
+
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # list available scripts from package.json
 function listScripts () {node -e "console.log(Object.keys(require('.' + require('path').sep + 'package.json').scripts || {}))"}
 alias list-npm=listScripts
 
 # Function to suggest running `npm ci` instead of `npm install`
-__npm_install() {
-  if [[ "$1" == "install" ]]; then
-    echo "Consider running 'npm ci' instead of 'npm install' to ensure you have the exact dependencies & versions listed in the package-lock.json file."
-  fi
-  command npm "$@"
-}
-
+# __npm_install() {
+#   if [[ "$1" == "install" ]]; then
+#     echo "Consider running 'npm ci' instead of 'npm install' to ensure you have the exact dependencies & versions listed in the package-lock.json file."
+#   fi
+#   command npm "$@"
+# }
 # Override the npm command with the custom function
-alias npm='__npm_install'
+# alias npm='__npm_install'
 
+# SAN stuff 
+# alias san-start="vip dev-env start --slug=san"
+# alias san-stop="vip dev-env stop --slug=san"
 
 function listAlias {
   text='\n'
@@ -311,38 +321,42 @@ function listAlias {
   text+="  ${LIME_YELLOW}parrot / partyparrot / party / testinternet\n"
   text+="  ${GREEN}listTextFormat / listColors / listcolors / colors list\n"  
   text+="  ${LIME_YELLOW}curl-size \$URL\n"
-  
-  text+="  ${GREEN}hostfile / hosts\n"
-  text+="  ${LIME_YELLOW}flushdns / flushDNS\n"
-
   text+="  ${GREEN}simpleserver / ss\n"
-  text+="  ${LIME_YELLOW}ports\n"  
-  
+  text+="  ${LIME_YELLOW}hostfile / hosts | flushdns\n"
   text+="  ${GREEN}tree\n"
-  
   text+="  ${LIME_YELLOW}sourcetree\n"  
-
   text+="  ${GREEN}restartAudio\n"  
   text+="  ${LIME_YELLOW}fire_immediateShutdown\n"  
-
   text+="  ${GREEN}showNodes / runningNodes / runningNode\n" 
-  text+="  ${LIME_YELLOW}rmd / glow\n"
-  text+="  ${GREEN}list-npm / listScripts / npmList\n"
+  text+="  ${LIME_YELLOW}ports\n"  
+  text+="  ${GREEN}rmd / glow\n"
   text+="\n"  
   text+="  ${PEACOCK_BLUE}--- git --- \n"
   text+="  ${PEACOCK_BLUE}branches | remotes | hist/history | ignored\n"
-  text+="  ${PEACOCK_BLUE}setbranch <branchName> => git branch -D \$1 && git checkout -b \$1 \n"  
-  text+="\n"  
-  text+="  ${SALMON}--- built-in --- \n"
+  text+="\n"
+  text+="  ${LIME_YELLOW}list-npm\n"
+  text+="\n"
+  text+="  ${SALMON}--- builtin --- \n"
   text+="  ${SALMON}uptime | finder . | top\n"
-  text+="\n"  
-  text+="\n"  
+
   printf "%b" "$text"
 }
 alias Aliases=listAlias
 alias aliases=listAlias
 
 
+
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion	
+
+
+# adding custom php version to path
+export PATH="/opt/homebrew/opt/php@8.3/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.3/sbin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
