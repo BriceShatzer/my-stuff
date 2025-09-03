@@ -1,105 +1,120 @@
 // ==UserScript==
 // @name         Github Gist Upgrades
 // @namespace    gist.github.com
-// @version      0.3
+// @version      0.4
 // @description  Making Github's gist site easier to use
 // @author       https://briceshatzer.com
 // @match        https://gist.github.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
-// @grant        none
+// @grant        GM_addStyle
 // ==/UserScript==
-    (function() {
-    'use strict';
+(function() {
+'use strict';
 
-    const nav = document.querySelector('nav');
-    const pathname = window.location.pathname;
 
-    nav.querySelector('a[href="https://github.com"]').setAttribute('style', 'margin-right: 8px !important');
 
-    const searchLink = makeHeaderLink('Search My Gists','https://gist.github.com/search?q=user%3ABriceShatzer');
-    searchLink.style.borderLeft = "1px solid #fff";
-    searchLink.style.paddingLeft = "8px";
-    const allGistsLink = makeHeaderLink('All My Gists','https://gist.github.com/BriceShatzer?direction=desc&sort=updated');
-    nav.append(searchLink, allGistsLink);
+// fix gist editor
+GM_addStyle(`
+.commit-create > div {min-height: 75vh}
+`);
 
-    const prettyLink = (() => {
-        let str = [...pathname];
-        str.splice(1,0,'@')
+setTimeout(()=>{
+    console.log('======yo');
+    const el = document.querySelector('.CodeMirror');
+    el.style = '';
+    document.getElementById('code-editor').focus();
+},600);
 
-        let link = makeLink('PrettyPage','https://gist.io' + str.join(''));
-        link.className = 'btn btn-sm';
-        link.target = '_blank';
 
-        let li = document.createElement('li');
-        li.append(link);
-        return li;
-    })();
-    document.querySelector('ul.pagehead-actions').prepend(prettyLink)
+const nav = document.querySelector('nav');
+const pathname = window.location.pathname;
 
-    function makeHeaderLink(text, href) {
-        let el = makeLink(text,href);
-        el.className = 'Header-link';
-        el.style.marginRight = "16px";
-        return el;
+nav.querySelector('a[href="https://github.com"]').setAttribute('style', 'margin-right: 8px !important');
+
+const searchLink = makeHeaderLink('Search My Gists','https://gist.github.com/search?q=user%3ABriceShatzer');
+searchLink.style.borderLeft = "1px solid #fff";
+searchLink.style.paddingLeft = "8px";
+const allGistsLink = makeHeaderLink('All My Gists','https://gist.github.com/BriceShatzer');
+nav.append(searchLink, allGistsLink);
+
+const prettyLink = (() => {
+    let str = [...pathname];
+    str.splice(1,0,'@')
+
+    let link = makeLink('PrettyPage','https://gist.io' + str.join(''));
+    link.className = 'btn btn-sm';
+    link.target = '_blank';
+
+    let li = document.createElement('li');
+    li.append(link);
+    return li;
+})();
+document.querySelector('ul.pagehead-actions').prepend(prettyLink)
+
+function makeHeaderLink(text, href) {
+    let el = makeLink(text,href);
+    el.className = 'Header-link';
+    el.style.marginRight = "16px";
+    return el;
+}
+function makeLink(text, href){
+    let el = document.createElement('a');
+    el.innerText = text;
+    el.href = href;
+    return el;
+}
+if(pathname.includes('e4fb287118e49e61ea00b1fc824fa0d5')){
+    const style = document.createElement('style');
+    style.innerText = `
+    h3,
+    p:has(+ details),
+    ul:has(+ details) {
+    margin-bottom:0 !important;
     }
-    function makeLink(text, href){
-        let el = document.createElement('a');
-        el.innerText = text;
-        el.href = href;
-        return el;
-    }
-    if(pathname.includes('e4fb287118e49e61ea00b1fc824fa0d5')){
-        const style = document.createElement('style');
-        style.innerText = `
-        h3,
-        p:has(+ details),
-        ul:has(+ details) {
-        margin-bottom:0 !important;
-        }
-        details > details {padding-left: 1rem !important;border-left:1px solid gray}
-        `;
+    details > details {padding-left: 1rem !important;border-left:1px solid gray}
+    `;
 
-        document.body.prepend(style);
-    }
-    if (pathname === '/search') {
-        let infoLink = document.createElement('a');
-        infoLink.href = 'https://gist.github.com/BriceShatzer/86832ab4ccfbd3220468cb3c045dad5c';
-        infoLink.target = '_blank';
-        infoLink.setAttribute('style',`
-        color: #24292f;
-        text-decoration: none;
+    document.body.prepend(style);
+}
+if (pathname === '/search') {
+    let infoLink = document.createElement('a');
+    infoLink.href = 'https://gist.github.com/BriceShatzer/86832ab4ccfbd3220468cb3c045dad5c';
+    infoLink.target = '_blank';
+    infoLink.setAttribute('style',`
+    color: #24292f;
+    text-decoration: none;
+    `);
+    infoLink.innerText = ' ⍰' //'❔';
+    document.querySelector('label[for="search-query"]').parentElement.appendChild(infoLink);
+/*
+    var notesElement = '';
+    fetch('https://gist.github.com/BriceShatzer/86832ab4ccfbd3220468cb3c045dad5c').then(function(response) {
+        // The API call was successful!
+        return response.text();
+    }).then(function(html) {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(html, 'text/html');
+        var house = document.querySelector('.application-main')
+        notesElement = doc.getElementById('file-search-my-gists-md-readme');
+        notesElement.className = "file";
+        notesElement.setAttribute('style', `
+        position: absolute;
+        top:0;
+        left:0;
+        background-color:white;
+        padding: 16px;
+        max-width: 33vw;
+        transform: scale(.75);
+        transform-origin: left top;
         `);
-        infoLink.innerText = ' ⍰' //'❔';
-        document.querySelector('label[for="search-query"]').parentElement.appendChild(infoLink);
-    /*
-        var notesElement = '';
-        fetch('https://gist.github.com/BriceShatzer/86832ab4ccfbd3220468cb3c045dad5c').then(function(response) {
-            // The API call was successful!
-            return response.text();
-        }).then(function(html) {
-            var parser = new DOMParser();
-            var doc = parser.parseFromString(html, 'text/html');
-            var house = document.querySelector('.application-main')
-            notesElement = doc.getElementById('file-search-my-gists-md-readme');
-            notesElement.className = "file";
-            notesElement.setAttribute('style', `
-            position: absolute;
-            top:0;
-            left:0;
-            background-color:white;
-            padding: 16px;
-            max-width: 33vw;
-            transform: scale(.75);
-            transform-origin: left top;
-            `);
-            house.style.position = 'relative';
-            house.appendChild(notesElement)
-    //        console.log(notesElement);
+        house.style.position = 'relative';
+        house.appendChild(notesElement)
+//        console.log(notesElement);
 
-        }).catch(function(err) {
-            // There was an error
-            console.warn('Something went wrong.', err);
-        });
-    */
-    }
+    }).catch(function(err) {
+        // There was an error
+        console.warn('Something went wrong.', err);
+    });
+*/
+}
 })();
