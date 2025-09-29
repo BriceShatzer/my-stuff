@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RescueTime upgrader
 // @namespace    https://www.rescuetime.com/
-// @version      23-8-2025
+// @version      29-9-2025
 // @description  fixes a few things
 // @author       http://github.com/BriceShatzer
 // @match        https://www.rescuetime.com/dashboard/*
@@ -32,7 +32,9 @@ if ( /dashboard\/for\/the\/day\/of/.test.path ){
 }
 //set link attributes
 link.appendChild( document.createTextNode('See Hourly Overview') )
-link.style= 'font-weight:bold;'+
+link.style= 'clear: both;'+
+            'float: left;'+
+            'font-weight:bold;'+
             'font-size:20px;'+
             'margin-left: 20px;'+
             'padding:10px;'+
