@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         SAN - Clear Watch & Queue Items
 // @namespace    SAN
-// @version      2.1
-// @description  Adds a hidden button to clear localStorage items that reveals on hover near bottom-right corner
+// @version      2.2
+// @description  Adds a hidden button to clear localStorage items that reveals on hover near bottom-left corner
 // @author       BriceShatzer.com
 // @match        http://san.vipdev.lndo.site/*
 // @match        https://stage.internal.san.com/*
@@ -18,7 +18,7 @@
     btn.style.cssText = `
         position: fixed;
         bottom: 20px;
-        right: -250px;
+        left: -250px;
         z-index: 9999;
         padding: 10px 15px;
         background-color: #e74c3c;
@@ -28,7 +28,7 @@
         cursor: pointer;
         box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
         font-size: 14px;
-        transition: right 0.3s ease;
+        transition: left 0.3s ease;
         white-space: nowrap;
     `;
 
@@ -37,7 +37,7 @@
     triggerZone.style.cssText = `
         position: fixed;
         bottom: 0;
-        right: 0;
+        left: 0;
         width: 200px;
         height: 100px;
         z-index: 9998;
@@ -50,7 +50,7 @@
     indicator.style.cssText = `
         position: fixed;
         bottom: 25px;
-        right: 25px;
+        left: 25px;
         z-index: 9997;
         font-size: 20px;
         opacity: 0.2;
@@ -76,14 +76,14 @@
 
     function showButton() {
         clearTimeout(hideTimeout);
-        btn.style.right = '20px';
+        btn.style.left = '20px';
         indicator.style.opacity = '0.6';
         indicator.style.transform = 'rotate(180deg)';
     }
 
     function hideButton() {
         hideTimeout = setTimeout(() => {
-            btn.style.right = '-250px';
+            btn.style.left = '-250px';
             indicator.style.opacity = '0.2';
             indicator.style.transform = 'rotate(0deg)';
         }, 500);
