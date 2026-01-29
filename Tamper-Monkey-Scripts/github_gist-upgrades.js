@@ -1,12 +1,11 @@
 // ==UserScript==
 // @name         Github Gist Upgrades
 // @namespace    gist.github.com
-// @version      0.4
+// @version      0.5
 // @description  Making Github's gist site easier to use
 // @author       https://briceshatzer.com
 // @match        https://gist.github.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
-// @grant        GM_addStyle
 // ==/UserScript==
 (function() {
 'use strict';
@@ -14,12 +13,28 @@
 
 
 // fix gist editor
-GM_addStyle(`
-.commit-create > div {min-height: 75vh}
+/*
+(async () => {
+  await GM.addStyle(`
+.commit-create > div,
+.CodeMirror-wrap {min-height: 75vh}
 `);
+})();
+*/
+
+/*
+GM_addStyle(`
+.commit-create > div,
+.CodeMirror-wrap {min-height: 75vh}
+`);
+*/
 
 setTimeout(()=>{
     console.log('======yo');
+    document.body.appendChild(document.createElement('style')).textContent = `
+.commit-create > div,
+.CodeMirror-wrap {min-height: 75vh}
+`;
     const el = document.querySelector('.CodeMirror');
     el.style = '';
     document.getElementById('code-editor').focus();
