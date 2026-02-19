@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Add Claude usage link
 // @namespace    claude.ai/
-// @version      2025-11-18
+// @version      2026-2-19
 // @description  adds a link to the usage page
 // @author       https://github.com/BriceShatzer
 // @match        https://claude.ai/*
@@ -20,7 +20,6 @@
     link.target = "_blank";
     link.innerText = "📈";
     el.append(link);
-    el.style = 'justify-content: space-between';
     }, 3000);
 
 
