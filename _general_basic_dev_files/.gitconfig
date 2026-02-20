@@ -6,14 +6,23 @@
     # leaving this out forces git to ask you on the intial commit of any repo
     # this is good if you have both personal and professional repos 
 
+    #signingkey = /Users/briceshatzer/.ssh/id_key.pub
+
+
 [core]
 	editor = nano
 	# excludesfile = /Users/bshatzer/.gitignore_global
+
+#[gpg]
+#       format = ssh
+# used for signingkey
 
 [init]
         defaultBranch = main
 
 [alias]
+    commit-gist = !git commit -am '' --allow-empty-message && git push
+    commitgist = commit-gist
     branches = branch --list
     remotes = remote -v
     hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
@@ -42,3 +51,5 @@
 # [mergetool "sourcetree"]
 # 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 # 	trustExitCode = true
+
+
