@@ -209,7 +209,6 @@ function listTextFormat() {
 }
 alias listColors=listTextFormat
 alias listcolors=listTextFormat
-alias colors=listTextFormat
 
 # Shows all files/folders
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
@@ -361,3 +360,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# Add claude code to path
+# export PATH="$HOME/.local/bin:$PATH"
