@@ -1,4 +1,6 @@
 #should live in ~//.oh-my-zsh/themes/custom.zsh-theme
+#and it is defined in your .zshrc like this:
+#ZSH_THEME="custom" 
 
 local ret_status="%(?:%{$fg_bold[green]%}≫ :%{$fg_bold[red]%}≫ %s)"
 PROMPT='%{$fg_bold[green]%}%p%{$fg[cyan]%}${PWD/#$HOME/~} $(git_prompt_info)$(hg_prompt_info)${ret_status} %{$reset_color%}'

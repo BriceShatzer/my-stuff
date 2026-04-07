@@ -333,6 +333,7 @@ function listAlias {
   text+="\n"  
   text+="  ${PEACOCK_BLUE}--- git --- \n"
   text+="  ${PEACOCK_BLUE}branches | remotes | hist/history | ignored\n"
+  text+="  ${PEACOCK_BLUE}  unstage | commit-gist/commitgist\n"
   text+="\n"
   text+="  ${LIME_YELLOW}list-npm\n"
   text+="\n"
