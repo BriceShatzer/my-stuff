@@ -140,6 +140,10 @@ function shutdown() {
 }
 alias fire_immediateShutdown='sudo shutdown -r now'
 
+# if using pnpm 
+# alias npm="pnpm"
+
+
 
 # overwriting git to prompt & handle unset upstream pushes
 git() {
@@ -293,6 +297,7 @@ alias rmd=glow
 
 # update per https://jira.atlassian.com/browse/SRCTREE-3172
 alias sourcetree='/Applications/SourceTree.app/Contents/Resources/stree'
+
 
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
