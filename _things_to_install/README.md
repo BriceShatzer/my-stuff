@@ -11,3 +11,4 @@
     + [purchase link](https://mail.google.com/mail/u/0/#inbox/FMfcgzGsmrFVLbPTWZsfSSGrhdWPSSvf) 
 - [RescueTime](https://www.rescuetime.com/) - app for time tracking
 - [CodexBar](https://codexbar.app/)
+- MeetingBar - [site](https://meetingbar.app/) | [github](https://github.com/leits/MeetingBar)
