@@ -1,0 +1,84 @@
+
+## --- array specific stuff --- 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/brice.shatzer/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brice.shatzer/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/brice.shatzer/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brice.shatzer/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+# array linting & testing aliases
+ARRAY_SVELTE_WORKSPACE="$HOME/Projects/SQ08Workspace/monorepo/js/website-webcom-svelte"
+ARRAY_SVELTE_COMPONENTS="$ARRAY_SVELTE_WORKSPACE/components/default"
+
+lint_array() {
+  local target="$1"
+
+  if [[ -z "$target" ]]; then
+    echo "Usage: lint_array <component-directory>"
+    return 1
+  fi
+
+  local component_path="$ARRAY_SVELTE_COMPONENTS/$target"
+
+  if [[ ! -d "$component_path" ]]; then
+    echo "Directory not found: $component_path"
+    return 1
+  fi
+
+  echo "Linting with --fix: components/default/$target"
+  (
+    cd "$ARRAY_SVELTE_WORKSPACE" || return 1
+    npx eslint "components/default/$target/**/*.{js,ts,svelte}" --fix
+  )
+}
+
+alias lint=lint_array
+
+test_array() {
+  local target="$1"
+
+  if [[ -z "$target" ]]; then
+    echo "Usage: test_array <component-directory>"
+    return 1
+  fi
+
+  local component_path="$ARRAY_SVELTE_COMPONENTS/$target"
+
+  if [[ ! -d "$component_path" ]]; then
+    echo "Directory not found: $component_path"
+    return 1
+  fi
+
+  echo "Running tests: components/default/$target"
+  (
+    cd "$ARRAY_SVELTE_WORKSPACE" || return 1
+    npm test -- "components/default/$target"
+  )
+}
+
+check_array() {
+  local target="$1"
+
+  if [[ -z "$target" ]]; then
+    echo "Usage: check_array <component-directory>"
+    return 1
+  fi
+
+  lint_array "$target" && test_array "$target"
+}
+
+_component_dirs() {
+  local -a dirs
+  # (/) = dirs only, N = no error if empty, :t = basename only
+  dirs=("$ARRAY_SVELTE_COMPONENTS"/*(/N:t))
+  _describe "component directory" dirs
+}
+
+compdef _component_dirs lint_array
+compdef _component_dirs lint
+compdef _component_dirs test_array
+compdef _component_dirs check_array
+
+
