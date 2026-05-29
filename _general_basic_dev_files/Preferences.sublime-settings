@@ -23,6 +23,25 @@
 }
 
 
+// array M5 mac
+{
+    "color_scheme": "Monokai.sublime-color-scheme",
+    "ignored_packages":
+    [
+        "Vintage",
+    ],
+    "ignored_words":
+    [
+        "enablement"
+    ],
+    "update_check": false,
+    "index_files": false,
+    "font_size": 14,
+    "show_encoding": false, 
+}
+
+
+
 // Grainger M1 mac
 {
 	"ignored_packages":
