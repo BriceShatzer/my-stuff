@@ -19,6 +19,7 @@
         "that’s"
     ],
     "update_check": false,
+    "scroll_past_end": 0.5
 }
 
 
