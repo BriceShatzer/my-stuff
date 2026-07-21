@@ -1,0 +1,79 @@
+
+
+lint 
+test_array
+check_array
+
+pnpm run build-assets-local && VITE_ENV_NAME=local pnpm dev
+
+
+
+# Run just SpendingTab tests
+npx vitest run --config=vitest.component.config.ts components/default/array-my-money-plan/pages/my-financial-plan/tabs/SpendingTab
+
+
+
+# Run all MMP tests
+npx vitest run --config=vitest.component.config.ts components/default/array-my-money-plan
+
+
+
+-- run My Money Plan --
+
+ - backend -
+cd golang/pkg/services/external-mmp/local-dev
+./start.sh
+
+~/Projects/SQ08Workspace/monorepo/golang/pkg/services/external-mmp/local-dev/start.sh 
+
+
+ - frontend -
+cd js/website-webcom-svelte
+pnpm install
+pnpm run build-assets-local 
+VITE_ENV_NAME=local pnpm dev
+
+
+
+
+
+
+-- subscription manager -- 
+pnpm run --filter website-webcom-svelte dev
+
+
+npx eslint './components/default/array-subscription-manager-mini/**/*.{js,ts,svelte}'
+
+
+pnpm vitest run --config=vitest.component.config.ts components/default/array-subscription-manager
+
+-watcher-
+pnpm vitest -c vitest.component.config.ts ./components/default/array-subscription-manager/
+
+
+pnpm vitest run -- config=vitest.component.config.ts components/default/array-my-money-plan
+
+
+¯\_(ツ)_/¯  
+
+
+ಠ_ಠ
+
+
+eb66f4108df269ffbe0fb4c635c5325e97a05120
+
+/Users/brice.shatzer/Projects/SQ08Workspace/monorepo/golang/pkg/services/external-mmp/local-dev
+
+
+--- LLM phrases
+for the pull request I'm going to need to provide: a brief description of the problem, a brief description of the solution, and any potential risks. Please write this without using any mdashes
+
+
+An automated code review provided the feedback below. Review it, determine if it's suggested changes are necessary, and create an an implementation plan if they are:
+
+
+Perform a code review on this merge request:
+
+
+
+I received the sentry alert below. Review it. Tell me the most likely caused the issue and if you advise any sort of code changes to resolve the issue currently/in the future. 

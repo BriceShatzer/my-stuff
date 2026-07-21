@@ -12,3 +12,7 @@
 - [RescueTime](https://www.rescuetime.com/) - app for time tracking
 - [CodexBar](https://codexbar.app/)
 - MeetingBar - [site](https://meetingbar.app/) | [github](https://github.com/leits/MeetingBar)
+- [iTerm2](https://iterm2.com/)
+    + View -> Toolbelt -> Show Toolbelt  
+        ✓ Jobs  
+        ✓ Notes  
