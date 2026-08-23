@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         RescueTime upgrader
 // @namespace    https://www.rescuetime.com/
-// @version      29-9-2025
+// @version      23-8-2026
 // @description  fixes a few things
 // @author       http://github.com/BriceShatzer
+// @match        https://www.rescuetime.com/dashboard
 // @match        https://www.rescuetime.com/dashboard/*
 // @match        https://www.rescuetime.com/dashboard?*
 // @match        https://www.rescuetime.com/dashboard/for/the/day/of/*
