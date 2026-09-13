@@ -2,7 +2,7 @@
 // @name         ChatGPT model chooser
 // @namespace    chatgpt.com/
 // @version      2026-09-13
-// @description  Adds a lower-right guide for choosing Astra, Sol, Terra, or Luna
+// @description  Adds a lower-right guide for choosing ChatGPT models
 // @author       https://github.com/BriceShatzer
 // @match        https://chatgpt.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=chatgpt.com
@@ -35,11 +35,6 @@
                 cursor: pointer;
             }
 
-            #open-button:hover {
-                background: #fff;
-                transform: translateY(-1px);
-            }
-
             #backdrop {
                 display: none;
                 position: fixed;
@@ -59,7 +54,7 @@
             #modal {
                 position: relative;
                 width: min(660px, 100%);
-                max-height: min(760px, 90vh);
+                max-height: 90vh;
                 overflow: auto;
                 padding: 24px;
                 border-radius: 16px;
@@ -78,8 +73,7 @@
                 font-size: 15px;
             }
 
-            .intro,
-            .note {
+            .intro, .note {
                 margin: 0;
                 color: #555;
                 font-size: 14px;
@@ -89,7 +83,7 @@
             .models {
                 display: grid;
                 gap: 10px;
-                margin: 14px 0 0;
+                margin-top: 14px;
             }
 
             .model {
@@ -103,9 +97,10 @@
 
             .model-name {
                 display: flex;
+                flex-wrap: wrap;
                 align-items: baseline;
                 gap: 8px;
-                margin-bottom: 4px;
+                margin-bottom: 5px;
             }
 
             .model-name strong {
@@ -119,12 +114,17 @@
                 text-transform: uppercase;
             }
 
-            .choose {
+            .claude {
+                color: #8a4b20;
+                font-size: 13px;
+                font-weight: 600;
+            }
+
+            p {
                 margin: 0 0 5px;
             }
 
             .avoid {
-                margin: 0;
                 color: #666;
             }
 
@@ -153,20 +153,17 @@
                     color: #fff;
                 }
 
-                #open-button:hover {
-                    background: #303030;
-                }
-
                 #modal {
                     background: #212121;
                     color: #f5f5f5;
                 }
 
-                .intro,
-                .note,
-                .avoid,
-                .tag {
+                .intro, .note, .avoid, .tag {
                     color: #bbb;
+                }
+
+                .claude {
+                    color: #e7a673;
                 }
 
                 .model {
@@ -184,25 +181,17 @@
             }
         </style>
 
-        <button
-            id="open-button"
-            type="button"
-            title="Choose a ChatGPT model"
-            aria-label="Open model chooser"
-        >🤖</button>
+        <button id="open-button" type="button" title="Choose a ChatGPT model">
+            🤖
+        </button>
 
         <div id="backdrop">
-            <section
-                id="modal"
-                role="dialog"
-                aria-modal="true"
-                aria-labelledby="title"
-            >
+            <section id="modal" role="dialog" aria-modal="true" aria-labelledby="title">
                 <button id="close-button" type="button" aria-label="Close">×</button>
 
                 <h2 id="title">Which model should I use?</h2>
                 <p class="intro">
-                    Start with Terra unless your task clearly fits one of the other options.
+                    Start with Terra unless your task clearly fits another model.
                     Use the least powerful model that will reliably do the job.
                 </p>
 
@@ -211,73 +200,54 @@
                         <div class="model-name">
                             <strong>Astra</strong>
                             <span class="tag">Hardest work</span>
+                            <span class="claude">≈ Claude Fable</span>
                         </div>
-                        <p class="choose">
-                            <strong>Choose for:</strong> complex end-to-end workflows across code,
-                            apps, and research that need sustained reasoning, judgment, multiple
-                            steps, and tool use.
-                        </p>
-                        <p class="avoid">
-                            <strong>Skip for:</strong> routine work, narrow requests, or anything
-                            with a clear, simple answer.
-                        </p>
+                        <p><strong>Choose for:</strong> complex end-to-end workflows across code, apps, and research that need sustained reasoning, judgment, multiple steps, and tool use.</p>
+                        <p class="avoid"><strong>Skip for:</strong> routine work or narrow requests with a clear answer.</p>
                     </article>
 
                     <article class="model">
                         <div class="model-name">
                             <strong>Sol</strong>
                             <span class="tag">Complex / open-ended</span>
+                            <span class="claude">≈ Claude Opus</span>
                         </div>
-                        <p class="choose">
-                            <strong>Choose for:</strong> ambiguous, difficult, or high-value work
-                            needing extra analysis, judgment, or polish — for example complex code
-                            changes, deep research, or polished documents.
-                        </p>
-                        <p class="avoid">
-                            <strong>Skip for:</strong> ordinary tasks where good, efficient work is
-                            enough and you do not need Sol's full depth.
-                        </p>
+                        <p><strong>Choose for:</strong> ambiguous, difficult, or high-value work that needs extra analysis, judgment, or polish—such as complex code changes, deep research, or polished documents.</p>
+                        <p class="avoid"><strong>Skip for:</strong> everyday work where Terra can get you a good result faster.</p>
                     </article>
 
                     <article class="model">
                         <div class="model-name">
                             <strong>Terra</strong>
                             <span class="tag">Everyday default</span>
+                            <span class="claude">≈ Claude Sonnet</span>
                         </div>
-                        <p class="choose">
-                            <strong>Choose for:</strong> everyday work that needs solid reasoning
-                            and tool use: normal coding tasks, drafting, analysis, troubleshooting,
-                            and most questions you would have given GPT-5.5.
-                        </p>
-                        <p class="avoid">
-                            <strong>Move up to Sol or Astra when:</strong> the work is genuinely
-                            ambiguous, multi-stage, high-stakes, or needs unusually careful judgment.
-                        </p>
+                        <p><strong>Choose for:</strong> normal coding, drafting, analysis, troubleshooting, and most tasks that need solid reasoning and tool use.</p>
+                        <p class="avoid"><strong>Move up to Sol or Astra when:</strong> the work is unusually ambiguous, multi-stage, high-stakes, or needs careful judgment.</p>
                     </article>
 
                     <article class="model">
                         <div class="model-name">
                             <strong>Luna</strong>
                             <span class="tag">Fast / repeatable</span>
+                            <span class="claude">≈ Claude Haiku</span>
                         </div>
-                        <p class="choose">
-                            <strong>Choose for:</strong> clear, repeatable, high-volume tasks where
-                            you know what a good result looks like: extraction, classification,
-                            transformation, and structured summaries.
-                        </p>
-                        <p class="avoid">
-                            <strong>Skip for:</strong> vague requests, deep investigation, complex
-                            code changes, or work that needs meaningful judgment.
-                        </p>
+                        <p><strong>Choose for:</strong> clear, repeatable, high-volume tasks: extraction, classification, transformation, and structured summaries.</p>
+                        <p class="avoid"><strong>Skip for:</strong> vague requests, deep investigation, or complex code changes.</p>
                     </article>
                 </div>
 
                 <h3>Reasoning effort</h3>
                 <p class="note">
-                    Use <strong>Light</strong> for quick, well-scoped tasks; <strong>Medium</strong>
-                    when a task needs planning; and <strong>High / Extra High</strong> for difficult
-                    multi-step work with sources, tradeoffs, or important checks. More reasoning
-                    takes longer and uses more of your allowance.
+                    Use <strong>Light</strong> for quick, well-scoped tasks;
+                    <strong>Medium</strong> for tasks needing planning; and
+                    <strong>High / Extra High</strong> for difficult multi-step work with
+                    sources, tradeoffs, or important checks.
+                </p>
+
+                <p class="note" style="margin-top: 12px;">
+                    Claude comparisons are approximate product-positioning equivalents,
+                    not benchmark claims or exact feature matches.
                 </p>
             </section>
         </div>
