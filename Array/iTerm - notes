@@ -1,5 +1,4 @@
 
-
 lint 
 test_array
 check_array
@@ -65,15 +64,27 @@ eb66f4108df269ffbe0fb4c635c5325e97a05120
 /Users/brice.shatzer/Projects/SQ08Workspace/monorepo/golang/pkg/services/external-mmp/local-dev
 
 
---- LLM phrases
-for the pull request I'm going to need to provide: a brief description of the problem, a brief description of the solution, and any potential risks. Please write this without using any mdashes
 
 
-An automated code review provided the feedback below. Review it, determine if it's suggested changes are necessary, and create an an implementation plan if they are:
+--- Code Reviews/MR - LLM phrases
+
+for the merge request I'm going to need to provide: a brief description of the problem, a brief description of the solution, and any potential risks. Please write this without using any mdashes
+
+
+An automated code review provided the feedback below. Review it, determine if it's suggested changes are necessary, and create an implementation plan if they are:
 
 
 Perform a code review on this merge request:
 
+
+-
+
+--- On Call - LLM phrases
+
+Review this [PagerDuty incident](https://array.pagerduty.com/incidents/Q271W739LAVPBO) and tell me the following: 
+- If this issue needs immediate attention. 
+- The most likely caused of the issue. 
+- If you advise any sort of code changes to resolve the issue currently/in the future.
 
 
 I received the sentry alert below. Review it. Tell me the most likely caused the issue and if you advise any sort of code changes to resolve the issue currently/in the future. 
